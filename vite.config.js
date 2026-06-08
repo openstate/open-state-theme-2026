@@ -9,7 +9,7 @@ if (! process.env.APP_URL) {
 }
 
 export default defineConfig({
-  base: '/app/themes/sage/public/build/',
+  base: '/wp-content/themes/open-state-theme-2026/public/build/',
   plugins: [
     tailwindcss(),
     laravel({
