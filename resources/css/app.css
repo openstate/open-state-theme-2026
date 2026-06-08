@@ -1,0 +1,75 @@
+@import "tailwindcss" theme(static);
+@plugin "@iconify/tailwind4" {
+  prefixes: simple-icons;
+}
+@import './fonts.css';
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+@theme {
+  --font-serif: "Manuale", ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --color-*: initial;
+
+  --color-white: #FFFFFF;
+  --color-white-30-opacity: #FFFFFF/30;
+  --color-black: #141414;
+  --color-light-grey: #EDEDED;
+
+  --color-pink: #FF29B4;
+
+  --color-purple-50: #FFEEF9;
+  --color-purple-100: #FDE2F8;
+  --color-purple-200: #D183C2;
+  --color-purple-300: #A9629B;
+  --color-purple-400: #A83992;
+  --color-purple-500: #973884;
+  --color-purple-600: #792B69;
+  --color-purple-700: #5C1F50;
+  --color-purple-800: #3D1535;
+
+  --color-blue-50: #EFF6FE;
+  --color-blue-100: #BCD6F9;
+  --color-blue-200: #0F4EA4;
+  --color-blue-300: #0A3670;
+  --color-blue-400: #07244B;
+
+  --color-off-white-50: #F8F5F2;
+  --color-off-white-100: #F4F0EB;
+  --color-off-white-200: #E1DAD0;
+  --color-off-white-300: #8F867B;
+  --color-off-white-400: #6E675E;
+  --color-off-white-500: #59534C;
+}
+
+@layer utilities {
+  [x-cloak] { display: none !important; }
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+a {
+  text-decoration-line: underline;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.05rem;
+}
+
+.page-template-project-page {
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    line-height: 2rem;
+    letter-spacing: -0.0125rem;
+  }
+}
+

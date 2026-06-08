@@ -1,0 +1,13 @@
+services:
+  node:
+    ports:
+      - "5173:5173"
+    restart: "no"
+    volumes:
+      - ./../../../../nginx-load-balancer/docker/mkcert/openstate.eu/:/certs/
+    networks:
+      - nginx-load-balancer
+networks:
+  nginx-load-balancer:
+    name: docker_nginx-load-balancer
+    external: true

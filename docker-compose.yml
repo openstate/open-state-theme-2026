@@ -1,0 +1,10 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/theme
+    working_dir: /theme
+    restart: always
+    command: tail -f /dev/null
