@@ -1,5 +1,5 @@
 <header class="banner grid grid-cols-12 items-center pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
-  <a class="brand col-span-3" href="{{ home_url('/') }}">
+  <a class="brand col-span-10 xl:col-span-3" href="{{ home_url('/') }}">
     <img src="{{ Vite::asset('resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
   </a>
 
@@ -15,7 +15,19 @@
     </nav>
   @endif
 
-  <div class="flex justify-end col-span-3">
-    <x-button href="/nl/doneren/" text="Steun"/>
+  <div class="flex justify-end col-span-2 xl:col-span-3 gap-4">
+    <!-- Mobile Menu -->
+    <x-mobile-menu>
+      @if (has_nav_menu('primary_navigation'))
+        {!! wp_nav_menu([
+          'theme_location' => 'primary_navigation',
+          'menu_class'     => 'mobile-nav',
+          'echo'           => false,
+          'items_wrap'     => '<ul id="mobile-menu-list" class="%2$s">%3$s</ul>',
+        ]) !!}
+      @endif
+    </x-mobile-menu>
+
+    <x-button class="hidden xl:grid" href="/nl/doneren/" text="Steun ons"/>
   </div>
 </header>

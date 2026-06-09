@@ -29,7 +29,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
-  <body @php(body_class(array('text-purple-800', 'text-[0.875rem]', 'leading-[22px]', 'md:text-[1rem]', 'md:leading-[24px]')))>
+  <body @php(body_class(array('text-purple-800')))>
     @php(wp_body_open())
 
     <div id="app">

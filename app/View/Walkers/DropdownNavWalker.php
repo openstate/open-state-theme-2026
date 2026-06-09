@@ -138,7 +138,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
             } else {
                 $output .= '<li role="none">';
 
-                $linkClasses = 'flex w-full items-center px-4 py-2 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
+                $linkClasses = 'flex items-center mx-4 py-2 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
                     . ($isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600');
 
                 $output .= sprintf(
