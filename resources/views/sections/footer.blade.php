@@ -1,4 +1,5 @@
-<footer class="content-info bg-purple-800 text-white px-[24px]">
+<footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
+  <div class="2xl:col-span-8 2xl:col-start-3 content-center">
   @php(dynamic_sidebar('sidebar-footer'))
 
   <div class="pt-[24px] pb-[120px] flex gap-x-[12px]">
@@ -22,5 +23,6 @@
     <div><a href="/nl/algemene-voorwaarden/">Algemene voorwaarden</a></div>
     <div><a href="/nl/privacy/">Privacy policy</a></div>
     <div><a href="/nl/responsible-disclosure">Responsible disclosure</a></div>
+  </div>
   </div>
 </footer>

@@ -51,9 +51,9 @@
 }
 
 p {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  margin-bottom: 1.375rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 a {
@@ -64,6 +64,14 @@ ul, ol {
   @apply list-disc list-outside pl-4 mb-3 space-y-0;
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+
+header ul {
+  @apply list-none pl-0 mb-0;
+}
+
+.single header {
+  @apply bg-white;
 }
 
 /* menu hover gradient from white to pink */
@@ -90,6 +98,8 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  margin-top: 1.7em;
+  margin-bottom: 0.625em;
 }
 
 h2 {

@@ -1,4 +1,4 @@
-<time class="dt-published" datetime="{{ get_post_time('c', true) }}">
+<time class="dt-published font-mono" datetime="{{ get_post_time('c', true) }}">
   {{ get_the_date('D j M \'y') }}
 </time>
 
