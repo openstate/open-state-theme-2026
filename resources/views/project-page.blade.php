@@ -11,7 +11,7 @@
         @include('partials.page-header')
         <div class="grid">
           {!! the_post_thumbnail('full', array('class' => 'md:order-2 img-fluid rounded-lg max-md:pb-[16px]')) !!}
-          <p class="md:order-1 md:pb-[40px] xl:pb-[64px] !mb-[0px]">
+          <p class="md:order-1 md:pb-[40px] xl:pb-[64px] mb-[0px]">
             <? echo get_field('project_samenvatting', get_the_id()) ?>
           </p>
         </div>

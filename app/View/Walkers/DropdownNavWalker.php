@@ -27,7 +27,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
                 @click.outside="open = false"
                 role="menu"
                 aria-label="%s submenu"
-                class="absolute left-0 top-full z-50 min-w-48 bg-white shadow-lg ring-1 ring-black/5 rounded-md py-1 mt-1">',
+                class="absolute left-0 top-full z-50 w-max bg-white shadow-lg ring-1 ring-black/5 rounded-md px-[24px] pt-[24px] pb-[12px]">',
             $label
         );
     }
@@ -64,7 +64,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
                     @mouseenter="open = true"
                     @mouseleave="open = false">';
             
-                $buttonClasses = 'flex items-center gap-0.5 px-1 py-2 text-sm font-medium transition-colors rounded '
+                $buttonClasses = 'flex items-center gap-0.5 px-1 pb-[6px] text-sm font-medium transition-colors rounded '
                     . 'focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 '
                     . ($isActive ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600');
             
@@ -92,7 +92,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
             } else {
                 $output .= '<li class="relative">';
 
-                $linkClasses = 'block px-1 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded '
+                $linkClasses = 'block px-1 pb-[6px] text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded '
                     . ($isActive ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600');
 
                 $output .= sprintf(
@@ -112,7 +112,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
                 // Nested submenu: opens on hover/focus, flies right
                 $output .= '<li class="relative" x-data="{ open: false }" @keydown.escape.stop="open = false; $refs.nestedToggle.focus()" role="none">';
 
-                $linkClasses = 'flex w-full items-center justify-between px-4 py-2 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
+                $linkClasses = 'flex w-full items-center justify-between px-4 pb-[6px] text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
                     . ($isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600');
 
                 $output .= sprintf(
@@ -138,7 +138,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
             } else {
                 $output .= '<li role="none">';
 
-                $linkClasses = 'flex items-center mx-4 py-2 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
+                $linkClasses = 'flex items-center pb-[6px] mb-[12px] text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 '
                     . ($isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600');
 
                 $output .= sprintf(
