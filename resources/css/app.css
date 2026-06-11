@@ -50,6 +50,10 @@
   [x-cloak] { display: none !important; }
 }
 
+body {
+  overflow-wrap: break-word;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.5rem;
