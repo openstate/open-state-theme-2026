@@ -39,7 +39,7 @@
                 <div class="col-span-4 bg-purple-800 rounded-[8px] overflow-hidden">
                   <a href="<? the_permalink(); ?>">
                     <div class="overlay-container">
-                      <? the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid image-cover')); ?>
+                      <? the_post_thumbnail('col-7-thumbnail', array('class' => 'img-fluid image-cover')); ?>
                     </div>
                     <div class="text-white px-[28px] pt-[20px] pb-[28px]">
                       <p class="!no-underline !font-serif !text-[1.5rem]/[1.75rem] !mb-[4px]"><? the_title(); ?></p>
