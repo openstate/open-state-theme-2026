@@ -1,7 +1,6 @@
 @import "tailwindcss" theme(static);
 @plugin "@iconify/tailwind4" {
-  prefixes: simple-icons;
-  prefixes: mdi;
+  prefixes: simple-icons, mdi;
 }
 @import './fonts.css';
 @import '../css/mobile-menu.css';

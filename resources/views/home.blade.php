@@ -7,7 +7,7 @@
       <p>In a strong democracy, the government has no secrets. We believe in an open government where citizens, journalists, and civil servants have access to information they can trust and build upon.</p>
     </div>
 
-    <div class="grid grid-cols-12">
+    <div class="grid grid-cols-12 gap-[16px] px-[24px]">
       <?=
         wp_reset_query();
         $args = array(
@@ -30,32 +30,30 @@
           if($the_query->have_posts()):
             while($the_query->have_posts()) : $the_query->the_post(); ?>
               <? if($the_query->current_post == 0): ?>
-                <div class="col-span-2 col-start-3 bg-blue-200 w-[186px] min-h-[186px] h-fit rounded-[8px] p-[16px]">
-                  <x-tag text="{{ get_post_type() === 'post' ? 'Nieuws' : 'test' }}"/>
-                  <div class=" text-white font-serif text-[24px] mt-[1rem]">
-                    <a class="!no-underline" href="<? the_permalink(); ?>"><? the_title(); ?></a>
+                <a class="col-span-2 col-start-3 !no-underline" href="<? the_permalink(); ?>">
+                  <div class="bg-blue-200 min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                      <p class="text-white !font-serif !text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                   </div>
-                </div>
+                </a>
               <? elseif($the_query->current_post == 1): ?>
-                <div class="col-span-4">
+                <div class="col-span-4 bg-purple-800 rounded-[8px] overflow-hidden">
                   <a href="<? the_permalink(); ?>">
                     <div class="overlay-container">
-                      <? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover')); ?>
-                      <div class="overlay overlay-paars d-flex"></div>
+                      <? the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid image-cover')); ?>
+                    </div>
+                    <div class="text-white px-[28px] pt-[20px] pb-[28px]">
+                      <p class="!no-underline !font-serif !text-[1.5rem]/[1.75rem] !mb-[4px]"><? the_title(); ?></p>
+                      <p class="!mb-0 !text-[0.875rem]/[1.375rem]"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
                     </div>
                   </a>
-                  <div class="bg-grijs-15 uitgelicht-item">
-                    <a class="!no-underline" href="<? the_permalink(); ?>"><? the_title(); ?></a>
-                    <p class="mb-0"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
-                  </div>
                 </div>
               <? elseif($the_query->current_post == 2): ?>
-                <div class="col-span-2">
-                  <div class="bg-grijs-15 uitgelicht-item">
-                    <a class="!no-underline" href="<? the_permalink(); ?>"><? the_title(); ?></a>
-                    <p class="mb-0"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
+                <a class="col-span-2 self-end !no-underline" href="<? the_permalink(); ?>">
+                  <div class="flex bg-off-white-400 min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                      <p class="!mb-0 text-white mt-auto !font-serif !text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                   </div>
-                </div>
+                </a>
+                <a class="col-span-2 col-start-3 !no-underline" href="<? the_permalink(); ?>">
               <? endif; ?>
             <? endwhile;
           endif;
