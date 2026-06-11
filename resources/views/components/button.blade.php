@@ -4,7 +4,7 @@
   'class' => '',
 ])
 
-@php($variantClasses = match ($type) {
+@php($variantClasses = match ($variant) {
   'secondary' => 'bg-white text-purple-800',
   default => 'bg-purple-800 text-white',
 })
@@ -14,6 +14,7 @@
     'group grid w-fit cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
     'motion-safe:transition-[grid] motion-safe:duration-200 motion-safe:ease-in-out',
     'motion-safe:hover:grid-cols-[2.75rem_auto_0]',
+    'no-underline',
     $class,
   ])
   {{ $attributes }}
@@ -27,7 +28,7 @@
       $variantClasses,
     ])
   >
-    <img src="{{ Vite::asset('resources/images/arrow_right.svg') }}" alt="Open State Foundation">
+    <span class="iconify size-4.5 mdi--arrow-right"></span>
   </span>
 
   <span
@@ -48,6 +49,6 @@
       $variantClasses,
     ])
   >
-    <img src="{{ Vite::asset('resources/images/arrow_right.svg') }}" alt="Open State Foundation">
+    <span class="iconify size-4.5 mdi--arrow-right"></span>
   </span>
 </a>

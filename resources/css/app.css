@@ -1,6 +1,7 @@
 @import "tailwindcss" theme(static);
 @plugin "@iconify/tailwind4" {
   prefixes: simple-icons;
+  prefixes: mdi;
 }
 @import './fonts.css';
 @import '../css/mobile-menu.css';
@@ -72,6 +73,18 @@ header ul {
 
 .single header {
   @apply bg-white;
+}
+
+.page-template-project-page header {
+  @apply bg-purple-800;
+
+  #menu-menu>li {
+    @apply text-white;
+
+    li {
+      @apply text-purple-800;
+    }
+  }
 }
 
 /* menu hover gradient from white to pink */

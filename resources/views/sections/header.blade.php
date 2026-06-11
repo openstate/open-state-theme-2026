@@ -1,6 +1,6 @@
 <header class="banner grid grid-cols-12 items-center pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
-  <a class="brand col-span-10 xl:col-span-3" href="{{ home_url('/') }}">
-    <img src="{{ Vite::asset('resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
+  <a class="brand col-span-10 xl:col-span-3 !w-[237px]" href="{{ home_url('/') }}">
+    <img src="{{ Vite::asset(in_array('page-template-project-page', get_body_class()) ? 'resources/images/open_state_foundation_white.svg' : 'resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
   </a>
 
   @if (has_nav_menu('primary_navigation'))
@@ -28,6 +28,6 @@
       @endif
     </x-mobile-menu>
 
-    <x-button class="hidden xl:grid" href="/nl/doneren/" text="Steun ons"/>
+    <x-button class="hidden xl:grid"  href="/nl/doneren/" text="Steun ons" variant="{{ in_array('page-template-project-page', get_body_class()) ? 'secondary' : 'primary' }}"/>
   </div>
 </header>
