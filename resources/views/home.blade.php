@@ -34,22 +34,22 @@
               while($the_query->have_posts()) : $the_query->the_post(); ?>
                 <? if($the_query->current_post == 0): ?>
                   <a class="snap-start w-full shrink-0 md:col-span-3 xl:col-span-2 xl:col-start-3 no-underline" href="<? the_permalink(); ?>">
-                    <div class="bg-blue-200 min-h-[186px] h-fit rounded-[8px] p-[16px]">
-                        <p class="text-white font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                    <div class="bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                        <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                     </div>
                   </a>
                 <? elseif($the_query->current_post == 1): ?>
-                  <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 rounded-[8px] overflow-hidden" href="<? the_permalink(); ?>">
+                  <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-[8px] overflow-hidden no-underline" href="<? the_permalink(); ?>">
                     <? the_post_thumbnail('col-7-thumbnail', array('class' => 'img-fluid image-cover')); ?>
-                    <div class="text-white px-[28px] pt-[20px] pb-[28px]">
+                    <div class="px-[28px] pt-[20px] pb-[28px]">
                       <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
                       <p class="mb-0 text-[0.875rem]/[1.375rem]"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
                     </div>
                   </a>
                 <? elseif($the_query->current_post == 2): ?>
                   <a class="snap-start w-full shrink-0 md:col-span-3 xl:col-span-2 self-end no-underline" href="<? the_permalink(); ?>">
-                    <div class="flex bg-off-white-400 min-h-[186px] h-fit rounded-[8px] p-[16px]">
-                        <p class="mb-0 text-white mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                    <div class="flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                        <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                     </div>
                   </a>
                 <? endif; ?>
@@ -72,7 +72,7 @@
       {!! get_search_form(false) !!}
     @endif
 
-    <div class="grid grid-cols-12 gap-x-[16px]">
+    <div class="flex xl:grid xl:grid-cols-12 gap-x-[16px] snap-x snap-mandatory items-stretch overflow-x-scroll px-[24px]">
       @while(have_posts()) @php(the_post())
         @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
       @endwhile
