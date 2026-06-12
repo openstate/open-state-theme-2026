@@ -72,13 +72,13 @@
       {!! get_search_form(false) !!}
     @endif
 
-    <div class="flex xl:grid xl:grid-cols-12 gap-x-[16px] snap-x snap-mandatory items-stretch overflow-x-scroll px-[24px]">
+    <div class="flex xl:grid xl:grid-cols-12 gap-x-[16px] snap-x snap-mandatory items-stretch overflow-x-scroll max-xl:px-[24px]">
       @while(have_posts()) @php(the_post())
         @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
       @endwhile
     </div>
 
-    {!! get_the_posts_navigation() !!}
+    <x-button class="mt-[24px] ml-auto" href="/nl/nieuwsarchief/" text="Nieuwsarchief" />
   </div>
 
 @endsection
