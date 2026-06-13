@@ -11,8 +11,8 @@
         <div class="col-span-12 xl:col-span-6 xl:col-start-7 mt-auto">
           <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label
           <div class="mc-field-group mc-first-group">
-            <input type="email" class="bg-white w-[244px] rounded-[8px] p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL">
-            <x-button-small variant="secondary" type="submit" />
+            <input type="email" class="align-top bg-white w-[244px] rounded-[8px] p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL">
+            <x-button-small variant="secondary" type="submit" class="align-top" />
             <div id="mce-responses" class="clear mt-[8px]">
               <div class="response text-blue-200" id="mce-error-response" style="display:none"></div>
               <div class="response text-pink" id="mce-success-response" style="display:none"></div>
