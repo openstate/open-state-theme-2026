@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
   <?php // Hero: Tagline and uitgelicht ?>
   <div class="bg-off-white-50 pt-[52px] md:pt-[84px] pb-[100px]">
     <div class="mx-auto text-center max-w-[336px] md:max-w-[560px] xl:max-w-[640px]">
@@ -62,7 +61,7 @@
   </div>
 
   <?php // Nieuws ?>
-  <div class="px-[16px] md:px-[24px] mb-[40px] md:mb-[64px]">
+  <div class="px-[16px] md:px-[24px] mb-[64px] md:mb-[100px] xl:mb-[120px]">
     <h2 class="mb-[24px] md:mb-[32px]">Nieuws</h2>
     @if (! have_posts())
       <x-alert type="warning">
@@ -81,6 +80,7 @@
     <x-button class="mt-[24px] ml-auto" href="/nl/nieuwsarchief/" text="Nieuwsarchief" />
   </div>
 
+  @include('partials.newsletter')
 @endsection
 
 @section('sidebar')

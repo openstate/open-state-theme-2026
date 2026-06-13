@@ -62,7 +62,11 @@
   }
 
   a {
-    text-decoration-line: underline;
+    @apply underline transition;
+
+    &:hover {
+        @apply text-pink no-underline transition;
+    }
   }
 
   ul, ol {
