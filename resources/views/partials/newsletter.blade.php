@@ -30,19 +30,34 @@
 </div>
 <script src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script>
-  var $mcj = jQuery.noConflict(true);
-  (function($) {
-    window.fnames = new Array();
-    window.ftypes = new Array();
-    fnames[0]='EMAIL';
-    ftypes[0]='email';
-    fnames[1]='NAME';
-    ftypes[1]='text';
-    if ($("html").attr("lang") == "nl") {
-      $mcj.extend($mcj.validator.messages, {
-        required: "Dit is een verplicht veld.",
-        email: "Dit is een ongeldig e-mailadres.",
-      });
-    }
-  }(jQuery));
+addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('mc-embedded-subscribe-form');
+  const emailInput = document.getElementById('mce-EMAIL');
+  const errorResponse = document.getElementById('mce-error-response');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      errorResponse.style.display = 'none';
+
+      // Validate email is not empty
+      if (!email) {
+        e.preventDefault();
+        errorResponse.textContent = 'Dit is een verplicht veld.';
+        errorResponse.style.display = 'block';
+        return;
+      }
+
+      // Validate email format
+      if (!emailRegex.test(email)) {
+        e.preventDefault();
+        errorResponse.textContent = 'Dit is een ongeldig e-mailadres.';
+        errorResponse.style.display = 'block';
+        return;
+      }
+    });
+  }
+});
 </script>
