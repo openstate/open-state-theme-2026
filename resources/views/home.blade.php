@@ -77,9 +77,19 @@
       @endwhile
     </div>
 
-    <x-button class="mt-[24px] ml-auto" href="/nl/nieuwsarchief/" text="Nieuwsarchief" />
+    <x-button class="mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/nl/nieuwsarchief/" text="Nieuwsarchief" />
   </div>
 
+  <?php // Doneer ?>
+  <div class="md:grid md:grid-cols-12 bg-cover bg-center bg-no-repeat h-[574px] md:h-[608px] xl:h-[664px] px-[16px] md:px-[24px]" style="background-image: url('{{ Vite::asset('resources/images/pixel_stretch.webp')}}')">
+    <div class="md:col-span-8 md:col-start-3 relative z-10 flex flex-col items-center">
+      <h2 class="mt-[48px] md:mt-[80px] mb-[16px] md:mb-[24px] xl:mt-[120px] text-[28px]/[32px] md:text-[44px]/[48px] xl:text-[52px]/[56px] tracking-[-0.2px] tracking-[-0.6px] xl:tracking-[-0.8px]">Ja, ik wil een sterke democratie!</h2>
+      <p class="mb-[40px]">Wij zetten ons in voor een sterke democratie door transparantie. Dit kunnen we niet zonder jouw hulp.</p>
+      <x-button href="/nl/doneren/" text="Doneer" />
+    </div>
+  </div>
+
+  <?php // Nieuwsbrief ?>
   @include('partials.newsletter')
 @endsection
 
