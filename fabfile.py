@@ -36,6 +36,7 @@ def deploy_and_compile(c):
                 NODE_CONTAINER
             )
         )
+    c.sudo('docker exec %s npm install' % (NODE_CONTAINER))
     c.sudo('docker exec %s npm run build' % (NODE_CONTAINER))
 
 
