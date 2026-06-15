@@ -7,20 +7,11 @@
 
       @include('partials.entry-meta')
 
-      {!! the_post_thumbnail('full', array('class' => 'img-fluid rounded-lg mt-[20px]')) !!}
+      {!! the_post_thumbnail('full', array('class' => 'rounded-lg mt-[20px]')) !!}
     </header>
 
-    <div class="e-content mt-[66px]">
+    <div class="mt-[66px]">
       @php(the_content())
     </div>
-
-    @if ($pagination())
-      <footer>
-        <nav class="page-nav" aria-label="Page">
-          {!! $pagination !!}
-        </nav>
-      </footer>
-    @endif
-
   </div>
 </article>

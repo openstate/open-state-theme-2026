@@ -39,7 +39,7 @@
                   </a>
                 <? elseif($the_query->current_post == 1): ?>
                   <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-[8px] overflow-hidden no-underline" href="<? the_permalink(); ?>">
-                    <? the_post_thumbnail('col-7-thumbnail', array('class' => 'img-fluid image-cover')); ?>
+                    <? the_post_thumbnail('col-7-thumbnail', array('class' => '')); ?>
                     <div class="px-[28px] pt-[20px] pb-[28px]">
                       <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
                       <p class="mb-0 text-[0.875rem]/[1.375rem]"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
