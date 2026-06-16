@@ -1,3 +1,5 @@
+<?php // Page/pagina ?>
+
 @php(the_content())
 
 @if ($pagination())

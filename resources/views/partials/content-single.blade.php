@@ -1,3 +1,5 @@
+<?php // Post/nieuwsbericht ?>
+
 <article class="md:grid md:grid-cols-12 xl:grid-cols-12 px-[16px] pt-[146px] pb-[100px] xl:pb-[160px]" @php(post_class('h-entry'))>
   <div class="md:col-span-8 md:col-start-3 xl:col-span-6 xl:col-start-4">
     <header>
