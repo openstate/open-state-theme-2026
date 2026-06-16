@@ -34,7 +34,7 @@
                 <? if($the_query->current_post == 0): ?>
                   <a class="snap-start w-full shrink-0 self-start md:col-span-3 xl:col-span-2 xl:col-start-3 no-underline" href="<? the_permalink(); ?>">
                     <div class="bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-[8px] p-[16px]">
-                        <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                      <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                     </div>
                   </a>
                 <? elseif($the_query->current_post == 1): ?>

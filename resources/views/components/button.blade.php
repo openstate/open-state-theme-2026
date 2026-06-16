@@ -2,6 +2,7 @@
   'variant' => 'primary',
   'text' => '',
   'class' => '',
+  'type' => '',
 ])
 
 @php($variantClasses = match ($variant) {
@@ -9,7 +10,11 @@
   default => 'bg-purple-800 text-white',
 })
 
+@if ($type)
+<button type={{ $type }}
+@else
 <a
+@endif
   @class([
     'group grid w-fit cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
     'motion-safe:transition-[grid] motion-safe:duration-200 motion-safe:ease-in-out',
@@ -51,4 +56,8 @@
   >
     <span class="iconify size-4.5 mdi--arrow-right"></span>
   </span>
+@if ($type)
+</button>
+@else
 </a>
+@endif

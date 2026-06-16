@@ -14,7 +14,7 @@
             <input type="email" class="align-top bg-white w-[244px] rounded-[8px] p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL">
             <x-button-small variant="secondary" type="submit" class="align-top" />
             <div id="mce-responses" class="clear mt-[8px]">
-              <div class="response text-blue-200" id="mce-error-response" style="display:none"></div>
+              <div class="response text-purple-800" id="mce-error-response" style="display:none"></div>
               <div class="response text-pink" id="mce-success-response" style="display:none"></div>
             </div>
           </div>
