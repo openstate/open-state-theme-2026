@@ -3,7 +3,7 @@
 @php
   $secondary_nav_colors = false;
 
-  if (array_intersect(array('page-template-project-page'), get_body_class())) {
+  if (array_intersect(array('page-template-project-page', 'page-template-work-with-us'), get_body_class())) {
     $secondary_nav_colors = true;
   }
 @endphp
@@ -27,7 +27,7 @@
 
   <div class="flex justify-end col-span-2 xl:col-span-3 gap-4">
     <!-- Mobile Menu -->
-    <x-mobile-menu>
+    <x-mobile-menu :secondaryNavColors="$secondary_nav_colors">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',

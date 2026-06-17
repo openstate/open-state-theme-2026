@@ -83,6 +83,7 @@
     @apply bg-white;
   }
 
+  /* Pages with a white nav bar */
   .page-template-projects,
   .page-template-news-archive,
   .single-post {
@@ -91,19 +92,36 @@
     }
   }
 
-  .page-template-project-page header {
-    @apply !bg-purple-800;
+  /* Pages with a pink nav bar */
+  /* NOTE: also add this class to $secondary_nav_colors at the top of sections/header.blade.php */
+  .page-template-project-page,
+  .page-template-work-with-us {
+    header {
+      @apply !bg-purple-800;
 
-    #menu-menu>li {
-      @apply text-white;
+      #menu-menu>li {
+        @apply text-white;
 
-      li {
-        @apply text-purple-800;
+        li {
+          @apply text-purple-800;
+        }
+      }
+
+      .hamburger-line {
+        @apply !bg-white;
+      }
+
+      .mobile-menu-toggle:hover {
+        @apply !bg-purple-600;
+      }
+
+      .mobile-menu {
+        @apply !bg-purple-800 text-white;
       }
     }
   }
 
-  /* menu hover gradient from white to pink */
+  /* Menu hover gradient from white to pink */
   #menu-menu a[href],
   #mobile-menu-list a[href] {
     display: inline-block !important;
@@ -123,6 +141,10 @@
     &:hover::after {
       width: 100%;
     }
+  }
+
+  .current-menu-item a {
+    @apply !text-pink;
   }
 
   h1 {

@@ -32,7 +32,7 @@
   <body @php(body_class(array('text-purple-800')))>
     @php(wp_body_open())
 
-    <div id="app">
+    <div id="app" class="flex flex-col min-h-screen">
       <a class="sr-only focus:not-sr-only" href="#main">
         Ga naar inhoud
       </a>
@@ -50,6 +50,7 @@
       @endif
 
       @include('sections.footer')
+      <div class="flex-1 bg-purple-800"></div>
     </div>
 
     @php(do_action('get_footer'))
