@@ -33,12 +33,12 @@
               while($the_query->have_posts()) : $the_query->the_post(); ?>
                 <? if($the_query->current_post == 0): ?>
                   <a class="snap-start w-full shrink-0 self-start md:col-span-3 xl:col-span-2 xl:col-start-3 no-underline" href="<? the_permalink(); ?>">
-                    <div class="bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                    <div class="bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-lg p-[16px]">
                       <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                     </div>
                   </a>
                 <? elseif($the_query->current_post == 1): ?>
-                  <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-[8px] overflow-hidden no-underline" href="<? the_permalink(); ?>">
+                  <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden no-underline" href="<? the_permalink(); ?>">
                     <? the_post_thumbnail('col-7-thumbnail', array('class' => '')); ?>
                     <div class="px-[28px] pt-[20px] pb-[28px]">
                       <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
@@ -47,7 +47,7 @@
                   </a>
                 <? elseif($the_query->current_post == 2): ?>
                   <a class="snap-start w-full shrink-0 md:col-span-3 xl:col-span-2 self-end no-underline" href="<? the_permalink(); ?>">
-                    <div class="flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-[8px] p-[16px]">
+                    <div class="flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-lg p-[16px]">
                       <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                     </div>
                   </a>
@@ -83,7 +83,7 @@
   <?php // Doneer ?>
   <div class="md:grid md:grid-cols-12 bg-cover bg-center bg-no-repeat h-[574px] md:h-[608px] xl:h-[664px] px-[16px] md:px-[24px]" style="background-image: url('{{ Vite::asset('resources/images/pixel_stretch.webp')}}')">
     <div class="md:col-span-8 md:col-start-3 relative z-10 flex flex-col items-center">
-      <h2 class="mt-[48px] md:mt-[80px] mb-[16px] md:mb-[24px] xl:mt-[120px] text-[28px]/[32px] md:text-[44px]/[48px] xl:text-[52px]/[56px] tracking-[-0.2px] tracking-[-0.6px] xl:tracking-[-0.8px]">Ja, ik wil een sterke democratie!</h2>
+      <h2 class="mt-[48px] md:mt-[80px] mb-[16px] md:mb-[24px] xl:mt-[120px] text-[1.75rem]/[2rem] md:text-[2.75rem]/[3rem] xl:text-[3.25rem]/[3.5rem] tracking-[-0.0125rem] md:tracking-[-0.0375rem] xl:tracking-[-0.05rem]">Ja, ik wil een sterke democratie!</h2>
       <p class="mb-[40px]">Wij zetten ons in voor een sterke democratie door transparantie. Dit kunnen we niet zonder jouw hulp.</p>
       <x-button href="/nl/doneren/" text="Doneer" />
     </div>

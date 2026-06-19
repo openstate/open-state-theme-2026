@@ -6,14 +6,14 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    <div class="bg-purple-800 text-white md:grid md:grid-cols-12 gap-x-[50px] px-[16px] md:px-[24px] pt-[98px] pt-[110px]">
+    <div class="bg-purple-800 text-white md:grid md:grid-cols-12 gap-x-[50px] px-[16px] md:px-[24px] pt-[98px] md:pt-[110px]">
       <div class="md:col-span-9 md:col-start-4 pb-[80px] xl:pb-[120px]">
         <div class="mb-[16px] md:mb-[24px] xl:mb-[40px]">
           <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
         </div>
         <div class="grid">
-          {!! the_post_thumbnail('full', array('class' => 'md:order-2 rounded-lg max-md:pb-[16px]')) !!}
-          <p class="md:order-1 md:pb-[40px] xl:pb-[64px] mb-[0px]">
+          {!! the_post_thumbnail('full', array('class' => 'md:order-2 rounded-lg')) !!}
+          <p class="md:order-1 md:pb-[40px] xl:pb-[64px] mb-[0px] max-md:mt-[16px]">
             <? echo get_field('project_samenvatting', get_the_id()) ?>
           </p>
         </div>
