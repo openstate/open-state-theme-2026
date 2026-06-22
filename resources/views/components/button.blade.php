@@ -3,6 +3,9 @@
   'text' => '',
   'class' => '',
   'type' => '',
+  'icon' => 'arrow-right',
+  'onclick' => '',
+  'arialabel' => '',
 ])
 
 @php($variantClasses = match ($variant) {
@@ -23,6 +26,12 @@
     $class,
   ])
   {{ $attributes }}
+  @if ($onclick)
+    onclick={{ $onclick }}
+  @endif
+  @if ($arialabel)
+    aria-label={{ $arialabel }}
+  @endif
 >
   <span
     aria-hidden="true"
@@ -33,7 +42,7 @@
       $variantClasses,
     ])
   >
-    <span class="iconify size-4.5 mdi--arrow-right"></span>
+    <span class="iconify size-4.5 mdi--{{ $icon }}"></span>
   </span>
 
   <span
@@ -54,7 +63,7 @@
       $variantClasses,
     ])
   >
-    <span class="iconify size-4.5 mdi--arrow-right"></span>
+    <span class="iconify size-4.5 mdi--{{ $icon }}"></span>
   </span>
 @if ($type)
 </button>

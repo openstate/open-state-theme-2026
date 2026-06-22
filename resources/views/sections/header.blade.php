@@ -3,7 +3,7 @@
 @php
   $secondary_nav_colors = false;
 
-  if (array_intersect(array('page-template-project-page', 'page-template-work-with-us'), get_body_class())) {
+  if (array_intersect(array('page-template-project-page', 'page-template-donate', 'page-template-work-with-us'), get_body_class())) {
     $secondary_nav_colors = true;
   }
 @endphp
@@ -38,6 +38,6 @@
       @endif
     </x-mobile-menu>
 
-    <x-button class="hidden xl:grid"  href="/nl/doneren/" text="Steun ons" variant="{{ $secondary_nav_colors ? 'secondary' : 'primary' }}"/>
+    <x-button class="hidden xl:grid"  href="/nl/doneren/" text="Steun ons" variant="{{ $secondary_nav_colors ? 'secondary' : 'primary' }}" />
   </div>
 </header>

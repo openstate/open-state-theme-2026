@@ -92,9 +92,10 @@
     }
   }
 
-  /* Pages with a pink nav bar */
+  /* Pages with a purple nav bar */
   /* NOTE: also add this class to $secondary_nav_colors at the top of sections/header.blade.php */
   .page-template-project-page,
+  .page-template-donate,
   .page-template-work-with-us {
     header {
       @apply !bg-purple-800;
@@ -193,6 +194,10 @@
     letter-spacing: 0;
   }
 
+  dialog h3 {
+    @apply text-[1.25rem]/[1.5rem] tracking-[-0.005rem] md:text-[2.25rem]/[2.5rem] md:tracking-[-0.0125rem] xl:text-[2.5rem]/[2.75rem] xl:tracking-[-0.025rem] mt-[0px] mb-[26px] md:mb-[28px] xl:mb-[30px];
+  }
+
   .page-template-contact {
     h3 {
       @apply font-mono text-pink font-medium text-[13px]/[18px] mt-[16px];
@@ -211,6 +216,22 @@
       p {
         @apply mb-[32px];
       }
+  }
+
+  .page-template-donate {
+    input,
+    select,
+    textarea {
+      @apply bg-purple-700 w-full rounded-lg p-[12px];
+
+      &::placeholder {
+        @apply text-purple-300;
+      }
+    }
+
+    label {
+      @apply text-pink font-mono text-[0.8125rem]/[1.125rem] font-medium;
+    }
   }
 
   .page-numbers {
