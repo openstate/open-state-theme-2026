@@ -2,6 +2,8 @@
 @plugin "@iconify/tailwind4" {
   prefixes: simple-icons, mdi;
 }
+/* List specific icons here if they aren't explicitly named (only as variable) in the code so they are included in the build  */
+@source inline("mdi--{plus}");
 @import './fonts.css';
 @import '../css/mobile-menu.css';
 @source "../../app/**/*.php";

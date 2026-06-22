@@ -17,7 +17,7 @@
         <div class="order-1 xl:order-2 xl:col-span-6 mb-[48px] xl:mb-0">
           <h1 class="xl:hidden mb-[40px] md:mb-[48px] text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem]">{!! get_the_title() !!}</h1>
           <h2 class="sr-only">Donatieformulier</h2>
-          <form action="/nl/donate/" class="donate-form grid gap-x-[16px] gap-y-[32px]" method="post">
+          <form action="/nl/doneren/" class="donate-form grid gap-x-[16px] gap-y-[32px]" method="post">
             <div>
               <label for="dmm_interval">
                 Donatie
@@ -51,7 +51,7 @@
                 <option value="100">€ 100</option>
               </select>
               <input type="hidden" name="dmm_currency" id="dmm_currency" value="EUR">
-              <input type="text" id="dmm_amount2" name="dmm_amount" placeholder="Vul een bedrag in" class="donate-form-field mt-[8px]" value="10" style="display: none;">
+              <input type="text" id="dmm_amount2" name="dmm_amount" placeholder="Vul een bedrag in" class="donate-form-field mt-[8px]" value="25" style="display: none;">
             </div>
 
             <div>
@@ -86,6 +86,9 @@
 
             <x-button type="submit" variant="secondary" name="dmm_submitted" class="mx-auto donate-form-field donate-form-button" text="Doneer" />
           </form>
+          <div class="hidden">
+            {!! do_shortcode( '[doneren_met_mollie]' ) !!}
+          </div>
         </div>
       </div>
     </div>
