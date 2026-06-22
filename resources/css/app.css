@@ -55,6 +55,7 @@
 @layer base {
   body {
     overflow-wrap: break-word;
+    @apply selection:bg-pink selection:text-white;
   }
 
   p {
@@ -63,12 +64,12 @@
     margin-bottom: 1.5rem;
   }
 
-  a {
-    @apply underline transition;
-
-    &:hover {
-        @apply text-pink no-underline transition;
-    }
+  div > a:not(:has(div, span)),
+  p a:not(:has(div, span)) {
+    @apply text-pink bg-linear-to-r from-current to-current
+      bg-[length:100%_1px] bg-no-repeat bg-right-bottom
+      [background-position:0_100%] transition-[background-size] duration-100
+      hover:bg-[length:0%_1px];
   }
 
   ul, ol {

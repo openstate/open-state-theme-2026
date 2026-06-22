@@ -19,9 +19,7 @@
           <h2 class="sr-only">Donatieformulier</h2>
           <form action="/nl/doneren/" class="donate-form grid gap-x-[16px] gap-y-[32px]" method="post">
             <div>
-              <label for="dmm_interval">
-                Donatie
-              </label>
+              <label for="dmm_interval">Donatie</label>
               <select id="dmm_interval" name="dmm_recurring_interval" class="mt-[8px] font-mono custom-select donate-form-field" onchange="dmm_recurring_methods(this.value);">
                 <option value="one">
                   Eenmalige donatie
@@ -68,12 +66,12 @@
             </div>
 
             <div class="flex gap-x-[16px]">
-              <div>
+              <div class="flex-1">
                 <label for="dmm_name">Naam</label>
                 <input type="text" name="dmm_name" class="mt-[8px] donate-form-field" placeholder="Jouw naam" value="" required>
               </div>
 
-              <div>
+              <div class="flex-1">
                 <label for="dmm_email">E-mailadres</label>
                 <input type="email" name="dmm_email" class="mt-[8px] donate-form-field" placeholder="jouw@emailadres.nl" value="" required>
               </div>
@@ -92,6 +90,45 @@
         </div>
       </div>
     </div>
+
+    <div class="bg-off-white-100 px-[16px] md:px-[24px] pt-[64px] pb-[80px] xl:pt-[84px] xl:pb-[152px]">
+      <h2 class="text-center text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] mt-0 mb-[12px]">Bedrijfsdonateurs</h2>
+      <p class="text-center mb-[48px]">Wil je met jouw bedrijf doneren aan Open State Foundation? <a href='https://openstate.eu/wp-content/uploads/sites/14/2022/09/Open-State-Foundation-Bedrijfsdonateurs-propositie.pdf' target='blank'>Bekijk dan onze propositie</a>. Interesse? Neem <a href="/contact">contact met ons op</a>.</p>
+      <div class="flex flex-col xl:flex-row xl:grid xl:grid-cols-12 gap-[16px] mb-[84px]">
+        <h3 class="sr-only">Niveaus bedrijfsdonaties</h3>
+        <div class="flex flex-col mx-auto order-2 xl:order-1 max-sm:w-full xl:w-full self-start xl:col-span-2 xl:col-start-3 bg-blue-200 text-white min-h-[232px] h-fit rounded-lg p-[24px]">
+          <h4 class="text-[1.5rem]/[1.75rem] mt-0 mb-[8px]">Open <span class="text-blue-100">State</span>-donateurs</h4>
+          <p class="text-[0.875rem]/[1.375rem]">We tonen jouw logo, bedrijfsnaam, beschrijving en link naar je website.</p>
+          <p class="font-serif text-[1.25rem]/[1.75rem] mt-auto mb-0">€1,000 - €5,000 per jaar</p>
+        </div>
+
+        <div class="flex flex-col mx-auto order-1 xl:order-2 max-sm:w-full xl:w-full p-[28px] pt-[24px] h-[396px] xl:col-span-4 bg-purple-700 text-white rounded-lg">
+          <h4 class="text-[2rem]/[2.5rem] tracking-[-0.025rem] mt-0 mb-[4px]">Open <span class="text-pink">World</span>-donateurs</h4>
+          <p class="text-[0.875rem]/[1.375rem]">We tonen groot jouw logo, bedrijfsnaam, beschrijving en link naar je website.</p>
+          <p class="font-serif text-[1.25rem]/[1.75rem] mt-auto mb-0">€5.000+ per jaar <span class="font-sans text-[0.875rem]/[1.25rem]">(niet meer dan 10% van onze continuïteitsreserve)</span></p>
+        </div>
+
+        <div class="flex flex-col mx-auto order-3 max-sm:w-full xl:w-full xl:col-span-2 self-end bg-off-white-400 text-white min-h-[186px] h-fit rounded-lg p-[24px]">
+          <h4 class="text-[1.5rem]/[1.75rem] mt-0 mb-[8px]">Open <span class="text-off-white-200">Street</span>-donateurs</h4>
+          <p class="text-[0.875rem]/[1.375rem]">We tonen jouw bedrijfsnaam en link naar je website.</p>
+          <p class="font-serif text-[1.25rem]/[1.75rem] mt-auto mb-0">€500 - €1,000 per jaar</p>
+        </div>
+      </div>
+
+      <h3>Open Street-donateurs</h3>
+      <div class="grid grid-cols-12">
+        <x-open-street title="Laptop met Linux" image="logo-laptop-met-linux.svg" link="https://laptopmetlinux.nl/">
+          Ga voor vrijheid, veiligheid, betrouwbaarheid en blijheid, kies Open Source hardware!
+        </x-open-street>
+      </div>
+
+      <h3>Steun in natura</h3>
+      <div class="grid grid-cols-12">
+        <x-steun-in-natura title="Open Data Monitor" image="logo-laptop-met-linux.svg" link="https://opendatamonitor.nl/">
+          Monitoring van data.overheid.nl gemaakt door Code Division.
+        </x-steun-in-natura>
+    </div>
+  </div>
   @endwhile
 @endsection
 

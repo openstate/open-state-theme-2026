@@ -6,7 +6,7 @@
           <h2 class='font-serif text-[2.75rem]/[3rem] tracking-[-0.0375rem] mt-0 mb-[12px]'>Blijf op de hoogte</h2>
           <p class='mb-0'>Meld je net als 1600+ andere lezers aan voor onze maandelijkse nieuwsbrief!
           </br>
-          Wat kan je verwachten? Zie onze <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">eerdere nieuwsbrieven.</a></p>
+          Wat kan je verwachten? Zie onze <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">eerdere nieuwsbrieven</a>.</p>
         </div>
         <div class="col-span-12 xl:col-span-6 xl:col-start-7 mt-auto">
           <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label
