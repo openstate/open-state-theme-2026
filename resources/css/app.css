@@ -90,6 +90,16 @@
     @apply bg-white;
   }
 
+  body.error404 {
+    #main {
+      @apply flex flex-col flex-1;
+    }
+
+    #app > div:last-child {
+      @apply !flex-none;
+    }
+  }
+
   /* Pages with a white nav bar */
   .page-template,
   .page-template-default,
@@ -114,6 +124,7 @@
   .page-template-project-page,
   /* About page, use its name otherwise its subpages also change color */
   .over-ons,
+  .error404,
   .page-template-donate,
   .page-template-work-with-us {
     header {
