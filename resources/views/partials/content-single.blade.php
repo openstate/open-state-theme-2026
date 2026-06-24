@@ -7,12 +7,18 @@
         {!! $title !!}
       </h1>
 
-      @include('partials.entry-meta')
+      @if (in_array('single', get_body_class()))
+        @include('partials.entry-meta')
+      @endif
 
       {!! the_post_thumbnail('full', array('class' => 'rounded-lg mt-[20px]')) !!}
     </header>
 
+    @if (has_post_thumbnail())
     <div class="mt-[66px]">
+    @else
+    <div class="mt-[46px]">
+    @endif
       @php(the_content())
     </div>
   </div>

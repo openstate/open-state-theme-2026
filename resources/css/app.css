@@ -87,6 +87,9 @@
   }
 
   /* Pages with a white nav bar */
+  .page-template,
+  .page-template-default,
+  .page-template-template-custom,
   .page-template-projects,
   .page-template-news-archive,
   .single-post {
