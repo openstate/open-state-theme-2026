@@ -64,6 +64,10 @@
     margin-bottom: 1.5rem;
   }
 
+  dialog p {
+    @apply xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625]
+  }
+
   div > a:not(:has(div, span)),
   p a:not(:has(div, span)) {
     @apply text-pink bg-linear-to-r from-current to-current
@@ -101,6 +105,7 @@
   /* Pages with a purple nav bar */
   /* NOTE: also add this class to $secondary_nav_colors at the top of sections/header.blade.php */
   .page-template-project-page,
+  .page-template-about,
   .page-template-donate,
   .page-template-work-with-us {
     header {
@@ -141,7 +146,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(to right, white, var(--color-pink));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-pink));
       transition: width 0.3s ease;
     }
 

@@ -3,7 +3,7 @@
 @php
   $secondary_nav_colors = false;
 
-  if (array_intersect(array('page-template-project-page', 'page-template-donate', 'page-template-work-with-us'), get_body_class())) {
+  if (array_intersect(array('page-template-project-page', 'page-template-about', 'page-template-donate', 'page-template-work-with-us'), get_body_class())) {
     $secondary_nav_colors = true;
   }
 @endphp
