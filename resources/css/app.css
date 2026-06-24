@@ -102,10 +102,18 @@
     }
   }
 
+  /* Pages with a off-white nav bar */
+  .page-template-contact {
+    header {
+      @apply !bg-off-white-50;
+    }
+  }
+
   /* Pages with a purple nav bar */
   /* NOTE: also add this class to $secondary_nav_colors at the top of sections/header.blade.php */
   .page-template-project-page,
-  .page-template-about,
+  /* About page, use its name otherwise its subpages also change color */
+  .over-ons,
   .page-template-donate,
   .page-template-work-with-us {
     header {
