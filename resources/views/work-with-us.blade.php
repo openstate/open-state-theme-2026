@@ -151,7 +151,7 @@
 
     <div class="md:grid md:grid-cols-12 bg-cover bg-center bg-no-repeat h-[574px] md:h-[608px] xl:h-[664px] px-[16px] md:px-[24px]" style="background-image: url('{{ Vite::asset('resources/images/pixel_stretch.webp')}}')">
       <div class="md:col-span-8 md:col-start-3 relative z-10 flex flex-col items-center">
-        <h2 class="text-center w-[288px] md:w-[480px] mt-[48px] md:mt-[80px] mb-[16px] mb-[40px] xl:mt-[120px] text-[1.75rem]/[2rem] md:text-[2.75rem]/[3rem] xl:text-[3.25rem]/[3.5rem] tracking-[-0.0125rem] md:tracking-[-0.0375rem] xl:tracking-[-0.05rem]">Boek een 30-minuten gesprek</h2>
+        <h2 class="text-center w-[250px] md:w-[380px] mt-[48px] md:mt-[80px] mb-[16px] mb-[40px] xl:mt-[120px] text-[1.75rem]/[2rem] md:text-[2.75rem]/[3rem] xl:text-[3.25rem]/[3.5rem] tracking-[-0.0125rem] md:tracking-[-0.0375rem] xl:tracking-[-0.05rem]">Plan een gesprek met ons in</h2>
         <x-button text="Boek" />
       </div>
     </div>
