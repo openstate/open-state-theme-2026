@@ -69,6 +69,7 @@
   }
 
   div > a:not(:has(div, span)),
+  td > a:not(:has(div, span)),
   p a:not(:has(div, span)) {
     @apply text-pink bg-linear-to-r from-current to-current
       bg-[length:100%_1px] bg-no-repeat bg-right-bottom
