@@ -20,6 +20,7 @@
     <div class="mt-[46px]">
     @endif
       @php(the_content())
+      @include('partials.action-boxes')
     </div>
   </div>
 </article>

@@ -77,6 +77,25 @@
       hover:bg-[length:0%_1px];
   }
 
+  /* We need this because our 2019 website used <a> links in the running text of an action box, but now we want to apply this link to its parent card <div>; use relative z-10 for the cases where multiple links are in a card to make those links at least clickable */
+  .action-box {
+    @apply relative;
+
+    a {
+      @apply after:absolute after:inset-0 underline;
+    }
+
+    /* In most cases there is only one <a href> in the text, so do not underline; in some cases there are more links, so underline them for clarity */
+    a:only-child {
+      @apply no-underline;
+    }
+
+    /* Make sure that if there is more than 1 link that these are clickable */
+    a:not(:first-child) {
+      @apply relative z-10;
+    }
+  }
+
   ul, ol {
     @apply list-disc list-outside pl-4 mb-3 space-y-0;
     font-size: 0.875rem;
