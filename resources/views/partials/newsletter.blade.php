@@ -10,7 +10,7 @@
             Wat kan je verwachten? Zie onze <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">eerdere nieuwsbrieven</a>.</p>
           </div>
           <div class="col-span-12 xl:col-span-6 xl:col-start-7 mt-auto">
-            <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label
+            <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label>
             <div class="mc-field-group mc-first-group">
               <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL">
               <x-button-small variant="secondary" type="submit" class="align-top" />

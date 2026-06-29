@@ -54,8 +54,5 @@
       @include('sections.footer')
       <div class="flex-1 bg-purple-800"></div>
     </div>
-
-    @php(do_action('get_footer'))
-    @php(wp_footer())
   </body>
 </html>

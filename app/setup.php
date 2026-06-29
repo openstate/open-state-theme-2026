@@ -161,3 +161,43 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+
+// Since our 2026 website we no longer have an English version of our whole
+// website; This action will still make old posts and project pages with
+// English texts available for those who directly visit the URL (e.g. via 'old'
+// bookmarks and search engines)
+add_action( 'template_redirect', function () {
+    if ( ! function_exists( 'qtranxf_getLanguage' ) || qtranxf_getLanguage() !== 'en' ) {
+        return;
+    }
+
+    global $q_config;
+    $post_id = get_queried_object_id();
+
+    $template        = $post_id ? (string) get_page_template_slug( $post_id ) : '';
+    $is_project_page = ( strpos( $template, 'project-page' ) !== false );
+
+    if ( is_singular( 'post' ) || $is_project_page ) {
+        $blocks = qtranxf_split( get_post_field( 'post_content', $post_id ) );
+        if ( ! empty( trim( $blocks['en'] ?? '' ) ) ) {
+            return; // English content present -> leave accessible
+        }
+        $saved = $q_config['language'];
+        $q_config['language'] = 'nl';
+        $target = get_permalink( $post_id );
+        $q_config['language'] = $saved;
+    } else {
+        $saved = $q_config['language'];
+        $q_config['language'] = 'nl';
+        $target = home_url( '/' );
+        $q_config['language'] = $saved;
+    }
+
+    if ( ! $target ) {
+        return;
+    }
+
+    wp_safe_redirect( $target, 301 );
+    exit;
+} );
