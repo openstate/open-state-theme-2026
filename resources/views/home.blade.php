@@ -96,7 +96,3 @@
   <?php // Nieuwsbrief ?>
   @include('partials.newsletter')
 @endsection
-
-@section('sidebar')
-  @include('sections.sidebar')
-@endsection

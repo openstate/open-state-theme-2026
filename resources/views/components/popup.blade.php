@@ -9,7 +9,7 @@
 
 <dialog
   id={{ $id }}
-  class="mt-[92px] mx-auto rounded-lg text-purple-800 backdrop:bg-black/70" style="width: {{ $width }}"
+  class="mt-[92px] mx-auto rounded-lg text-purple-800 backdrop:bg-black/70 max-h-[calc(100dvh-184px)]" style="width: {{ $width }}"
   onclick="if(event.target===this)this.close()">
   <div class="p-[24px] md:p-[40px] xl:p-[64px] xl:pt-[48px]">
     <div class="flex justify-between">

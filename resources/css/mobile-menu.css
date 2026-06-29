@@ -144,7 +144,7 @@ body:has(.mobile-menu.is-open) {
   }
 
   .mobile-menu-content ul a {
-    padding: 0 0 0.75rem;
+    padding: 0.75rem 0 0;
     font-size: 2.25rem;
     line-height: 2.5rem;
     letter-spacing: -0.025rem;
