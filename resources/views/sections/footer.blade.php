@@ -1,5 +1,5 @@
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
-  <div class="2xl:col-span-12 content-center">
+  <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
     @php(dynamic_sidebar('sidebar-footer'))
 
     <div class="pt-[24px] pb-[120px] flex gap-x-[12px]">

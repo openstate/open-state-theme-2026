@@ -24,7 +24,7 @@
   ?>
 
   <div class="px-[16px] md:px-[24px]">
-    <div class="grid grid-cols-12 gap-y-[16px] mt-[88px] xl:mt-[124px] mb-[64px] md:mb-[84px] xl:mb-[152px]">
+    <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-y-[16px] mt-[88px] xl:mt-[124px] mb-[64px] md:mb-[84px] xl:mb-[152px]">
       <div class="col-span-12 md:col-span-6">
         <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
       </div>
@@ -55,7 +55,7 @@
     <? $completed_projects = false ?>
     <h2 class="sr-only">Actieve projecten</h2>
 
-    <div class="grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
+    <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
       <!--div id="no-results" class="col-12 col-sm-6 col-md-4 offset-md-4 offset-sm-6">
         Er zijn geen projecten gevonden. Verwijder één of meerdere filters/zoektermen of <a href='#' onclick='FWP.reset(); event.preventDefault();'>wis alle filters</a>.
       </div--!>
@@ -87,9 +87,9 @@
           @if (get_field('project_afgerond', get_the_id()) == true && $completed_projects == false)
             <? $completed_projects = true ?>
             </div>
-            <hr class="border-purple-800/10">
-            <h2 class="text-[1.625rem]/[1.875rem] md:text-[1.75rem]/[2.125rem] xl:text-[2.125rem]/[2.625rem] mb-[32px] md:mb-[40px] xl:mb-[48px]">Afgeronde projecten</h2>
-            <div class="grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
+            <hr class="mx-auto w-full max-w-[1920px] border-purple-800/10">
+            <h2 class="mx-auto w-full max-w-[1920px] text-[1.625rem]/[1.875rem] md:text-[1.75rem]/[2.125rem] xl:text-[2.125rem]/[2.625rem] mb-[32px] md:mb-[40px] xl:mb-[48px]">Afgeronde projecten</h2>
+            <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
           @endif
 
           <div class="col-span-12 {{ $cols }} {{ $cols_xl }}">
