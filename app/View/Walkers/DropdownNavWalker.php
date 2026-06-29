@@ -92,7 +92,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
             } else {
                 $output .= '<li class="relative">';
 
-                $linkClasses = 'block px-1 pb-[6px] text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded '
+                $linkClasses = 'block px-1 pb-[7px] text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded '
                     . ($isActive ? 'text-pink' : 'text-gray-700 hover:text-blue-600');
 
                 $output .= sprintf(
