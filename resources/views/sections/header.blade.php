@@ -6,6 +6,10 @@
   if (array_intersect(array('page-template-project-page', 'over-ons', 'error404', 'page-template-donate', 'page-template-work-with-us'), get_body_class())) {
     $secondary_nav_colors = true;
   }
+
+  global $q_config;
+  $qtx_lang = $q_config['language'];
+  $q_config['language'] = 'nl';
 @endphp
 
 <header class="banner pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
@@ -43,3 +47,5 @@
     </div>
   </div>
 </header>
+
+<? $q_config['language'] = $qtx_lang; // restore so the page body keeps its own language ?>
