@@ -8,26 +8,35 @@ namespace App;
 
 // Retrieve ACF action box fields
 function get_action_box_data($data) {
-    $data['action_box_vraagteken'] = get_field('action_box_vraagteken');
-    $data['action_box_download'] = get_field('action_box_download');
+  $data['action_box_vraagteken'] = get_field('action_box_vraagteken');
+  $data['action_box_download'] = get_field('action_box_download');
 
-    return $data;
+  return $data;
+}
+
+// Retrieve ACF project fields
+function get_project_data($data) {
+  $data['project_afgerond'] = get_field('project_afgerond');
+  $project_websites = get_field('project_websites');
+
+  if (is_array($project_websites)) {
+    $data['project_url'] = $project_websites[0]['project_url'];
+  }
+
+  return $data;
 }
 
 add_filter('sage/template/single/data', function ($data) {
   return get_action_box_data($data);
 });
 
-add_filter('sage/template/page/data', function ($data) {
-  return get_action_box_data($data);
-});
-
-add_filter('sage/template/project-page/data', function ($data) {
-  return get_action_box_data($data);
-});
-
 add_filter('sage/template/template-custom/data', function ($data) {
   return get_action_box_data($data);
+});
+
+add_filter('sage/template/page/data', function ($data) {
+  $data = get_action_box_data($data);
+  return get_project_data($data);
 });
 
 // Custom Contact Form 7 tag to include our button component
