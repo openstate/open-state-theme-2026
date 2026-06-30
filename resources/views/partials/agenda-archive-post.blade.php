@@ -4,9 +4,9 @@
     {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover w-full md:h-full max-h-[280px]')) !!}
 
     <div class="flex flex-col pt-[16px] px-[20px] pb-[24px] md:pt-[20px] md:px-[24px] md:pb-[24px] group-hover:bg-purple-700 group-hover:text-pink transition-colors">
-      <h2 class="mt-0 text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">
+      <h3 class="mt-0 text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">
         {!! get_the_title() !!}
-      </h2>
+      </h3>
 
       <div class="flex mt-auto">
         <div class="flex flex-col">

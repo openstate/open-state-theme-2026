@@ -8,7 +8,6 @@
   <div class="text-center mt-[100px] xl:mt-[120px] mb-[148px] xl:mb-[168px]">
     <h1 class="text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem]">{!! get_the_title() !!}</h1>
   </div>
-{{ $agenda_tijdstip }}
 
   <?
     wp_reset_query();
@@ -54,9 +53,31 @@
 
   <div class="px-[16px]">
   @if ($the_query->have_posts())
+    @php $new_separator_shown = false; @endphp
+    @php $old_separator_shown = false; @endphp
     @while ($the_query->have_posts())
       <? $the_query->the_post() ?>
-        {!! $agenda_inschrijfformulier_url !!}
+        @php
+          $tijdstip = get_field('agenda_tijdstip', get_the_id());
+          $tijdstip_ts = $tijdstip ? strtotime($tijdstip) : false;
+          $is_past = $tijdstip_ts && $tijdstip_ts < current_time('timestamp');
+        @endphp
+
+        @if (!$is_past && !$new_separator_shown)
+          <div class="sr-only md:w-[688px] mx-auto">
+            <h2>Aankomende evenementen</h2>
+          </div>
+          @php $new_separator_shown = true; @endphp
+        @endif
+
+        @if ($is_past && !$old_separator_shown)
+          <div class="md:w-[688px] mx-auto">
+            <hr class="mx-auto mt-[40px] w-full max-w-[1920px] border-purple-800/10">
+            <h2>Oude evenementen</h2>
+          </div>
+          @php $old_separator_shown = true; @endphp
+        @endif
+
         @include('partials.agenda-archive-post')
     @endwhile
   @endif
