@@ -7,19 +7,28 @@
 @section('content')
   <?
     wp_reset_query();
+
+    // Get the selected parents from query parameter, default to all parents
+    $selected_parents = isset($_GET['parents']) ? array_map('intval', (array)$_GET['parents']) : array();
+    $parent_ids = Array(9113, 9116, 9118, 9120, 9122);
+
+    // If specific parents are selected, filter by those, otherwise show all
+    $filter_parents = !empty($selected_parents) ? array_intersect($selected_parents, $parent_ids) : $parent_ids;
+    if (empty($filter_parents)) {
+      $filter_parents = $parent_ids;
+    }
+
     $args = array(
       'numberposts' => -1,
       'post_type' => 'page',
       'posts_per_page' => -1,
-      'post_parent__in' => Array(9113, 9116, 9118, 9120, 9122),
+      'post_parent__in' => $filter_parents,
       'meta_key' => 'project_afgerond',
       'orderby' => array(
         'meta_value' => 'asc',
         'modified' => 'desc'
       )
     );
-    $total_count_query = new WP_Query($args);
-    $args['facetwp'] = true;
     $the_query = new WP_Query($args);
   ?>
 
@@ -33,33 +42,46 @@
       </div>
     </div>
 
-    <!-- div class="bg-grijsblauw projects-filter d-inline-block">
-      <span class="text-white"><b>Filter</b></span>
-      <i class="fas fa-filter text-white float-right filter-icon"></i>
-      <div id="remove-filters">
-        <a class="float-right" href="#" onclick="FWP.reset(); event.preventDefault();">
-          <? _e("
-            <!--:nl-->
-              filters wissen
-            <!--:--><!--:en-->
-              remove filters
-            <!--:-->
-          ") ?>
-        </a>
-      </div>
-      <? echo facetwp_display('facet', 'projects_search'); ?>
-      <? echo facetwp_display('facet', 'projects'); ?>
-    </div --!>
+    {{-- Parent project filter with checkboxes --}}
+    <div class="mx-auto w-full max-w-[1920px] mb-[44px]">
+      <form method="get" class="space-y-[12px]">
+        <p class="block font-mono font-medium text-pink text-[0.8125rem]/[1.125rem]">Filter op dossier:</p>
+        <div class="flex flex-wrap gap-[8px]">
+          @php
+            $parents = get_pages(['include' => Array(9113, 9116, 9118, 9120, 9122)]);
+            foreach ($parents as $parent) {
+              $is_checked = in_array($parent->ID, $selected_parents);
+              $checkbox_id = 'parent-' . $parent->ID;
+          @endphp
+              <label class="bg-off-white-100 font-mono text-[0.875rem]/[1.375rem] text-off-white-400 flex items-center gap-[8px] px-[12px] py-[8px] rounded-lg cursor-pointer hover:!bg-purple-400 hover:text-white has-checked:bg-purple-600 has-checked:text-white transition-colors">
+                <input
+                  type="checkbox"
+                  id="{{ $checkbox_id }}"
+                  name="parents[]"
+                  value="{{ $parent->ID }}"
+                  {{ $is_checked ? 'checked' : '' }}
+                  class="sr-only"
+                  onchange="this.form.submit()"
+                >
+                <span>{{ $parent->post_title }}</span>
+              </label>
+          @php
+            }
+          @endphp
+          @if (!empty($selected_parents))
+            <a href="<?php echo remove_query_arg('parents'); ?>" class="self-center font-mono text-[0.875rem]/[1.375rem]">
+              Filters wissen
+            </a>
+          @endif
+        </div>
+      </form>
+    </div>
 
     {{-- show completed projects beneath the 'completed projects' line --}}
     <? $completed_projects = false ?>
     <h2 class="sr-only">Actieve projecten</h2>
 
     <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
-      <!--div id="no-results" class="col-12 col-sm-6 col-md-4 offset-md-4 offset-sm-6">
-        Er zijn geen projecten gevonden. Verwijder één of meerdere filters/zoektermen of <a href='#' onclick='FWP.reset(); event.preventDefault();'>wis alle filters</a>.
-      </div--!>
-
       @if ($the_query->have_posts())
         <? $i = 0; ?>
         @while ($the_query->have_posts())
@@ -103,3 +125,16 @@
     </div>
   </div>
 @endsection
+
+
+<script>
+document.getElementById('parent-filter').addEventListener('change', function() {
+  const parentId = this.value;
+  if (parentId) {
+    window.location.href = get_page_link(parentId);
+  } else {
+    // Reset to show all
+    window.location.href = window.location.pathname;
+  }
+});
+</script>
