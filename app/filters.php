@@ -14,6 +14,16 @@ function get_action_box_data($data) {
   return $data;
 }
 
+// Retrieve ACF agenda fields
+function get_agenda_data($data) {
+  $data['agenda_evenement'] = get_field('agenda_evenement');
+  $data['agenda_tijdstip'] = get_field('agenda_tijdstip');
+  $data['agenda_locatie'] = get_field('agenda_locatie');
+  $data['agenda_inschrijfformulier_url'] = get_field('agenda_inschrijfformulier_url');
+
+  return $data;
+}
+
 // Retrieve ACF project fields
 function get_project_data($data) {
   $data['project_afgerond'] = get_field('project_afgerond');
@@ -27,7 +37,8 @@ function get_project_data($data) {
 }
 
 add_filter('sage/template/single/data', function ($data) {
-  return get_action_box_data($data);
+  $data = get_action_box_data($data);
+  return get_agenda_data($data);
 });
 
 add_filter('sage/template/template-custom/data', function ($data) {

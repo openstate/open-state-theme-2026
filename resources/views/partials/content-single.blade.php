@@ -21,6 +21,27 @@
       <div class="mt-[46px]">
       @endif
         @php(the_content())
+
+        @if ($agenda_evenement)
+        <div class="flex flex-col">
+          <?
+            $unixtimestamp = strtotime($agenda_tijdstip);
+            $formatted_date = date_i18n('l j F Y, H:i', $unixtimestamp);
+          ?>
+          <time class="font-medium mb-[8px] flex" datetime="{{ str_replace(' ', 'T', $agenda_tijdstip) }}">
+            <span class="my-auto mr-[10px] iconify size-[16px] mdi--clock"></span>{{ $formatted_date }}
+          </time>
+
+          <div class="flex mb-[8px]">
+            <span class="my-auto mr-[10px] iconify size-[16px] mdi--location"></span><p class="mb-0 font-medium"><? echo $agenda_locatie ?></p>
+          </div>
+
+          @if ($agenda_inschrijfformulier_url)
+          <x-button text="Inschrijven" href="{{ $agenda_inschrijfformulier_url }}" target="_blank" />
+          @endif
+        </div>
+        @endif
+
         @include('partials.action-boxes')
       </div>
     </div>
