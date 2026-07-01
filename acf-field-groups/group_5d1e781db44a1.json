@@ -1,0 +1,367 @@
+{
+    "key": "group_5d1e781db44a1",
+    "title": "Project",
+    "fields": [
+        {
+            "key": "field_5d37293c2fdf0",
+            "label": "Project samenvatting",
+            "name": "project_samenvatting",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Zorg dat de tekst maximaal 3 regels (circa 75 karakters) inneemt als je de samenvatting op de projectenoverzicht-pagina op een groot scherm bekijkt.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d2358b507269",
+            "label": "Project websites",
+            "name": "project_websites",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Nieuwe rij",
+            "sub_fields": [
+                {
+                    "key": "field_5d2359700726b",
+                    "label": "Plaatje",
+                    "name": "project_plaatje",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Screenshot van de website (deze moet 1200x750 pixels zijn)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "col-4-thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_5d2358b507269"
+                },
+                {
+                    "key": "field_5d2359240726a",
+                    "label": "URL",
+                    "name": "project_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Vul de URL van een van de websites die bij dit project horen in.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_5d2358b507269"
+                },
+                {
+                    "key": "field_5d2c91dd069c3",
+                    "label": "Titel",
+                    "name": "project_titel",
+                    "aria-label": "",
+                    "type": "qtranslate_text",
+                    "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_5d2358b507269"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5d3b0dac7b971",
+            "label": "Project status lobby score",
+            "name": "project_status_lobby_score",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b00807b96f",
+            "label": "Project status lobby tekst",
+            "name": "project_status_lobby_tekst",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Hoe staat het met de lobby? Wat is er gedaan (met wie?) of staat er te gebeuren op dit vlak?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b0f077b974",
+            "label": "Project status data beschikbaar score",
+            "name": "project_status_data_beschikbaar_score",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b0efd7b973",
+            "label": "Project status data beschikbaar tekst",
+            "name": "project_status_data_beschikbaar_tekst",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Is er data beschikbaar, zo ja welke en hoeveel?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b14412b830",
+            "label": "Project status ontsluiten en hulpmiddelen score",
+            "name": "project_status_ontsluiten_en_hulpmiddelen_score",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b143f2b82f",
+            "label": "Project status ontsluiten en hulpmiddelen tekst",
+            "name": "project_status_ontsluiten_en_hulpmiddelen_tekst",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Op welke manier(en) wordt de data ontsloten? Zijn er andere hulpmiddelen\/tools beschikbaar om de data te gebruiken?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b145e5ed4f",
+            "label": "Project status duurzame ontsluiting score",
+            "name": "project_status_duurzame_ontsluiting_score",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b146e5ed50",
+            "label": "Project status duurzame ontsluiting tekst",
+            "name": "project_status_duurzame_ontsluiting_tekst",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Wordt de data regelmatig bijgewerkt? Hoe vaak? Gebeurt dit op een professionele manier door een betrouwbare partij?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b02b57b970",
+            "label": "Project status hergebruik score",
+            "name": "project_status_hergebruik_score",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3af4257b96e",
+            "label": "Project status hergebruik tekst",
+            "name": "project_status_hergebruik_tekst",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Beschrijf de status van het hergebruik. Weten hergebruikers de data te vinden, zijn er nog drempels die het hergebruik tegenhouden?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5de695d75e697",
+            "label": "Project afgerond",
+            "name": "project_afgerond",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Vink dit veld aan om aan te geven dat het project afgerond is. Het project komt dan onder de 'afgeronde projecten' lijn te staan op de projectoverzichtspagina. Dit gebruiken we om projecten die minder relevant zijn of waarvan de data al lang niet meer bijgewerkt is onderaan het overzicht te zetten.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "project-page.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1782912137
+}

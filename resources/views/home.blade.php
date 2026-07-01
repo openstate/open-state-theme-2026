@@ -63,7 +63,7 @@
   </div>
 
   <?php // Nieuws ?>
-  <div class="px-[16px] md:px-[24px] mb-[64px] md:mb-[100px] xl:mb-[120px]">
+  <div class="px-[16px] md:px-[24px] mb-[96px] xl:mb-[128px]">
     <div class="mx-auto w-full max-w-[1920px]">
       <h2 class="mb-[24px] md:mb-[32px]">Nieuws</h2>
       @if (! have_posts())
@@ -80,7 +80,63 @@
         @endwhile
       </div>
 
-      <x-button class="mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/nl/nieuwsarchief/" text="Nieuwsarchief" />
+      <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/nieuwsarchief/" text="Nieuwsarchief" />
+    </div>
+  </div>
+
+  <?php // Onze projecten ?>
+  <div class="px-[16px] md:px-[24px] mb-[64px] md:mb-[80px] xl:mb-[128px]">
+    <div class="mx-auto w-full max-w-[1920px]">
+      <h2 class="mb-[24px] md:mb-[32px]">Onze projecten</h2>
+
+      <?
+        wp_reset_query();
+        $args = array(
+          'post_type' => 'page',
+          'posts_per_page' => 4,
+          'meta_query' => array(
+            array(
+              'key' => 'toon_in_onze_projecten',
+              'compare' => '=',
+              'value' => '1'
+            )
+          ),
+          'meta_key' => 'toon_in_onze_projecten_volgorde',
+          'orderby' => 'meta_value',
+          'order' => 'asc'
+        );
+        $the_query = new WP_Query($args);
+      ?>
+      @if ($the_query->have_posts())
+        <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[56px] xl:gap-y-[64px] mb-[40px] md:mb-[56px] xl:mb-[24px]">
+          <? $i = 0; ?>
+          @while ($the_query->have_posts())
+            <?
+              # On each row the cards have different col-spans so use modulo 2
+              # for md+
+              $mod_md = $i % 2;
+
+              # On md the col-span order also alters every row
+              $cols = match($mod_md) {
+                // md: modulo 2
+                0 => $row % 2 === 0 ? 'md:col-span-4' : 'md:col-span-8',
+                1 => $row % 2 === 1 ? 'md:col-span-8' : 'md:col-span-4',
+              };
+            ?>
+
+            <? $the_query->the_post() ?>
+
+            <div class="col-span-12 {{ $cols }}">
+              @include('partials.content-projects')
+            </div>
+            <? $i++; ?>
+            <? $row = ceil($i / 2); ?>
+          @endwhile
+        </div>
+        <x-button class="mx-auto xl:mx-0 xl:ml-auto" href="/projecten-tools-data/" text="Bekijk alle projecten" />
+      @endif
+      <? wp_reset_query() ?>
+
     </div>
   </div>
 
@@ -89,7 +145,7 @@
     <div class="md:col-span-8 md:col-start-3 relative z-10 flex flex-col items-center">
       <h2 class="mt-[48px] md:mt-[80px] mb-[16px] md:mb-[24px] xl:mt-[120px] text-[1.75rem]/[2rem] md:text-[2.75rem]/[3rem] xl:text-[3.25rem]/[3.5rem] tracking-[-0.0125rem] md:tracking-[-0.0375rem] xl:tracking-[-0.05rem]">Ja, ik wil een sterke democratie!</h2>
       <p class="mb-[40px]">Wij zetten ons in voor een sterke democratie door transparantie. Dit kunnen we niet zonder jouw hulp.</p>
-      <x-button href="/nl/doneren/" text="Doneer" />
+      <x-button href="/doneren/" text="Doneer" />
     </div>
   </div>
 

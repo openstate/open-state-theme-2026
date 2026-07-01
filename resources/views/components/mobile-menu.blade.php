@@ -27,7 +27,7 @@
       <div class="mobile-menu-content">
         {{ $slot }}
         <div class="flex justify-center">
-          <x-button class="!grid" href="/nl/doneren/" text="Steun ons" variant="{{ $secondaryNavColors ? 'secondary' : 'primary' }}"/>
+          <x-button class="!grid" href="/doneren/" text="Steun ons" variant="{{ $secondaryNavColors ? 'secondary' : 'primary' }}"/>
         </div>
       </div>
     </div>

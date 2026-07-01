@@ -1,0 +1,77 @@
+{
+    "key": "group_5d1d3359b7232",
+    "title": "Action boxes",
+    "fields": [
+        {
+            "key": "field_5d1d33794b23c",
+            "label": "Vraagteken",
+            "name": "action_box_vraagteken",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tekst voor in de 'vraagteken action box' die onderaan de tekst komt te staan.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d1d3cd002355",
+            "label": "Download",
+            "name": "action_box_download",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tekst voor in de 'download action box' die onderaan de tekst komt te staan.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1782912137
+}

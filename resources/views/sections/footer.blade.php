@@ -20,9 +20,9 @@
     </a>
 
     <div class="flex justify-end pb-[24px] gap-x-[24px]">
-      <div><a class="text-white" href="/nl/algemene-voorwaarden/">Algemene voorwaarden</a></div>
-      <div><a class="text-white" href="/nl/privacy/">Privacy policy</a></div>
-      <div><a class="text-white" href="/nl/responsible-disclosure">Responsible disclosure</a></div>
+      <div><a class="text-white" href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
+      <div><a class="text-white" href="/privacy/">Privacy policy</a></div>
+      <div><a class="text-white" href="/responsible-disclosure">Responsible disclosure</a></div>
     </div>
   </div>
 </footer>

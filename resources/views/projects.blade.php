@@ -79,6 +79,7 @@
 
     {{-- show completed projects beneath the 'completed projects' line --}}
     <? $completed_projects = false ?>
+
     <h2 class="sr-only">Actieve projecten</h2>
 
     <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">

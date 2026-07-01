@@ -1,0 +1,186 @@
+{
+    "key": "group_5d1a347216d2f",
+    "title": "Agenda",
+    "fields": [
+        {
+            "key": "field_5d1a34f9f10c9",
+            "label": "Evenement?",
+            "name": "agenda_evenement",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Is dit een post over een aankondiging van een evenement?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d1a3481f10c8",
+            "label": "Tijdstip",
+            "name": "agenda_tijdstip",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "Begin tijdstip van het evenement",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1,
+            "default_to_current_date": 0
+        },
+        {
+            "key": "field_5d1a39dfd47dd",
+            "label": "Locatie",
+            "name": "agenda_locatie",
+            "aria-label": "",
+            "type": "qtranslate_text",
+            "instructions": "Locatie van het evenement, bijvoorbeeld: Auditorium Ministerie van Binnenlandse Zaken, Turfmarkt 147, Den Haag",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d1a3b7bf8f22",
+            "label": "Inschrijfformulier URL",
+            "name": "agenda_inschrijfformulier_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Als je je kan aanmelden voor een evenement, plaats dan hier de link naar bijvoorbeeld Eventbrite of Google Forms.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d1a3f4de4e1d",
+            "label": "Uitgelicht",
+            "name": "agenda_uitgelicht",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toon dit evenement op de frontpage in de Agenda box.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d1a9c15f1fea",
+            "label": "Uitgelicht volgorde",
+            "name": "agenda_uitgelicht_volgorde",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 5,
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1782912137
+}

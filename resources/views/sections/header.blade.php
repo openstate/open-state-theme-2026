@@ -43,7 +43,7 @@
         @endif
       </x-mobile-menu>
 
-      <x-button class="hidden xl:grid"  href="/nl/doneren/" text="Steun ons" variant="{{ $secondary_nav_colors ? 'secondary' : 'primary' }}" />
+      <x-button class="hidden xl:grid"  href="/doneren/" text="Steun ons" variant="{{ $secondary_nav_colors ? 'secondary' : 'primary' }}" />
     </div>
   </div>
 </header>
