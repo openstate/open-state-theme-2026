@@ -124,8 +124,6 @@
       <? wp_reset_query() ?>
     </div>
   </div>
-@endsection
-
 
 <script>
 document.getElementById('parent-filter').addEventListener('change', function() {
@@ -138,3 +136,4 @@ document.getElementById('parent-filter').addEventListener('change', function() {
   }
 });
 </script>
+@endsection

@@ -18,7 +18,7 @@
           <div class="order-1 xl:order-2 xl:col-span-6 mb-[48px] xl:mb-0">
             <h1 class="xl:hidden mb-[40px] md:mb-[48px] text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem]">{!! get_the_title() !!}</h1>
             <h2 class="sr-only">Donatieformulier</h2>
-            <form action="/nl/doneren/" class="donate-form grid gap-x-[16px] gap-y-[32px]" method="post">
+            <form action="/doneren/" class="donate-form grid gap-x-[16px] gap-y-[32px]" method="post">
               <div>
                 <label for="dmm_interval">Donatie</label>
                 <select id="dmm_interval" name="dmm_recurring_interval" class="mt-[8px] font-mono custom-select donate-form-field" onchange="dmm_recurring_methods(this.value);">
@@ -134,7 +134,6 @@
     </div>
   </div>
   @endwhile
-@endsection
 
 <script>
   window.onload=function() {
@@ -176,3 +175,4 @@
       }
   }
 </script>
+@endsection

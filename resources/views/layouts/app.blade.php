@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php
-      echo '<meta name="twitter:card" content="summary">', "\r\n  ";
-      if (strpos($_SERVER['REQUEST_URI'], 'civicrm/petition/sign') !== false && isset($_GET['sid']) && $_GET['sid'] == '2') {
-          echo '<meta property="og:image" content="https://openstate.eu/wp-content/uploads/sites/14/2025/03/Petitie-lobbyregister.webp">';
-          echo '<meta property="og:title" content="Petitie: Maak lobby transparant!">' . "\r\n  ";
+      if ((strpos($_SERVER['REQUEST_URI'], 'civicrm/petition/sign') !== false && isset($_GET['sid']) && $_GET['sid'] == '2') || strpos($_SERVER['REQUEST_URI'], 'petitie-maak-lobby-transparant') !== false) {
+          echo '<meta property="og:image" content="https://openstate.eu/wp-content/uploads/sites/14/2025/03/Petitie-lobbyregister.webp">' . "\n";
+          echo '    <meta property="og:title" content="Petitie: Maak lobby transparant!">' . "\n";
       } elseif(!is_front_page()) {
-          echo '<meta property="og:title" content="' . ltrim(wp_title('', false)) . '">' . "\r\n  ";
-          $ogimage = '<meta property="og:image" content="https://openstate.eu/wp-content/themes/open-state-theme/dist/images/logo-open-state-foundation-og.png">';
-          if (isset($post_id)) {
-            $image = get_the_post_thumbnail_url($post_id);
+          echo '<meta property="og:title" content="' . ltrim(wp_title('', false)) . '">' . "\n";
+          $ogimage = '    <meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
+          if (isset($post)) {
+            $image = get_the_post_thumbnail_url($post->ID);
             if ($image) {
-             $ogimage = '<meta property="og:image" content="' . esc_url($image) . '">';
+             $ogimage = '    <meta property="og:image" content="' . esc_url($image) . '">' . "\n";
             }
           }
           echo $ogimage;
       } else {
-          echo '<meta property="og:image" content="https://openstate.eu/wp-content/themes/open-state-theme/dist/images/logo-open-state-foundation-og.png">';
-          echo '<meta property="og:title" content="Open State Foundation">' . "\r\n  ";
+          echo '<meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
+          echo '    <meta property="og:title" content="Open State Foundation - Zonder transparantie geen democratie">' . "\n";
       }
     ?>
+    <meta property="og:site_name" content="Open State Foundation">
 
     @php(do_action('get_header'))
     @php(wp_head())
