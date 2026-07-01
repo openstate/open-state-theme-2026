@@ -67,3 +67,18 @@ add_action('wpcf7_init', function () {
     true
   );
 });
+
+
+// Allow videos and SVG to be uploaded
+add_filter('upload_mimes', function( $existing_mimes=array() ) {
+  // Add webm, mp4, OGG and SVG to the list of mime types;
+  // Some mime types can/must also be set via
+  // My Sites -> Network Admin -> Settings
+  $existing_mimes['webm'] = 'video/webm';
+  $existing_mimes['mp4']  = 'video/mp4';
+  $existing_mimes['ogg']  = 'video/ogg';
+  $existing_mimes['svg']  = 'image/svg+xml';
+
+  // Return an array now including our added mime types
+  return $existing_mimes;
+});
