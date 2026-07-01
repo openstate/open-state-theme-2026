@@ -10,54 +10,84 @@
       </div>
 
       <div class="px-[16px]">
-        <div class="flex md:grid md:grid-cols-12 gap-[16px] px-[24px] snap-x snap-mandatory items-stretch overflow-x-scroll">
-          <?=
-            wp_reset_query();
-            $args = array(
-              'numberposts' => -1,
-              'post_type' => array('post', 'page'),
-              'posts_per_page' => 3,
-              'meta_query' => array(
-                array(
-                  'key' => 'uitgelicht',
-                  'compare' => '=',
-                  'value' => '1'
-                )
-              ),
-              'meta_key' => 'uitgelicht_volgorde',
-              'orderby' => 'meta_value',
-              'order' => 'asc'
-            );
-            $the_query = new WP_Query($args);
+      <?=
+        wp_reset_query();
+        $args = array(
+          'post_type' => array('post', 'page'),
+          'posts_per_page' => 3,
+          'meta_query' => array(
+            array(
+              'key' => 'uitgelicht',
+              'compare' => '=',
+              'value' => '1'
+            )
+          ),
+          'meta_key' => 'uitgelicht_volgorde',
+          'orderby' => 'meta_value',
+          'order' => 'asc'
+        );
+        $the_query = new WP_Query($args);
 
-              if($the_query->have_posts()):
-                while($the_query->have_posts()) : $the_query->the_post(); ?>
-                  <? if($the_query->current_post == 0): ?>
-                    <a class="snap-start w-full shrink-0 self-start md:col-span-3 xl:col-span-2 xl:col-start-3 no-underline" href="<? the_permalink(); ?>">
-                      <div class="bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-lg p-[16px]">
-                        <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
-                      </div>
-                    </a>
-                  <? elseif($the_query->current_post == 1): ?>
-                    <a class="snap-start w-full shrink-0 md:col-span-6 xl:col-span-4 bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden no-underline" href="<? the_permalink(); ?>">
-                      <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover w-full max-h-[280px]')); ?>
-                      <div class="px-[28px] pt-[20px] pb-[28px]">
-                        <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
-                        <p class="mb-0 text-[0.875rem]/[1.375rem]"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
-                      </div>
-                    </a>
-                  <? elseif($the_query->current_post == 2): ?>
-                    <a class="snap-start w-full shrink-0 md:col-span-3 xl:col-span-2 self-end no-underline" href="<? the_permalink(); ?>">
-                      <div class="flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors min-h-[186px] h-fit rounded-lg p-[16px]">
-                        <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
-                      </div>
-                    </a>
-                  <? endif; ?>
-                <? endwhile;
-              endif;
-              wp_reset_query();
-            ?>
+        // Hero: uitgelicht for sm and xl+
+        if($the_query->have_posts()): ?>
+        <div class="flex md:hidden xl:flex xl:justify-center gap-[16px] px-[24px] snap-x snap-mandatory items-stretch overflow-x-scroll">
+          <? while($the_query->have_posts()) : $the_query->the_post(); ?>
+            <? if($the_query->current_post == 0): ?>
+              <a class="group max-md:w-full shrink-0 snap-start self-start" href="<? the_permalink(); ?>">
+                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+                  <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                </div>
+              </a>
+            <? elseif($the_query->current_post == 1): ?>
+              <a class="group max-md:w-full shrink-0 snap-start max-md:size-[360px] xl:size-[452px] bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+                <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[180px] xl:h-[280px]')); ?>
+                <div class="flex flex-col h-[172px] px-[28px] pt-[20px] pb-[28px]">
+                  <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                </div>
+              </a>
+            <? elseif($the_query->current_post == 2): ?>
+              <a class="group max-md:w-full shrink-0 snap-start self-end" href="<? the_permalink(); ?>">
+                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mb-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                  <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                </div>
+              </a>
+            <? endif; ?>
+          <? endwhile; ?>
         </div>
+
+        <?php // Hero: uitgelicht for md ?>
+        <div class="hidden md:grid xl:hidden md:grid-cols-12 gap-[16px] px-[24px]">
+          <div class="md:col-span-4 md:grid md:grid-cols-12 gap-[16px]">
+            <? $post0 = $the_query->posts[0]; ?>
+            <a class="group md:col-span-12" href="<? echo get_permalink($post0); ?>">
+              <div class="flex flex-col md:h-[229.5px] bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+                <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post0); ?></p>
+                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+              </div>
+            </a>
+            <? $post2 = $the_query->posts[2]; ?>
+            <a class="group md:col-span-12" href="<? echo get_permalink($post2); ?>">
+              <div class="flex flex-col md:h-[229.5px] bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+                <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post2); ?></p>
+                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+              </div>
+            </a>
+          </div>
+          <? $post1 = $the_query->posts[1]; ?>
+          <a class="group md:col-span-8 h-[475px] bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden" href="<? echo get_permalink($post1); ?>">
+            <? echo get_the_post_thumbnail($post1, 'col-7-thumbnail', array('class' => 'object-cover md:h-[300px]')); ?>
+            <div class="flex flex-col h-[175px] px-[28px] pt-[20px] pb-[28px]">
+              <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? echo get_the_title($post1); ?></p>
+              <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+            </div>
+          </a>
+        </div>
+        <? endif;
+        wp_reset_query();
+      ?>
       </div>
     </div>
   </div>
