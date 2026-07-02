@@ -46,6 +46,12 @@
   --color-off-white-300: #8F867B;
   --color-off-white-400: #6E675E;
   --color-off-white-500: #59534C;
+
+  /* used for kieswijzers */
+  --color-status-green: #008000;
+  --color-status-orange: #ffa500;
+  --color-status-red: #ff0000;
+  --color-status-grey: #808080;
 }
 
 
@@ -107,13 +113,19 @@
   }
 
   ul, ol {
-    @apply list-disc list-outside pl-4 mb-3 space-y-0;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    @apply list-outside pl-4 mb-3 space-y-0;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
   }
 
   header ul {
-    @apply list-none pl-0 mb-0;
+    @apply list-none pl-0 mb-0 text-[0.875rem]/[1.375rem];
   }
 
   .single header {
