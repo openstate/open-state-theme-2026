@@ -35,22 +35,32 @@
             <? if($the_query->current_post == 0): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-start" href="<? the_permalink(); ?>">
                 <div class="flex flex-col max-md:h-[180px] xl:size-[218px] bg-blue-200 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
-                  <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
+                  @include('partials/hero-badge-white')
+                  <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                   <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
                 </div>
               </a>
             <? elseif($the_query->current_post == 1): ?>
               <a class="group max-md:w-full shrink-0 snap-start max-md:size-[360px] xl:size-[452px] bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
-                <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[180px] xl:h-[280px]')); ?>
+                <div class="relative">
+                  <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[180px] xl:h-[280px]')); ?>
+                  @include('partials/hero-badge-purple')
+                </div>
                 <div class="flex flex-col h-[172px] px-[28px] pt-[20px] pb-[28px]">
                   <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
-                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                  <div class="flex mt-auto">
+                    @include('partials/hero-project-type')
+                    <span class="shrink-0 iconify size-[20px] mdi--arrow-right ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                  </div>
                 </div>
               </a>
             <? elseif($the_query->current_post == 2): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-end" href="<? the_permalink(); ?>">
                 <div class="flex flex-col max-md:h-[180px] xl:size-[218px] flex bg-off-white-400 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
-                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mb-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                  <div class="flex justify-between gap-x-[16px]">
+                    @include('partials/hero-badge-white')
+                    <span class="shrink-0 iconify size-[20px] mdi--arrow-right mb-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                  </div>
                   <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                 </div>
               </a>
@@ -61,29 +71,52 @@
         <?php // Hero: uitgelicht for md ?>
         <div class="hidden md:grid xl:hidden md:grid-cols-12 gap-[16px] px-[24px]">
           <div class="md:col-span-4 md:grid md:grid-cols-12 gap-[16px]">
-            <? $post0 = $the_query->posts[0]; ?>
-            <a class="group md:col-span-12" href="<? echo get_permalink($post0); ?>">
-              <div class="flex flex-col md:h-[229.5px] bg-blue-200 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg p-[16px]">
-                <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post0); ?></p>
+            <?
+            global $post;
+            $post = $the_query->posts[0];
+            setup_postdata($post);
+            ?>
+            <a class="group md:col-span-12" href="<? the_permalink() ?>">
+              <div class="flex flex-col md:h-[229.5px] bg-blue-200 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
+                @include('partials/hero-badge-white')
+                <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                 <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
               </div>
             </a>
-            <? $post2 = $the_query->posts[2]; ?>
-            <a class="group md:col-span-12" href="<? echo get_permalink($post2); ?>">
-              <div class="flex flex-col md:h-[229.5px] bg-off-white-400 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg p-[16px]">
-                <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post2); ?></p>
+            <? wp_reset_postdata(); ?>
+            <?
+            global $post;
+            $post = $the_query->posts[2];
+            setup_postdata($post);
+            ?>
+            <a class="group md:col-span-12" href="<? the_permalink(); ?>">
+              <div class="flex flex-col md:h-[229.5px] bg-off-white-400 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
+                @include('partials/hero-badge-white')
+                <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                 <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
               </div>
             </a>
+            <? wp_reset_postdata(); ?>
           </div>
-          <? $post1 = $the_query->posts[1]; ?>
-          <a class="group md:col-span-8 h-[475px] bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? echo get_permalink($post1); ?>">
-            <? echo get_the_post_thumbnail($post1, 'col-7-thumbnail', array('class' => 'object-cover md:h-[300px]')); ?>
+          <?
+          global $post;
+          $post = $the_query->posts[1];
+          setup_postdata($post);
+          ?>
+          <a class="group md:col-span-8 h-[475px] bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+            <div class="relative">
+              <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover md:h-[300px]')); ?>
+              @include('partials/hero-badge-purple')
+            </div>
             <div class="flex flex-col h-[175px] px-[28px] pt-[20px] pb-[28px]">
-              <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? echo get_the_title($post1); ?></p>
-              <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+              <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
+              <div class="flex mt-auto">
+                @include('partials/hero-project-type')
+                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+              </div>
             </div>
           </a>
+          <? wp_reset_postdata(); ?>
         </div>
         <? endif;
         wp_reset_query();

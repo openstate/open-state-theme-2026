@@ -1,7 +1,17 @@
 <?php // Nieuwsbericht card op de nieuwsarchief pagina ?>
 
 <a class="group no-underline md:mx-auto md:block md:w-[688px] rounded-lg overflow-hidden bg-off-white-50 flex flex-col md:grid md:grid-cols-2 md:h-[280px] mb-[16px]" href="{!! the_permalink() !!}">
-  {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover w-full md:h-full max-h-[280px]')) !!}
+  <div class="relative">
+    {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover w-full md:h-full max-h-[280px]')) !!}
+
+    @php
+      $categories = wp_get_post_categories(get_the_ID(), ['fields' => 'all']);
+      $category_title = $categories ? $categories[0]->name : '';
+    @endphp
+    @if ($category_title)
+      <x-badge text="{{ $category_title }}" card=True />
+    @endif
+  </div>
 
   <div class="flex flex-col justify-between pt-[16px] px-[20px] pb-[24px] md:pt-[20px] md:px-[24px] md:pb-[24px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors">
     <h2 class="mt-0 text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">

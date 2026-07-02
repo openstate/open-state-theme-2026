@@ -6,6 +6,7 @@
 ])
 
 @php($variantClasses = match ($variant) {
+  'quarternary' => 'bg-white text-purple-800',
   'tertiary' => 'bg-purple-100 text-purple-800',
   'secondary' => 'bg-off-white-400 text-white',
   default => 'bg-purple-700 text-white',
