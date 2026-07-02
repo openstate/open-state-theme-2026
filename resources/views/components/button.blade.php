@@ -22,7 +22,7 @@
   @class([
     'group grid w-fit cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
     'motion-safe:transition-[grid] motion-safe:duration-200 motion-safe:ease-in-out',
-    'motion-safe:hover:grid-cols-[2.75rem_auto_0]',
+    'motion-safe:hocus:grid-cols-[2.75rem_auto_0]',
     'no-underline',
     $class,
   ])
@@ -38,8 +38,8 @@
     aria-hidden="true"
     @class([
       'mr-1 flex size-10 origin-left scale-0 items-center justify-center rounded-full',
-      'group-hover:scale-100 motion-safe:duration-200 motion-safe:ease-in-out',
-      'motion-reduce:group-hover:scale-0',
+      'group-hocus:scale-100 motion-safe:duration-200 motion-safe:ease-in-out',
+      'motion-reduce:group-hocus:scale-0',
       $variantClasses,
     ])
   >
@@ -59,8 +59,8 @@
     aria-hidden="true"
     @class([
       'ml-1 flex size-10 origin-left items-center justify-center rounded-full',
-      'group-hover:scale-0 motion-safe:transition-[scale] motion-safe:duration-200',
-      'motion-safe:ease-in-out motion-reduce:group-hover:scale-0',
+      'group-hocus:scale-0 motion-safe:transition-[scale] motion-safe:duration-200',
+      'motion-safe:ease-in-out motion-reduce:group-hocus:scale-0',
       $variantClasses,
     ])
   >

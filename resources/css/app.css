@@ -48,6 +48,16 @@
   --color-off-white-500: #59534C;
 }
 
+
+/* custom variants for hover so the effects are also shown on smartphones */
+@custom-variant hocus (&:hover, &:focus, &:active);
+
+@custom-variant group-hocus (
+  &:is(:where(.group):hover *),
+  &:is(:where(.group):focus *),
+  &:is(:where(.group):active *)
+);
+
 @layer utilities {
   [x-cloak] { display: none !important; }
 }
@@ -74,7 +84,7 @@
     @apply text-pink bg-linear-to-r from-current to-current
       bg-[length:100%_1px] bg-no-repeat bg-right-bottom
       [background-position:0_100%] transition-[background-size] duration-100
-      hover:bg-[length:0%_1px];
+      hocus:bg-[length:0%_1px];
   }
 
   /* We need this because our 2019 website used <a> links in the running text of an action box, but now we want to apply this link to its parent card <div>; use relative z-10 for the cases where multiple links are in a card to make those links at least clickable */
@@ -162,8 +172,12 @@
         @apply !bg-white;
       }
 
-      .mobile-menu-toggle:hover {
-        @apply !bg-purple-600;
+      .mobile-menu-toggle {
+        @apply hocus:!bg-purple-600;
+      }
+
+      .mobile-menu-toggle:focus {
+        @apply text-white;
       }
 
       .mobile-menu {
@@ -189,9 +203,7 @@
       transition: width 0.3s ease;
     }
 
-    &:hover::after {
-      width: 100%;
-    }
+    @apply hocus:after:w-[100%];
   }
 
   .current-menu-item a {

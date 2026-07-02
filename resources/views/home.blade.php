@@ -34,23 +34,23 @@
           <? while($the_query->have_posts()) : $the_query->the_post(); ?>
             <? if($the_query->current_post == 0): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-start" href="<? the_permalink(); ?>">
-                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] bg-blue-200 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
                   <p class="font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
-                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
                 </div>
               </a>
             <? elseif($the_query->current_post == 1): ?>
-              <a class="group max-md:w-full shrink-0 snap-start max-md:size-[360px] xl:size-[452px] bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+              <a class="group max-md:w-full shrink-0 snap-start max-md:size-[360px] xl:size-[452px] bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
                 <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[180px] xl:h-[280px]')); ?>
                 <div class="flex flex-col h-[172px] px-[28px] pt-[20px] pb-[28px]">
                   <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
-                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
                 </div>
               </a>
             <? elseif($the_query->current_post == 2): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-end" href="<? the_permalink(); ?>">
-                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] flex bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
-                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mb-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                <div class="flex flex-col max-md:h-[180px] xl:size-[218px] flex bg-off-white-400 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right mb-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
                   <p class="mb-0 mt-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
                 </div>
               </a>
@@ -63,25 +63,25 @@
           <div class="md:col-span-4 md:grid md:grid-cols-12 gap-[16px]">
             <? $post0 = $the_query->posts[0]; ?>
             <a class="group md:col-span-12" href="<? echo get_permalink($post0); ?>">
-              <div class="flex flex-col md:h-[229.5px] bg-blue-200 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+              <div class="flex flex-col md:h-[229.5px] bg-blue-200 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg p-[16px]">
                 <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post0); ?></p>
-                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
               </div>
             </a>
             <? $post2 = $the_query->posts[2]; ?>
             <a class="group md:col-span-12" href="<? echo get_permalink($post2); ?>">
-              <div class="flex flex-col md:h-[229.5px] bg-off-white-400 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg p-[16px]">
+              <div class="flex flex-col md:h-[229.5px] bg-off-white-400 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg p-[16px]">
                 <p class="font-serif text-[1.5rem]/[1.75rem]"><? echo get_the_title($post2); ?></p>
-                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+                <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
               </div>
             </a>
           </div>
           <? $post1 = $the_query->posts[1]; ?>
-          <a class="group md:col-span-8 h-[475px] bg-purple-800 hover:bg-purple-700 text-white hover:text-pink transition-colors rounded-lg overflow-hidden" href="<? echo get_permalink($post1); ?>">
+          <a class="group md:col-span-8 h-[475px] bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? echo get_permalink($post1); ?>">
             <? echo get_the_post_thumbnail($post1, 'col-7-thumbnail', array('class' => 'object-cover md:h-[300px]')); ?>
             <div class="flex flex-col h-[175px] px-[28px] pt-[20px] pb-[28px]">
               <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? echo get_the_title($post1); ?></p>
-              <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
+              <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
             </div>
           </a>
         </div>

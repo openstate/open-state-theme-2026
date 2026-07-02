@@ -53,7 +53,7 @@
               $is_checked = in_array($parent->ID, $selected_parents);
               $checkbox_id = 'parent-' . $parent->ID;
           @endphp
-              <label class="bg-off-white-100 font-mono text-[0.875rem]/[1.375rem] text-off-white-400 flex items-center gap-[8px] px-[12px] py-[8px] rounded-lg cursor-pointer hover:!bg-purple-400 hover:text-white has-checked:bg-purple-600 has-checked:text-white transition-colors">
+              <label class="bg-off-white-100 font-mono text-[0.875rem]/[1.375rem] text-off-white-400 flex items-center gap-[8px] px-[12px] py-[8px] rounded-lg cursor-pointer hocus:!bg-purple-400 hocus:text-white focus-within:!bg-purple-400 focus-within:text-white has-checked:bg-purple-600 has-checked:text-white transition-colors">
                 <input
                   type="checkbox"
                   id="{{ $checkbox_id }}"

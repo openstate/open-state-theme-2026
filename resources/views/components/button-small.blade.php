@@ -11,14 +11,14 @@
 
 <button
   @class([
-    'cursor-pointer',
+    'cursor-pointer group',
     $class,
   ])
   {{ $attributes }}
 >
   <span
     @class([
-      'flex size-[46px] items-center justify-center rounded-full hover:rounded-sm',
+      'flex size-[46px] items-center justify-center rounded-full group-hocus:rounded-sm',
       $variantClasses,
     ])
   >
