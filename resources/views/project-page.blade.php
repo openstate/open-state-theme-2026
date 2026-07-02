@@ -7,13 +7,31 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     <div class="bg-purple-800 text-white px-[16px] md:px-[24px] pt-[98px] md:pt-[110px]">
-      <div class="mx-auto w-full max-w-[1920px] md:grid md:grid-cols-12 gap-x-[50px] ">
+      <div class="mx-auto w-full max-w-[1920px] md:grid md:grid-cols-12 gap-x-[50px]">
+        <?
+          $parent_id = wp_get_post_parent_id(get_the_id());
+          if ($parent_id) {
+            $parent = get_post($parent_id);
+            $parent_title = $parent->post_title;
+          }
+        ?>
+        <div class="hidden md:block md:col-span-3 justify-self-start">
+        @if ($parent_id && $parent_title)
+          <x-badge text="{{ $parent_title }}" />
+        @endif
+        </div>
+
         <div class="md:col-span-9 md:col-start-4 pb-[80px] xl:pb-[120px]">
           <div class="mb-[16px] md:mb-[24px] xl:mb-[40px]">
             <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
           </div>
           <div class="grid">
-            {!! the_post_thumbnail('full', array('class' => 'md:order-3 rounded-lg')) !!}
+            <div class="md:order-3 max-md:relative md:static">
+              {!! the_post_thumbnail('full', array('class' => 'rounded-lg')) !!}
+              @if ($parent_id && $parent_title)
+                <x-badge text="{{ $parent_title }}" card=True class="md:hidden" />
+              @endif
+            </div>
             <p class="md:order-1 max-md:mt-[16px]">
               <? echo get_field('project_samenvatting', get_the_id()) ?>
             </p>
