@@ -9,6 +9,7 @@
 ])
 
 @php($variantClasses = match ($variant) {
+  'tertiary' => 'bg-purple-600 text-white',
   'secondary' => 'bg-white text-purple-800',
   default => 'bg-purple-800 text-white',
 })

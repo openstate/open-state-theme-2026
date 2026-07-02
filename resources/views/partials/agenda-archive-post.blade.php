@@ -10,15 +10,7 @@
 
     <div class="flex mt-auto">
       <div class="flex flex-col">
-        <?
-          $unixtimestamp = strtotime(get_field('agenda_tijdstip', get_the_id()));
-          $formatted_date = date_i18n('l j F Y, H:i', $unixtimestamp);
-        ?>
-        <time class="text-[0.875rem]/[1.375rem] font-medium" datetime="{{ str_replace(' ', 'T', get_field('agenda_tijdstip', get_the_id())) }}">
-          {{ $formatted_date }}
-        </time>
-
-        <p class="mb-0 text-[0.875rem]/[1.375rem] font-medium"><? echo get_field('agenda_locatie', get_the_id()) ?></p>
+        @include('partials.agenda-card-info')
       </div>
 
       <span class="shrink-0 iconify size-[20px] mdi--arrow-right mt-auto ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>

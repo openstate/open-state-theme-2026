@@ -69,7 +69,7 @@
         </aside>
 
         <?php // up till xl: floating button + dialog/popup ?>
-        <x-button type="button" icon="plus" text="Nieuwsberichten" class="xl:hidden fixed bottom-[32px] left-1/2 -translate-x-1/2 z-30" onclick="document.getElementById('nieuwsberichten-dialog').showModal()" arialabel="dialog" />
+        <x-button type="button" variant="tertiary" icon="plus" text="Nieuwsberichten" class="xl:hidden fixed bottom-[32px] left-1/2 -translate-x-1/2 z-30" onclick="document.getElementById('nieuwsberichten-dialog').showModal()" arialabel="dialog" />
 
         <x-popup title="Nieuwsberichten" id="nieuwsberichten-dialog">
           @include('partials.project-page-news')
