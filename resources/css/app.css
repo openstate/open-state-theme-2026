@@ -64,7 +64,7 @@
 
 @layer base {
   body {
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     @apply selection:bg-pink selection:text-white;
   }
 
