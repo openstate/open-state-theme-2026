@@ -12,9 +12,9 @@
   $q_config['language'] = 'nl';
 @endphp
 
-<header class="banner pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
-  <div class="mx-auto w-full max-w-[1920px] flex justify-between items-center gap-x-[72px]">
-    <a class="brand" href="{{ home_url('/') }}">
+<header class="pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
+  <div class="mx-auto w-full max-w-[1920px] flex items-center gap-x-[72px]">
+    <a class="flex-1" href="{{ home_url('/') }}">
       <img class="h-[20px]" src="{{ Vite::asset($secondary_nav_colors ? 'resources/images/open_state_foundation_white.svg' : 'resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
     </a>
 
@@ -30,7 +30,7 @@
       </nav>
     @endif
 
-    <div class="flex justify-end">
+    <div class="flex-1 flex justify-end">
       <!-- Mobile Menu -->
       <x-mobile-menu :secondaryNavColors="$secondary_nav_colors">
         @if (has_nav_menu('primary_navigation'))
