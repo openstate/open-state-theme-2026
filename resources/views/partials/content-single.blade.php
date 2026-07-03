@@ -12,7 +12,7 @@
           @include('partials.entry-meta')
         @endif
 
-        {!! the_post_thumbnail('full', array('class' => 'rounded-lg mt-[20px]')) !!}
+        {!! the_post_thumbnail('full', array('class' => 'rounded-lg mt-[20px] object-cover h-[180px] md:h-[400px] xl:h-[430px]')) !!}
       </header>
 
       @if (has_post_thumbnail())
