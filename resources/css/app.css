@@ -48,10 +48,10 @@
   --color-off-white-500: #59534C;
 
   /* used for kieswijzers */
-  --color-status-green: #008000;
-  --color-status-orange: #ffa500;
-  --color-status-red: #ff0000;
-  --color-status-grey: #808080;
+  --color-status-green: green;
+  --color-status-orange: orange;
+  --color-status-red: red;
+  --color-status-grey: grey;
 }
 
 

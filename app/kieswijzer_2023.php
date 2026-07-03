@@ -8,14 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function kieswijzer_2023_shortcode() {
-	// Tooltip-script alleen laden op pagina's met de tabel
-	static $rendered = false;
-	if ( ! $rendered ) {
-		$rendered = true;
-		add_action( 'wp_footer', 'kieswijzer_2023_script' );
-	}
+	wp_enqueue_script( 'kieswijzer' );
 
-	return <<<'PARTIJEN_HTML'
+	return <<<'KIESWIJZER_2023_HTML'
 <div class="overflow-x-auto rounded-lg border border-gray-300 shadow-sm">
   <table class="w-full min-w-160 border-collapse bg-white text-sm">
     <thead>
@@ -488,82 +483,6 @@ function kieswijzer_2023_shortcode() {
     </tbody>
   </table>
 </div>
-PARTIJEN_HTML;
+KIESWIJZER_2023_HTML;
 }
 add_shortcode( 'kieswijzer_2023', 'kieswijzer_2023_shortcode' );
-
-function kieswijzer_2023_script() {
-	echo <<<'PARTIJEN_JS'
-<script>
-(function () {
-  function init() {
-    var tooltip = document.getElementById('kieswijzer-2023-tooltip');
-    if (!tooltip) {
-      tooltip = document.createElement('div');
-      tooltip.id = 'kieswijzer-2023-tooltip';
-      tooltip.setAttribute('role', 'tooltip');
-      tooltip.className =
-        'pointer-events-none fixed z-50 hidden max-w-md rounded-lg bg-white p-4 ' +
-        'text-xs leading-relaxed shadow-xl ' +
-        '[&_b]:mb-1 [&_b]:block [&_b]:text-sm [&_b]:font-semibold ' +
-        '[&_ul]:mb-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-4 [&_ul:last-child]:mb-0';
-      document.body.appendChild(tooltip);
-    }
-
-    function show(trigger) {
-      var template = trigger.parentElement.querySelector('template');
-      if (!template) {
-        return;
-      }
-      tooltip.innerHTML = template.innerHTML;
-      tooltip.classList.remove('hidden');
-
-      var rect = trigger.getBoundingClientRect();
-      var ttRect = tooltip.getBoundingClientRect();
-
-      // Onder de cel; boven de cel als er onvoldoende ruimte is.
-      var top = rect.bottom + 8;
-      if (top + ttRect.height > window.innerHeight - 8) {
-        top = Math.max(8, rect.top - ttRect.height - 8);
-      }
-
-      // Horizontaal centreren op de cel, binnen het scherm houden.
-      var left = rect.left + rect.width / 2 - ttRect.width / 2;
-      left = Math.max(8, Math.min(left, window.innerWidth - ttRect.width - 8));
-
-      tooltip.style.top = top + 'px';
-      tooltip.style.left = left + 'px';
-    }
-
-    function hide() {
-      tooltip.classList.add('hidden');
-    }
-
-    document.querySelectorAll('.tt-trigger').forEach(function (trigger) {
-      trigger.addEventListener('mouseenter', function () { show(trigger); });
-      trigger.addEventListener('focus', function () { show(trigger); });
-      trigger.addEventListener('mouseleave', hide);
-      trigger.addEventListener('blur', hide);
-      // Tap-ondersteuning op touchscreens.
-      trigger.addEventListener('click', function () {
-        if (tooltip.classList.contains('hidden')) {
-          show(trigger);
-        } else {
-          hide();
-        }
-      });
-    });
-
-    window.addEventListener('scroll', hide, true);
-    window.addEventListener('resize', hide);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-</script>
-PARTIJEN_JS;
-}
