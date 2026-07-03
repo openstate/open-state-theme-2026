@@ -77,7 +77,7 @@
 
 		var triggers = document.querySelectorAll('.tt-trigger');
 		if (!triggers.length) {
-			window.console && console.warn('partijen-tabel: geen .tt-trigger cellen gevonden');
+			window.console && console.warn('kieswijzer-tabel: geen .tt-trigger cellen gevonden');
 		}
 		triggers.forEach(function (trigger) {
 			trigger.addEventListener('mouseenter', function () {

@@ -13,13 +13,13 @@
 @endphp
 
 <header class="banner pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
-  <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 items-center">
-    <a class="brand col-span-10 xl:col-span-3 w-[237px]" href="{{ home_url('/') }}">
-      <img src="{{ Vite::asset($secondary_nav_colors ? 'resources/images/open_state_foundation_white.svg' : 'resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
+  <div class="mx-auto w-full max-w-[1920px] flex justify-between items-center gap-x-[72px]">
+    <a class="brand" href="{{ home_url('/') }}">
+      <img class="h-[20px]" src="{{ Vite::asset($secondary_nav_colors ? 'resources/images/open_state_foundation_white.svg' : 'resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
     </a>
 
     @if (has_nav_menu('primary_navigation'))
-      <nav class="nav-primary relative flex-grow flex justify-center col-span-6" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+      <nav class="nav-primary relative flex-grow flex justify-center" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
           'menu_class'     => 'nav flex items-center gap-[72px]',
@@ -30,7 +30,7 @@
       </nav>
     @endif
 
-    <div class="flex justify-end col-span-2 xl:col-span-3 gap-4">
+    <div class="flex justify-end">
       <!-- Mobile Menu -->
       <x-mobile-menu :secondaryNavColors="$secondary_nav_colors">
         @if (has_nav_menu('primary_navigation'))

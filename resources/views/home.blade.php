@@ -33,7 +33,7 @@
         <div class="flex md:hidden xl:flex xl:justify-center gap-[16px] px-[24px] snap-x snap-mandatory items-stretch overflow-x-scroll">
           <? while($the_query->have_posts()) : $the_query->the_post(); ?>
             <? if($the_query->current_post == 0): ?>
-              <a class="group max-md:w-full shrink-0 snap-start self-start" href="<? the_permalink(); ?>">
+              <a class="group max-md:w-full shrink-0 snap-start self-start rounded-lg" href="<? the_permalink(); ?>">
                 <div class="flex flex-col max-md:h-[180px] xl:size-[218px] bg-blue-200 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
                   @include('partials/hero-badge-white')
                   <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
@@ -55,7 +55,7 @@
                 </div>
               </a>
             <? elseif($the_query->current_post == 2): ?>
-              <a class="group max-md:w-full shrink-0 snap-start self-end" href="<? the_permalink(); ?>">
+              <a class="group max-md:w-full shrink-0 snap-start self-end rounded-lg" href="<? the_permalink(); ?>">
                 <div class="flex flex-col max-md:h-[180px] xl:size-[218px] flex bg-off-white-400 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
                   <div class="flex justify-between gap-x-[16px]">
                     @include('partials/hero-badge-white')
@@ -76,7 +76,7 @@
             $post = $the_query->posts[0];
             setup_postdata($post);
             ?>
-            <a class="group md:col-span-12" href="<? the_permalink() ?>">
+            <a class="group md:col-span-12 rounded-lg" href="<? the_permalink() ?>">
               <div class="flex flex-col md:h-[229.5px] bg-blue-200 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
                 @include('partials/hero-badge-white')
                 <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
@@ -89,7 +89,7 @@
             $post = $the_query->posts[2];
             setup_postdata($post);
             ?>
-            <a class="group md:col-span-12" href="<? the_permalink(); ?>">
+            <a class="group md:col-span-12 rounded-lg" href="<? the_permalink(); ?>">
               <div class="flex flex-col md:h-[229.5px] bg-off-white-400 group-hocus:bg-purple-700 text-white group-hocus:text-pink transition-colors rounded-lg p-[16px]">
                 @include('partials/hero-badge-white')
                 <p class="my-auto font-serif text-[1.5rem]/[1.75rem]"><? the_title(); ?></p>
