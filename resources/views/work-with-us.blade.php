@@ -57,21 +57,7 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-work-card title="Tool implementatie">
-            Van lobbyregister tot begrotingsportaal: wij bouwen tools die werken. Open source, op maat, en met volledige overdracht aan jullie team.
-          </x-work-card>
-          <x-work-card title="Advies & strategie">
-            Een transparantie-roadmap die past bij jullie organisatie. Wij analyseren waar je staat, waar je naartoe wilt, en hoe je daar komt.
-          </x-work-card>
-          <x-work-card title="Training & workshops">
-            Van Woo-procedures tot open data-publicatie: praktische trainingen voor ambtenaren die het dagelijks moeten doen.
-          </x-work-card>
-          <x-work-card title="Onderzoek & analyse">
-            Hoe transparant is jouw organisatie werkelijk? Wij doen transparantie-audits, lobby-inventarisaties en algoritme-toetsingen.
-          </x-work-card>
-          <x-work-card title="Events & co-creatie">
-            Data-expedities, hackathons en expert meetups. Samen met journalisten, developers en ambtenaren werken aan concrete oplossingen.
-          </x-work-card>
+          <x-ons-aanbod variant="ons-aanbod-work" />
         </div>
       </div>
     </div>

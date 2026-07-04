@@ -212,6 +212,22 @@
     </div>
   </div>
 
+  <?php // Ons aanbod ?>
+  <div class="px-[16px] md:px-[24px] mt-[40px] md:mt-[48px] xl:mt-[80px] mb-[64px] md:mb-[100px] xl:mb-[120px]">
+    <div class="mx-auto w-full max-w-[1920px]">
+      <div class="md:grid md:grid-cols-12 gap-x-[16px] mb-[40px] xl:mb-[64px]">
+        <h2 class="md:col-span-6 xl:col-span-3 mt-0 mb-[12px] md:mb-[32px]">Ons aanbod</h2>
+        <p class="md:col-span-6 xl:col-span-6 m-0">Werk met ons aan een transparante overheid. We zetten onze expertise in om overheden te helpen de democratie te versterken. Dat doen we door bronnen en tools te bouwen, onderzoek uit te voeren en trainingen en events te organiseren.</p>
+      </div>
+
+      <div class="flex gap-x-[16px] snap-x snap-mandatory items-stretch overflow-x-scroll max-xl:px-[24px]">
+        <x-ons-aanbod variant="ons-aanbod-home" />
+      </div>
+
+      <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/werk-met-ons/" text="Werk met ons" />
+    </div>
+  </div>
+
   <?php // Nieuwsbrief ?>
   @include('partials.newsletter')
 @endsection

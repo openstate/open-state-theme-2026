@@ -8,7 +8,7 @@
   <img class="bg-white" src="{{ Vite::asset('resources/images/' . $image) }}" alt="Logo Laptop met Linux">
 
   <div class="flex flex-col min-h-[180px] md:min-h-[260px] xl:min-h-[280px] px-[20px] py-[20px] md:pt-[20px] md:px-[28px] md:pb-[28px] xl:pt-[20px] xl:px-[24px] xl:pb-[24px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors">
-    <h4 class="mt-0 mb-[4px] md:mb-[8px] text-[1.5rem]/[1.75rem] tracking-0 md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">{{ $title }}</h4>
+    <h4 class="mt-0 mb-[4px] md:mb-[8px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">{{ $title }}</h4>
     <p class="mb-0">{{ $slot }}</p>
 
     <div class="mt-auto flex">
