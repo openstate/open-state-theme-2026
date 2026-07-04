@@ -8,8 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function kieswijzer_2024_shortcode() {
-	wp_enqueue_script( 'kieswijzer' );
-
 	return <<<'KIESWIJZER_2024_HTML'
 <div class="overflow-x-auto rounded-lg border border-gray-300 shadow-sm" style="width:0;min-width:100%;">
   <table class="w-full min-w-160 border-collapse bg-white text-sm">

@@ -50,7 +50,7 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters', 'shortcodes', 'kieswijzer_2023', 'kieswijzer_2024'])
+collect(['setup', 'filters', 'shortcodes', 'kieswijzer_2023', 'kieswijzer_2024', 'kieswijzer_2025'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
