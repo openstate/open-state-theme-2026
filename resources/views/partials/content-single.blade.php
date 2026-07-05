@@ -1,7 +1,40 @@
 <?php // Post/nieuwsbericht ?>
 
-<article class="px-[16px] pt-[146px] pb-[100px] xl:pb-[160px]" @php(post_class('h-entry'))>
+<div class="px-[16px] pt-[104px] pb-[100px] xl:pb-[160px]" @php(post_class('h-entry'))>
+  @if (in_array('single', get_body_class()))
   <div class="mx-auto md:w-[688px]">
+    <?
+      $categories = wp_get_post_categories(get_the_ID(), ['fields' => 'all']);
+      $category_title = $categories ? $categories[0]->name : '';
+
+      $args = array(
+        'post_type' => 'page',
+        'posts_per_page' => 1,
+        'cat' => $categories[0]->term_id,
+      );
+
+      $the_query = new \WP_Query($args);
+
+      $project_url = '';
+      while ($the_query->have_posts()) {
+          $the_query->the_post();
+          $project_url = get_permalink();
+      }
+
+      wp_reset_query();
+    ?>
+    @if ($category_title)
+      <nav aria-label="Breadcrumb" class="font-mono font-medium text-[0.8125rem]/[1rem] md:text-[0.875rem]/[1rem] tracking-[0.03125rem] mt-[6px] mb-[22px]">
+        <ol class="list-none p-0">
+          <li class="inline"><a href="/projecten-tools-data/" class="text-[#A1A1A1]">Projecten</a></li>
+          <span class="text-pink inline">></span>
+          <li class="inline"><a href="{!! $project_url !!}">{{ $category_title }}</a></li>
+        </ol>
+      </nav>
+    @endif
+  </div>
+  @endif
+  <article class="mx-auto md:w-[688px]">
     <header>
       <h1 class="p-name font-serif text-[1.5rem]/[1.75rem] tracking-[-0.00625rem] md:text-[2.25rem]/[2.5rem] md:tracking-[-0.025rem] xl:text-[2.75rem]/[3rem] xl:tracking-[-0.0375rem] pb-[20px]">
         {!! $title !!}
@@ -43,5 +76,5 @@
 
       @include('partials.action-boxes')
     </div>
-  </div>
-</article>
+  </article>
+</div>
