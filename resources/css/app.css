@@ -204,6 +204,7 @@
   }
 
   /* Menu hover gradient from white to pink */
+  #breadcrumb a[href],
   #menu-menu a[href],
   #mobile-menu-list a[href] {
     display: inline-block !important;
