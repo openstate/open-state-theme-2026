@@ -24,9 +24,9 @@
       wp_reset_query();
     ?>
     @if ($category_title)
-      <nav aria-label="Breadcrumb" class="font-mono font-medium text-[0.8125rem]/[1rem] md:text-[0.875rem]/[1rem] tracking-[0.03125rem] mt-[6px] mb-[22px]">
+      <nav aria-label="Breadcrumb" class="font-mono font-medium text-[#A1A1A1] text-[0.8125rem]/[1rem] md:text-[0.875rem]/[1rem] tracking-[0.03125rem] mt-[6px] mb-[22px]">
         <ol class="list-none p-0">
-          <li class="inline"><a href="/projecten-tools-data/" class="text-[#A1A1A1]">Projecten</a></li>
+          <li class="inline"><a href="/projecten-tools-data/">Projecten</a></li>
           <span class="text-pink inline">></span>
           <li class="inline"><a href="{!! $project_url !!}">{{ $category_title }}</a></li>
         </ol>
