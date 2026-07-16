@@ -1,6 +1,7 @@
 @props([
   'title' => '',
   'link' => '',
+  'domain' => '',
 ])
 
 <a class="group rounded-lg overflow-hidden bg-off-white-200 flex flex-col col-span-12 md:col-span-3" href="{{ $link }}" target="_blank">
@@ -10,7 +11,7 @@
     <p class="mb-0">{{ $slot }}</p>
 
     <div class="mt-auto flex">
-      <p class="mt-[8px] mb-0 text-[0.875rem]/[1.375rem] font-medium">Ga naar {{ $title }}</p>
+      <p class="mt-[8px] mb-0 text-[0.875rem]/[1.375rem] font-medium">Ga naar {{ $domain }}</p>
       <span class="iconify size-4.5 mdi--arrow-right col-span-1 my-auto ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
     </div>
   </div>
