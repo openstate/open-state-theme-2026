@@ -118,7 +118,7 @@
           </div>
         </div>
 
-        <h3>Open Street-donateurs</h3>
+        <h3>Open State-donateurs</h3>
         <div class="grid grid-cols-12 gap-[16px]">
           <x-open-street title="Laptop met Linux" image="logo-laptop-met-linux.svg" link="https://laptopmetlinux.nl/" domain="LaptopMetLinux.nl">
             Ga voor vrijheid, veiligheid, betrouwbaarheid en blijheid, kies Open Source hardware!
