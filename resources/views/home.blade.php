@@ -125,10 +125,11 @@
     </div>
   </div>
 
-  <?php // Nieuws ?>
+  <?php // Actueel ?>
   <div class="px-[16px] md:px-[24px] mb-[96px] xl:mb-[128px]">
     <div class="mx-auto w-full max-w-[1920px]">
-      <h2 class="mb-[24px] md:mb-[32px]">Nieuws</h2>
+      <h2 class="mb-[24px] md:mb-[32px]">Actueel</h2>
+      <p class="mb-[20px] md:mb-[28px]">Bekijk alle <a href="/nieuws/">nieuwsberichten</a>, check onze <a href="/agenda/">agenda</a> en bekijk waar we genoemd worden <a href="/in-de-media/">in de media</a>.</p>
       @if (! have_posts())
         <x-alert type="warning">
           Sorry, geen resultaten gevonden.
@@ -142,8 +143,6 @@
           @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
         @endwhile
       </div>
-
-      <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/nieuwsarchief/" text="Nieuwsarchief" />
     </div>
   </div>
 
