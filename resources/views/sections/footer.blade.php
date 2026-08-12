@@ -10,9 +10,9 @@
     </div>
 
     <div class="md:grid md:grid-cols-12 gap-x-[50px] mb-[28px]">
-      <div class="md:col-span-4 max-md:mb-[10px]"><a class="text-white" href="tel:0031203080567">+31 (0)20 3080567</a></div>
-      <div class="md:col-span-4 max-md:mb-[10px] md:text-center"><a class="text-white" href="mailto:contact@openstate.eu">contact@openstate.eu</a></div>
-      <div class="md:col-span-4 md:text-end"><a class="text-white" href="https://www.openstreetmap.org/node/3519368613">Kattenburgerstraat 5 – Gebouw 002 B, 1018 JA, Amsterdam</a></div>
+      <div class="md:col-span-4 max-md:mb-[10px]"><a class="text-white hover:text-pink transition no-open-state-underline" href="tel:0031203080567">+31 (0)20 3080567</a></div>
+      <div class="md:col-span-4 max-md:mb-[10px] md:text-center"><a class="text-white hover:text-pink transition no-open-state-underline" href="mailto:contact@openstate.eu">contact@openstate.eu</a></div>
+      <div class="md:col-span-4 md:text-end"><a class="text-white hover:text-pink transition no-open-state-underline" href="https://www.openstreetmap.org/node/3519368613">Kattenburgerstraat 5 – Gebouw 002 B, 1018 JA, Amsterdam</a></div>
     </div>
 
     <a href="/">
@@ -20,9 +20,9 @@
     </a>
 
     <div class="flex justify-end pb-[24px] gap-x-[24px]">
-      <div><a class="text-white" href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
-      <div><a class="text-white" href="/privacy/">Privacy policy</a></div>
-      <div><a class="text-white" href="/responsible-disclosure">Responsible disclosure</a></div>
+      <div><a class="text-white hover:text-pink transition no-open-state-underline" href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
+      <div><a class="text-white hover:text-pink transition no-open-state-underline" href="/privacy/">Privacy policy</a></div>
+      <div><a class="text-white hover:text-pink transition no-open-state-underline" href="/responsible-disclosure">Responsible disclosure</a></div>
     </div>
   </div>
 </footer>

@@ -89,7 +89,8 @@
     @apply xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625]
   }
 
-  div > a:not(:has(div, span, img)),
+  /* Underline with a remove transition on hover */
+  div > a:not(:has(div, span, img), .no-open-state-underline),
   td > a:not(:has(div, span, img)),
   p a:not(:has(div, span, img)) {
     @apply text-pink bg-linear-to-r from-current to-current
