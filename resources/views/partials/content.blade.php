@@ -24,7 +24,9 @@
     {!! get_the_excerpt() !!}
 
     <div class="flex mt-auto pt-[8px]">
-      @include('partials.entry-meta')
+      <time class="dt-published text-[0.875rem]/[1.375rem] font-medium" datetime="{{ get_post_time('c', true) }}">
+        {{ get_the_date('D j M \'y') }}
+      </time>
       <span class="iconify size-4.5 mdi--arrow-right ml-auto my-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
     </div>
   </div>
