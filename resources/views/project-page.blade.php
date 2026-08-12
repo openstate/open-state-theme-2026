@@ -78,10 +78,6 @@
 
         <article class="md:col-span-8 md:col-start-4 xl:col-span-6 xl:col-start-4">
           @includeFirst(['partials.content-page', 'partials.content'])
-
-          @if ($project_url)
-          <x-button class="mt-[48px]" text="Bezoek {{ preg_replace('#^https?://#', '', rtrim($project_url, '/')) }}" href="{{ $project_url }}" />
-          @endif
         </article>
       </div>
     </div>
