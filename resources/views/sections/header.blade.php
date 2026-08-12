@@ -13,8 +13,8 @@
 @endphp
 
 <header class="pt-[24px] pb-[12px] px-[16px] md:px-[24px] bg-off-white-50">
-  <div class="mx-auto w-full max-w-[1920px] flex items-center gap-x-[72px]">
-    <a class="flex-1" href="{{ home_url('/') }}">
+  <div class="mx-auto w-full max-w-[1920px] flex items-center xl:gap-x-[72px]">
+    <a href="{{ home_url('/') }}">
       <img class="h-[20px]" src="{{ Vite::asset($secondary_nav_colors ? 'resources/images/open_state_foundation_white.svg' : 'resources/images/open_state_foundation.svg') }}" alt="Open State Foundation">
     </a>
 
