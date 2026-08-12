@@ -10,7 +10,6 @@
   >
     <span class="hamburger" aria-hidden="true">
       <span class="hamburger-line hamburger-line-top"></span>
-      <span class="hamburger-line hamburger-line-middle"></span>
       <span class="hamburger-line hamburger-line-bottom"></span>
     </span>
   </button>
