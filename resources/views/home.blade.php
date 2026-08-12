@@ -5,7 +5,7 @@
   <div class="bg-off-white-50 pt-[52px] md:pt-[84px] pb-[100px]">
     <div class="mx-auto w-full max-w-[1920px]">
       <div class="mx-auto text-center max-w-[336px] md:max-w-[560px] xl:max-w-[640px]">
-        <h1 class="font-serif text-[2.25rem] leading-[40px] tracking-[-0.4px] mb-[16px] md:text-[3.25rem] md:leading-[56px] md:tracking-[-0.8px] md:mb-[16px] xl:text-[4rem] xl:leading-[68px] xl:tracking-[-1px] xl:mb-[24px]">Zonder transparantie geen democratie</h1>
+        <h1 class="font-serif text-[2.25rem]/[2.5rem] tracking-[-0.025rem] mb-[16px] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] md:mb-[16px] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] xl:mb-[24px]">Zonder transparantie geen democratie</h1>
         <p class="mb-[40px] md:mb-[56px] xl:mb-[64px]">In een sterke democratie heeft de overheid geen geheimen. Wij geloven in een open overheid waarbij burgers, journalisten en ambtenaren toegang hebben tot informatie om op te kunnen vertrouwen en op te kunnen bouwen.</p>
       </div>
 
