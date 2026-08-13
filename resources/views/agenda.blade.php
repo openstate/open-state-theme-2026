@@ -24,6 +24,8 @@
           'value' => '1'
         )
       ),
+      'meta_key' => 'agenda_tijdstip',
+      'orderby' => 'meta_value',
       'order' => 'desc'
     );
     $the_query = new WP_Query($args);
@@ -55,12 +57,16 @@
   @if ($the_query->have_posts())
     @php $new_separator_shown = false; @endphp
     @php $old_separator_shown = false; @endphp
+    @php $upcoming_event_count = 0; @endphp
     @while ($the_query->have_posts())
       <? $the_query->the_post() ?>
         @php
           $tijdstip = get_field('agenda_tijdstip', get_the_id());
           $tijdstip_ts = $tijdstip ? strtotime($tijdstip) : false;
           $is_past = $tijdstip_ts && $tijdstip_ts < current_time('timestamp');
+          if (!$is_past) {
+            $upcoming_event_count++;
+          }
         @endphp
 
         @if (!$is_past && !$new_separator_shown)
@@ -70,10 +76,10 @@
           @php $new_separator_shown = true; @endphp
         @endif
 
-        @if ($is_past && !$old_separator_shown)
+        @if ($is_past && !$old_separator_shown && $upcoming_event_count > 0)
           <div class="md:w-[688px] mx-auto">
             <hr class="mx-auto mt-[40px] w-full max-w-[1920px] border-purple-800/10">
-            <h2>Oude evenementen</h2>
+            <h2>Geweest</h2>
           </div>
           @php $old_separator_shown = true; @endphp
         @endif
