@@ -195,7 +195,7 @@
             <? $row = ceil($i / 2); ?>
           @endwhile
         </div>
-        <x-button class="mx-auto xl:mx-0 xl:ml-auto" href="/projecten-tools-data/" text="Bekijk alle projecten" />
+        <x-button class="mx-auto xl:mx-0 xl:ml-auto" href="/projecten/" text="Bekijk alle projecten" />
       @endif
       <? wp_reset_query() ?>
 

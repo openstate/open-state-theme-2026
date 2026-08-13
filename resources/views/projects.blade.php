@@ -1,5 +1,5 @@
 {{--
-  Template Name: Projects, Tools & Data Template
+  Template Name: Projects Template
 --}}
 
 @extends('layouts.app')

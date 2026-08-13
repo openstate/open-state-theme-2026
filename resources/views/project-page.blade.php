@@ -22,6 +22,13 @@
         </div>
 
         <div class="md:col-span-9 md:col-start-4 pb-[80px] xl:pb-[120px]">
+          <nav aria-label="Breadcrumb" id="breadcrumb" class="font-mono font-medium text-[#A1A1A1] text-[0.8125rem]/[1rem] md:text-[0.875rem]/[1rem] tracking-[0.03125rem] mt-[6px] mb-[22px] md:mb-[18px] xl:mb-[22px]">
+            <ol class="list-none p-0">
+              <li class="inline"><a href="/projecten/">Projecten</a></li>
+              <span class="text-pink inline">></span>
+              <li class="inline text-white">{!! get_the_title() !!}</li>
+            </ol>
+          </nav>
           <div class="mb-[16px] md:mb-[24px] xl:mb-[40px]">
             <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
           </div>
