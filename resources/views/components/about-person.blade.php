@@ -4,12 +4,12 @@
   'image' => '',
 ])
 
-<button type="button" class="group text-left cursor-pointer col-span-12 md:col-span-6 xl:col-span-4 rounded-lg overflow-hidden" onclick="document.getElementById('{{ preg_replace('/\s+/', '', $name) }}').showModal()" arialabel="dialog">
+<button type="button" class="group text-left cursor-pointer col-span-12 md:col-span-6 xl:col-span-4 overflow-hidden" onclick="document.getElementById('{{ preg_replace('/\s+/', '', $name) }}').showModal()" arialabel="dialog">
   <div class="relative h-[347px] mb-[8px]">
     <img src={{ Vite::asset('resources/images/' . $image . '1.webp') }}
-         class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hocus:opacity-0" />
+         class="absolute rounded-lg inset-0 w-full h-full object-cover transition-opacity duration-300 group-hocus:opacity-0" />
     <img src={{ Vite::asset('resources/images/' . $image . '2.webp') }}
-         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hocus:opacity-100" />
+         class="absolute rounded-lg inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hocus:opacity-100" />
   </div>
 
   <h3 class="m-0 mb-[4px] text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] md:tracking-[-0.0125rem] xl:text-[1.5rem]/[1.75rem]">{{ $name }}</h3>
