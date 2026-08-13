@@ -70,15 +70,15 @@
         ?>
         @if ($the_query->have_posts())
         <?php // xl: sidebar ?>
-        <aside aria-labelledby="nieuwsberichten" class="max-xl:hidden xl:col-span-3 mr-[70px]">
-          <h2 id="nieuwsberichten" class="font-mono font-medium text-[0.75rem]/[1rem] mt-0">Nieuwsberichten</h2>
+        <aside aria-labelledby="project updates" class="max-xl:hidden xl:col-span-3 mr-[70px]">
+          <h2 id="project-updates" class="font-mono font-medium text-[0.75rem]/[1rem] mt-0">Project updates</h2>
           @include('partials.project-page-news')
         </aside>
 
         <?php // up till xl: floating button + dialog/popup ?>
-        <x-button type="button" variant="tertiary" icon="plus" text="Nieuwsberichten" class="xl:hidden fixed bottom-[32px] left-1/2 -translate-x-1/2 z-30" onclick="document.getElementById('nieuwsberichten-dialog').showModal()" arialabel="dialog" />
+        <x-button type="button" variant="tertiary" icon="plus" text="Project updates" class="xl:hidden fixed bottom-[32px] left-1/2 -translate-x-1/2 z-30" onclick="document.getElementById('project-updates-dialog').showModal()" arialabel="dialog" />
 
-        <x-popup title="Nieuwsberichten" id="nieuwsberichten-dialog">
+        <x-popup title="Project updates" id="project-updates-dialog">
           @include('partials.project-page-news')
         </x-popup>
         @endif
