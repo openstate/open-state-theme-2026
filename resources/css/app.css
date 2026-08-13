@@ -225,6 +225,29 @@
     @apply hocus:after:w-[100%];
   }
 
+  #footer-menu-list {
+    ul {
+      @apply list-none pl-0 mb-0;
+    }
+
+    & > li {
+      @apply col-span-6 md:col-span-3;
+    }
+
+    a[href] {
+      @apply hover:text-pink transition font-medium;
+    }
+
+    a:not([href]) {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      font-size: 0.8125rem;
+      line-height: 1rem;
+      letter-spacing: 0.03125rem;
+      color: var(--color-pink);
+    }
+  }
+
   .current-menu-item a {
     @apply !text-pink;
   }

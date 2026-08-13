@@ -1,12 +1,20 @@
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
-    @php(dynamic_sidebar('sidebar-footer'))
+    <div class="xl:flex xl:justify-between mt-[24px] mb-[48px] md:mb-[100px] xl:mb-[120px]">
+      <div class="mb-[32px] flex gap-x-[12px]">
+        <x-icon icon="simple-icons--mastodon" href="https://mastodon.nl/@openstate"/>
+        <x-icon icon="simple-icons--bluesky" href="https://bsky.app/profile/openstate.eu"/>
+        <x-icon icon="simple-icons--linkedin" href="https://www.linkedin.com/company/open-state-foundation/"/>
+        <x-icon icon="simple-icons--github" href="https://github.com/openstate/"/>
+      </div>
 
-    <div class="pt-[24px] pb-[120px] flex gap-x-[12px]">
-      <x-icon icon="simple-icons--mastodon" href="https://mastodon.nl/@openstate"/>
-      <x-icon icon="simple-icons--bluesky" href="https://bsky.app/profile/openstate.eu"/>
-      <x-icon icon="simple-icons--linkedin" href="https://www.linkedin.com/company/open-state-foundation/"/>
-      <x-icon icon="simple-icons--github" href="https://github.com/openstate/"/>
+      @if (has_nav_menu('primary_navigation'))
+        {!! wp_nav_menu([
+          'theme_location' => 'primary_navigation',
+          'echo'           => false,
+          'items_wrap'     => '<ul id="footer-menu-list" class="grid grid-cols-12 xl:grid-none xl:flex list-none pl-0 mb-0 gap-x-[16px] xl:gap-x-[48px] gap-y-[40px]">%3$s</ul>',
+        ]) !!}
+      @endif
     </div>
 
     <div class="md:grid md:grid-cols-12 gap-x-[50px] mb-[28px]">
