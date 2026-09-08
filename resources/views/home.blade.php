@@ -30,7 +30,7 @@
 
         // Hero: uitgelicht for sm and xl+
         if($the_query->have_posts()): ?>
-        <div class="flex md:hidden xl:flex xl:justify-center gap-[16px] px-[24px] snap-x snap-mandatory items-stretch overflow-x-scroll">
+        <div class="flex md:hidden xl:flex xl:justify-center gap-[16px] px-[24px] max-md:snap-x max-md:snap-mandatory max-md:items-stretch max-md:overflow-x-scroll">
           <? while($the_query->have_posts()) : $the_query->the_post(); ?>
             <? if($the_query->current_post == 0): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-start rounded-lg" href="<? the_permalink(); ?>">
