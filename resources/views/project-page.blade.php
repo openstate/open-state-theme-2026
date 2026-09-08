@@ -82,9 +82,13 @@
           @include('partials.project-page-news')
         </x-popup>
         @endif
+        <?
+          wp_reset_query();
+        ?>
 
         <article class="md:col-span-8 md:col-start-4 xl:col-span-6 xl:col-start-4">
-          @includeFirst(['partials.content-page', 'partials.content'])
+          @php(the_content())
+          @include('partials.action-boxes')
         </article>
       </div>
     </div>
