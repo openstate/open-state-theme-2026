@@ -10,7 +10,7 @@
 
     // Get the selected parents from query parameter, default to all parents
     $selected_parents = isset($_GET['parents']) ? array_map('intval', (array)$_GET['parents']) : array();
-    $parent_ids = Array(9113, 9116, 9118, 9120, 9122);
+    $parent_ids = Array(9113, 9116, 9118, 9120, 9122, 13823, 13825, 13827);
 
     // If specific parents are selected, filter by those, otherwise show all
     $filter_parents = !empty($selected_parents) ? array_intersect($selected_parents, $parent_ids) : $parent_ids;
@@ -38,7 +38,7 @@
         <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
       </div>
       <div class="col-span-12 md:col-span-6">
-        <p class="mb-0 md:text-[1rem]/[1.5rem] xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625rem]">Elk Open State project ontsluit overheidsinformatie als open data en zorgt voor meer transparantie in sectoren zoals lobby, financiën en verkiezingen.</p>
+        <p class="mb-0 md:text-[1rem]/[1.5rem] xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625rem]">Elk Open State project ontsluit overheidsinformatie als open data en zorgt voor meer transparantie in sectoren zoals lobby, publiek geld en verkiezingen.</p>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
         <p class="block font-mono font-medium text-pink text-[0.8125rem]/[1.125rem]">Filter op dossier:</p>
         <div class="flex flex-wrap gap-[8px]">
           @php
-            $parents = get_pages(['include' => Array(9113, 9116, 9118, 9120, 9122)]);
+            $parents = get_pages(['include' => Array(9113, 9116, 9118, 9120, 9122, 13823, 13825, 13827)]);
             foreach ($parents as $parent) {
               $is_checked = in_array($parent->ID, $selected_parents);
               $checkbox_id = 'parent-' . $parent->ID;
