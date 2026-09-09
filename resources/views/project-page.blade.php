@@ -10,10 +10,7 @@
       <div class="mx-auto w-full max-w-[1920px] md:grid md:grid-cols-12 gap-x-[50px]">
         <?
           $parent_id = wp_get_post_parent_id(get_the_id());
-          if ($parent_id) {
-            $parent = get_post($parent_id);
-            $parent_title = $parent->post_title;
-          }
+          $parent_title = get_the_title($post->post_parent);
         ?>
         <div class="hidden md:block md:col-span-3 justify-self-start">
         @if ($parent_id && $parent_title)
