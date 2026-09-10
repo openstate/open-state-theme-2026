@@ -2,10 +2,10 @@
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
     <div class="xl:flex xl:justify-between mt-[24px] mb-[48px] md:mb-[100px] xl:mb-[120px]">
       <div class="mb-[32px] flex gap-x-[12px]">
-        <x-icon icon="simple-icons--mastodon" href="https://mastodon.nl/@openstate"/>
-        <x-icon icon="simple-icons--bluesky" href="https://bsky.app/profile/openstate.eu"/>
-        <x-icon icon="simple-icons--linkedin" href="https://www.linkedin.com/company/open-state-foundation/"/>
-        <x-icon icon="simple-icons--github" href="https://github.com/openstate/"/>
+        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--mastodon" href="https://mastodon.nl/@openstate"/>
+        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--bluesky" href="https://bsky.app/profile/openstate.eu"/>
+        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--linkedin" href="https://www.linkedin.com/company/open-state-foundation/"/>
+        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--github" href="https://github.com/openstate/"/>
       </div>
 
       @if (has_nav_menu('primary_navigation'))

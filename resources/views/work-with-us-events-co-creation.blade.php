@@ -64,7 +64,7 @@
             Developers bouwen werkende prototypes met overheidsdata, rond een concreet vraagstuk.
           </x-ons-aanbod-work>
           <x-ons-aanbod-work title="Maatwerk">
-            Events rond een specifiek thema of dataset voor jullie organisatie 
+            Events rond een specifiek thema of dataset voor jullie organisatie
           </x-ons-aanbod-work>
         </div>
       </div>
