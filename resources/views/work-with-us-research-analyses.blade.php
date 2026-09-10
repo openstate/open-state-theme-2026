@@ -57,15 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod-work title="Transparantie-audit">
+          <x-ons-aanbod-work-without-link title="Transparantie-audit">
             Een feitelijke nulmeting van jullie openheid en informatiehuishouding, met concrete verbeterpunten.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Data-kwaliteitsanalyse">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Data-kwaliteitsanalyse">
             Hoe bruikbaar is jullie open data werkelijk? Wij toetsen datasets op formaat, standaarden en hergebruik.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Algoritme-toetsing">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Algoritme-toetsing">
             Voldoen jullie geautomatiseerde besluiten aan de transparantie-eisen? Wij toetsen op bias en navolgbaarheid.
-          </x-ons-aanbod-work>
+          </x-ons-aanbod-work-without-link>
         </div>
       </div>
     </div>

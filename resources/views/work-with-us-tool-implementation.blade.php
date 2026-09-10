@@ -57,15 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod-work title="Een werkende tool, live">
+          <x-ons-aanbod-work-without-link title="Een werkende tool, live">
             Van lobbyregister tot begrotingsportaal, gebouwd op open standaarden en gekoppeld aan jullie systemen.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Volledige overdracht">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Volledige overdracht">
             Broncode op GitHub, technische documentatie en training, zodat jullie team het zelf beheert en doorontwikkelt.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Ondersteuning na oplevering">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Ondersteuning na oplevering">
             Drie tot zes maanden begeleiding, zodat de tool blijft werken zonder dat jullie afhankelijk worden.
-          </x-ons-aanbod-work>
+          </x-ons-aanbod-work-without-link>
         </div>
       </div>
     </div>

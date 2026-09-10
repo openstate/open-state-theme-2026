@@ -57,15 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod-work title="Transparantie-nulmeting">
+          <x-ons-aanbod-work-without-link title="Transparantie-nulmeting">
             Waar staan jullie nu? Een feitelijke meting van jullie openheid en informatiehuishouding.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Roadmap op maat">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Roadmap op maat">
             Concrete stappen met een tijdlijn en een implementatieplan per thema, afgestemd op wat jullie aankunnen.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Bestuurlijke samenvatting">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Bestuurlijke samenvatting">
             Een helder verhaal voor college en raad, zodat besluitvorming niet blijft hangen.
-          </x-ons-aanbod-work>
+          </x-ons-aanbod-work-without-link>
         </div>
       </div>
     </div>

@@ -57,15 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod-work title="Woo in de praktijk">
+          <x-ons-aanbod-work-without-link title="Woo in de praktijk">
             Trainingen die ambtenaren leren hoe je verzoeken afhandelt, actief openbaar maakt en de valkuilen vermijdt.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Open data-publicatie">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Open data-publicatie">
             Hands-on workshops over formaten, standaarden en het bruikbaar maken van data voor hergebruik.
-          </x-ons-aanbod-work>
-          <x-ons-aanbod-work title="Tool- en datatraining op maat">
+          </x-ons-aanbod-work-without-link>
+          <x-ons-aanbod-work-without-link title="Tool- en datatraining op maat">
             Werken met Open Spending, Open Lobby of jullie eigen tools, en data publiceren die ook echt gebruikt wordt.
-          </x-ons-aanbod-work>
+          </x-ons-aanbod-work-without-link>
         </div>
       </div>
     </div>
