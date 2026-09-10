@@ -203,7 +203,7 @@ add_action('template_redirect', function () {
 });
 
 // Add categories to pages
-add_action('add_taxonomies_to_pages', function () {
+add_action('init', function () {
   register_taxonomy_for_object_type('post_tag', 'page');
   register_taxonomy_for_object_type('category', 'page');
 });
