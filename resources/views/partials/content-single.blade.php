@@ -6,6 +6,10 @@
     <?
       $categories = wp_get_post_categories(get_the_ID(), ['fields' => 'all']);
       $category_title = $categories ? $categories[0]->name : '';
+      // Don't show breadcrumb if the post has the default 'Nieuws' category
+      if ($category_title == 'Nieuws') {
+        $category_title = '';
+      }
 
       $args = array(
         'post_type' => 'page',
