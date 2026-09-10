@@ -1,5 +1,5 @@
 {{--
-  Template Name: Work With Us Template
+  Template Name: Work With Us - Events & Co-creation Template
 --}}
 
 @extends('layouts.app')
@@ -9,17 +9,17 @@
     <div class="bg-purple-800 text-white px-[16px] md:px-[24px] pt-[88px] md:pt-[120px] pb-[80px] md:pb-[120px]">
       <div class="mx-auto w-full max-w-[1920px] xl:grid xl:grid-cols-12 gap-x-[16px]">
         <header class="xl:col-span-4 mb-[16px] md:mb-[24px] xl:mb-[40px]">
-          <h1 class="font-sans text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] mb-[8px] md:mb-[16px]">{!! get_the_title() !!}</h1>
-          <p class="font-serif text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] m-0">Samen voor de democratie</p>
+          <p class="font-sans text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] mb-[8px] md:mb-[16px]">Werk met ons</p>
+          <h1 class="font-serif text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] m-0">Events & co-creatie</h1>
         </header>
 
         <div class="xl:col-span-6 xl:col-start-6">
           {!! the_post_thumbnail('full', array('class' => 'rounded-lg')) !!}
           <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">
-            Transparantie is complex.
+            Samen kom je verder.
           </p>
           <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">
-            Of het nu gaat om de Woo, een lobbyregister of het ontsluiten van begrotingsdata — de politieke en maatschappelijke druk groeit, maar de capaciteit en kennis om het goed te doen zijn schaars. Wij helpen overheden die stap te zetten. Praktisch, bewezen, en altijd open source.
+            De beste oplossingen ontstaan als je er samen aan werkt. Wij organiseren data-expedities, hackathons en expert meetups waar ambtenaren, journalisten en developers samen bouwen aan transparantie.
           </p>
         </div>
       </div>
@@ -33,17 +33,17 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Herkenbaar?</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[48px]">
-          <x-work-text title="Woo-druk">
-            Verzoeken en projecten stapelen zich op, de urgentie is er maar de capaciteit ontbreekt.
+          <x-work-text title="Data zonder verhaal ">
+            Er ligt een berg overheidsdata, maar de maatschappelijke waarde blijft onzichtbaar zolang niemand ermee aan de slag gaat.
           </x-work-text>
-          <x-work-text title="Open data">
-            Er is veel data, maar weinig hergebruik. Publiceren lukt, maar bruikbaar maken is een ander verhaal.
+          <x-work-text title="Werken in silo’s">
+            Ambtenaren, journalisten en developers werken langs elkaar heen, terwijl ze elkaar hard nodig hebben.
           </x-work-text>
-          <x-work-text title="Lobby-transparantie">
-            De politiek vraagt om een lobbyregister, maar niemand weet hoe je dat implementeert.
+          <x-work-text title="Hoge drempel bij data">
+            Complexe datasets worden oppervlakkig gebruikt, de verhalen erin blijven onverteld.
           </x-work-text>
-          <x-work-text title="Kleine teams, grote ambities">
-            De ambitie is er, de middelen niet altijd. Externe expertise kan het verschil maken.
+          <x-work-text title="Ideeën blijven liggen">
+            Goede plannen sneuvelen omdat de juiste mensen nooit samen doorpakken.
           </x-work-text>
         </div>
       </div>
@@ -57,7 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod variant="ons-aanbod-work" />
+          <x-ons-aanbod-work title="Data-expedities">
+            Journalisten, ambtenaren en data-analisten zetten in één dag ruwe data om in bruikbare inzichten en onderzoek.
+          </x-ons-aanbod-work>
+          <x-ons-aanbod-work title="Hackathons">
+            Developers bouwen werkende prototypes met overheidsdata, rond een concreet vraagstuk.
+          </x-ons-aanbod-work>
+          <x-ons-aanbod-work title="Maatwerk">
+            Events rond een specifiek thema of dataset voor jullie organisatie 
+          </x-ons-aanbod-work>
         </div>
       </div>
     </div>

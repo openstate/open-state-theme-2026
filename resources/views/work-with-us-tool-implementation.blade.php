@@ -1,5 +1,5 @@
 {{--
-  Template Name: Work With Us Template
+  Template Name: Work With Us - Tool Implementation Template
 --}}
 
 @extends('layouts.app')
@@ -9,17 +9,17 @@
     <div class="bg-purple-800 text-white px-[16px] md:px-[24px] pt-[88px] md:pt-[120px] pb-[80px] md:pb-[120px]">
       <div class="mx-auto w-full max-w-[1920px] xl:grid xl:grid-cols-12 gap-x-[16px]">
         <header class="xl:col-span-4 mb-[16px] md:mb-[24px] xl:mb-[40px]">
-          <h1 class="font-sans text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] mb-[8px] md:mb-[16px]">{!! get_the_title() !!}</h1>
-          <p class="font-serif text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] m-0">Samen voor de democratie</p>
+          <p class="font-sans text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] mb-[8px] md:mb-[16px]">Werk met ons</p>
+          <h1 class="font-serif text-[2.25rem]/[2.5rem] tracking-[-0.025rem] md:text-[3.25rem]/[3.5rem] md:tracking-[-0.05rem] xl:text-[4rem]/[4.25rem] xl:tracking-[-0.0625rem] m-0">Tool implementatie</h1>
         </header>
 
         <div class="xl:col-span-6 xl:col-start-6">
           {!! the_post_thumbnail('full', array('class' => 'rounded-lg')) !!}
           <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">
-            Transparantie is complex.
+            Bouwen is een vak.
           </p>
           <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">
-            Of het nu gaat om de Woo, een lobbyregister of het ontsluiten van begrotingsdata — de politieke en maatschappelijke druk groeit, maar de capaciteit en kennis om het goed te doen zijn schaars. Wij helpen overheden die stap te zetten. Praktisch, bewezen, en altijd open source.
+            Van concept tot werkende tool. Wij bouwen transparantie-instrumenten die passen bij jullie organisatie: lobbyregisters, begrotingsportalen, raadsinformatiesystemen en maatwerkoplossingen. Open source, volledig overdraagbaar, en gebouwd om te blijven.
           </p>
         </div>
       </div>
@@ -33,17 +33,17 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Herkenbaar?</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[48px]">
-          <x-work-text title="Woo-druk">
-            Verzoeken en projecten stapelen zich op, de urgentie is er maar de capaciteit ontbreekt.
+          <x-work-text title="Onbruikbare data">
+            Jullie publiceren cijfers, maar niemand kan ermee werken. Een PDF is geen open data.
           </x-work-text>
-          <x-work-text title="Open data">
-            Er is veel data, maar weinig hergebruik. Publiceren lukt, maar bruikbaar maken is een ander verhaal.
+          <x-work-text title="Vendor lock-in">
+            Een externe partij bouwde iets en nam bij vertrek de kennis mee. Nu durft niemand het aan te raken.
           </x-work-text>
-          <x-work-text title="Lobby-transparantie">
-            De politiek vraagt om een lobbyregister, maar niemand weet hoe je dat implementeert.
+          <x-work-text title="Geen bouwcapaciteit">
+            De opdracht ligt er, een lobbyregister of begrotingsportaal, maar de technische capaciteit ontbreekt intern.
           </x-work-text>
-          <x-work-text title="Kleine teams, grote ambities">
-            De ambitie is er, de middelen niet altijd. Externe expertise kan het verschil maken.
+          <x-work-text title="Losse systemen">
+            Tools die niet met elkaar praten, waardoor data steeds opnieuw handmatig wordt overgezet.
           </x-work-text>
         </div>
       </div>
@@ -57,7 +57,15 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod variant="ons-aanbod-work" />
+          <x-ons-aanbod-work title="Een werkende tool, live">
+            Van lobbyregister tot begrotingsportaal, gebouwd op open standaarden en gekoppeld aan jullie systemen.
+          </x-ons-aanbod-work>
+          <x-ons-aanbod-work title="Volledige overdracht">
+            Broncode op GitHub, technische documentatie en training, zodat jullie team het zelf beheert en doorontwikkelt.
+          </x-ons-aanbod-work>
+          <x-ons-aanbod-work title="Ondersteuning na oplevering">
+            Drie tot zes maanden begeleiding, zodat de tool blijft werken zonder dat jullie afhankelijk worden.
+          </x-ons-aanbod-work>
         </div>
       </div>
     </div>
