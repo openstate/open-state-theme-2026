@@ -167,7 +167,7 @@ add_action('widgets_init', function () {
 // website; This action will still make old posts and project pages with
 // English texts available for those who directly visit the URL (e.g. via 'old'
 // bookmarks and search engines)
-add_action( 'template_redirect', function () {
+add_action('template_redirect', function () {
     if ( ! function_exists( 'qtranxf_getLanguage' ) || qtranxf_getLanguage() !== 'en' ) {
         return;
     }
@@ -200,4 +200,10 @@ add_action( 'template_redirect', function () {
 
     wp_safe_redirect( $target, 301 );
     exit;
-} );
+});
+
+// Add categories to pages
+add_action('add_taxonomies_to_pages', function () {
+  register_taxonomy_for_object_type('post_tag', 'page');
+  register_taxonomy_for_object_type('category', 'page');
+});
