@@ -7,7 +7,7 @@
   <h3 class="mt-[20px] mb-[8px] md:mb-[12px] text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem] tracking-[0]">{{ $title }}</h3>
   <p>{{ $slot }}</p>
   <div class="flex mt-auto">
-    <p class="font-medium mb-0">Lees meer</p>
+    <p class="font-medium mb-0">Bekijk aanbod</p>
     <span class="iconify size-4.5 mdi--arrow-right ml-auto my-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
   </div>
 </a>

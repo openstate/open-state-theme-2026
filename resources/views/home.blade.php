@@ -219,7 +219,7 @@
         <p class="md:col-span-6 xl:col-span-6 m-0">Werk met ons aan een transparante overheid. We zetten onze expertise in om overheden te helpen de democratie te versterken. Dat doen we door bronnen en tools te bouwen, onderzoek uit te voeren en trainingen en events te organiseren.</p>
       </div>
 
-      <div class="flex gap-x-[16px] snap-x snap-mandatory items-stretch overflow-x-scroll max-xl:px-[24px]">
+      <div class="flex gap-x-[16px] snap-x snap-mandatory items-stretch scroll-px-[15%] md:scroll-px-[30px] overflow-x-scroll">
         <x-ons-aanbod variant="ons-aanbod-home" />
       </div>
 
