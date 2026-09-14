@@ -3,7 +3,7 @@
 @php
   $secondary_nav_colors = false;
 
-  if (array_intersect(array('page-template-project-page', 'over-ons', 'error404', 'page-template-donate', 'page-template-work-with-us'), get_body_class())) {
+  if (array_intersect(array('page-template-project-page', 'over-ons', 'error404', 'page-template-donate', 'page-template-work-with-us', 'page-template-work-with-us-tool-implementation', 'page-template-work-with-us-advice-strategy', 'page-template-work-with-us-training-workshops', 'page-template-work-with-us-research-analyses', 'page-template-work-with-us-events-co-creation'), get_body_class())) {
     $secondary_nav_colors = true;
   }
 
