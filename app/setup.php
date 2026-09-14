@@ -207,3 +207,8 @@ add_action('init', function () {
   register_taxonomy_for_object_type('post_tag', 'page');
   register_taxonomy_for_object_type('category', 'page');
 });
+
+// Set summary word length
+add_filter('excerpt_length', function ($length) {
+    return 20;
+}, 999);

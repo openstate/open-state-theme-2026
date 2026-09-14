@@ -1,25 +1,18 @@
 <?php // Nieuwsbericht card op de homepage ?>
 
-<a class="xl:col-span-3 snap-start w-full md:w-1/2 xl:w-full shrink-0 flex flex-col bg-off-white-100 hocus:bg-purple-700 hocus:text-pink transition-colors rounded-lg overflow-hidden no-underline group" href="{{ get_permalink() }}">
-
-  <div class="relative">
-    <? the_post_thumbnail('col-7-thumbnail', array('class' => 'aspect-[16/10] object-cover')); ?>
-
+<a class="xl:col-span-3 snap-start w-full md:w-1/2 xl:w-full shrink-0 flex flex-col bg-off-white-100 hocus:bg-purple-700 hocus:text-pink transition-colors rounded-lg overflow-hidden no-underline group h-[388px] no-default-ring focus:outline-none focus-visible:ring-2 focus-visible:ring-inset" href="{{ get_permalink() }}">
+  <div class="flex flex-col h-full px-[16px] py-[16px]">
     @php
       $text = 'Nieuws';
       if (get_field('agenda_evenement')) {
         $text = 'Evenement';
       }
     @endphp
-    <x-badge text="{{ $text }}" variant="secondary" card=True />
-  </div>
-  <div class="flex flex-col h-full px-[16px] pt-[32px] pb-[16px]">
-    <h3 class="entry-title mt-0 text-[1.5rem]/[1.75rem] tracking-[0]">
+    <x-badge text="{{ $text }}" variant="secondary" class="self-start" />
+    <h3 class="entry-title mt-[32px] mb-[12px] text-[1.5rem]/[1.75rem] tracking-[0]">
         {!! $title !!}
     </h3>
-    <div class="mb-[12px]">
-      @include('partials.agenda-card-info')
-    </div>
+    @include('partials.agenda-card-info')
 
     {!! get_the_excerpt() !!}
 

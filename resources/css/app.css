@@ -69,7 +69,7 @@
 }
 
 @layer base {
-  *:focus-visible {
+  *:focus-visible:not(.no-default-ring) {
     outline: 2px solid var(--color-pink);
     outline-offset: 2px;
   }
