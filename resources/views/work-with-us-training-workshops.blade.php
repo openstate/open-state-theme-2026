@@ -19,7 +19,7 @@
             Kennis maakt het verschil.
           </p>
           <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">
-            Transparantie werkt alleen als mensen weten hoe het moet. Onze trainingen zijn praktisch, op maat, en gericht op de ambtenaren die het dagelijks doen. Van Woo-afhandeling tot open data-publicatie.
+            Transparantie werkt alleen als mensen weten hoe het moet. We trainen ambtenaren die overheidsinformatie beheren en journalisten die ermee werken, van Woo-afhandeling en open datapublicatie tot onderzoek met AI.
           </p>
         </div>
       </div>
@@ -33,17 +33,17 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Herkenbaar?</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[48px]">
+          <x-work-text title="Kennis bij één persoon">
+            Eén collega weet hoe het werkt of waar de data staat. Vertrekt die persoon, dan begint het team weer bij nul.
+          </x-work-text>
           <x-work-text title="Procedure op papier">
             De Woo-procedure bestaat, maar in de praktijk weet niemand precies hoe het moet.
           </x-work-text>
-          <x-work-text title="Publiceren is lastig">
-            Open data klinkt simpel, tot je voor de vraag staat welk formaat, welke standaard, welke licentie.
+          <x-work-text title="Versnipperde bronnen">
+            Overheidsdata staat verspreid over portals en pdf's, waardoor het zoeken naar informatie voelt als het zoeken naar een speld in een hooibelt.
           </x-work-text>
-          <x-work-text title="Kennis bij één persoon">
-            Eén collega weet hoe het werkt. Als die weggaat, begint het team weer bij nul.
-          </x-work-text>
-          <x-work-text title="Data die niemand gebruikt">
-            Jullie publiceren netjes, maar de data worden nauwelijks hergebruikt.
+          <x-work-text title="Potentie blijft liggen">
+            Overheden publiceren data die nauwelijks wordt hergebruikt, en als redactie is er niet genoeg tijd om door bergen data heen te spitten.
           </x-work-text>
         </div>
       </div>
@@ -57,14 +57,14 @@
           <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons aanbod</h2>
         </div>
         <div class="xl:col-span-8 md:grid md:grid-cols-12 md:gap-x-[16px] gap-y-[16px]">
-          <x-ons-aanbod-work-without-link title="Woo in de praktijk">
-            Trainingen die ambtenaren leren hoe je verzoeken afhandelt, actief openbaar maakt en de valkuilen vermijdt.
+          <x-ons-aanbod-work-without-link title="Workshops">
+            Van Woo in de praktijk en open datapublicatie tot de IAMA-beoordeling van een algoritme en AI voor raadsleden: onze workshops zijn praktijkgericht en direct toepasbaar. Benieuwd naar het volledige aanbod, mail ons.
           </x-ons-aanbod-work-without-link>
-          <x-ons-aanbod-work-without-link title="Open data-publicatie">
-            Hands-on workshops over formaten, standaarden en het bruikbaar maken van data voor hergebruik.
+          <x-ons-aanbod-work-without-link title="Presentaties">
+            Toegankelijke presentaties over de staat van transparantie bij overheden of de Wet open overheid, om een team of bestuur snel op hetzelfde niveau te krijgen. Ook voor grotere, meerjarige trajecten zoals de Democracy accelerator: mail ons voor de mogelijkheden.
           </x-ons-aanbod-work-without-link>
-          <x-ons-aanbod-work-without-link title="Tool- en datatraining op maat">
-            Werken met Open Spending, Open Lobby of jullie eigen tools, en data publiceren die ook echt gebruikt wordt.
+          <x-ons-aanbod-work-without-link title="Journalistieke workshops (Bron academy)">
+            Journalistiek onderzoek met overheidsinformatie en AI. In drie workshops leren redacties en journalisten hoe ze openbare bronnen efficiënt vinden, complexe dossiers structureren en AI verantwoord inzetten. Los te volgen of als leertraject.
           </x-ons-aanbod-work-without-link>
         </div>
       </div>
