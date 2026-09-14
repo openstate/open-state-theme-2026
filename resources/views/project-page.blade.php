@@ -31,7 +31,7 @@
           </div>
           <div class="grid">
             <div class="md:order-3 max-md:relative md:static">
-              {!! the_post_thumbnail('full', array('class' => 'rounded-lg')) !!}
+              {!! the_post_thumbnail('full', array('class' => 'rounded-lg object-cover max-h-[310px] xl:max-h-[500px]')) !!}
               @if ($parent_id && $parent_title)
                 <x-badge text="{{ $parent_title }}" card=True class="md:hidden" />
               @endif
