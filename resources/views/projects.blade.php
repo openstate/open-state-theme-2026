@@ -38,7 +38,9 @@
         <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
       </div>
       <div class="col-span-12 md:col-span-6">
-        <p class="mb-0 md:text-[1rem]/[1.5rem] xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625rem]">Elk Open State project ontsluit overheidsinformatie als open data en zorgt voor meer transparantie in sectoren zoals lobby, publiek geld en verkiezingen.</p>
+        <p class="mb-0 md:text-[1rem]/[1.5rem] xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625rem]">
+          {!! apply_filters('the_content', get_the_content()) !!}
+        </p>
       </div>
     </div>
 
