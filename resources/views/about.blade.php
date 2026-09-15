@@ -117,12 +117,10 @@
           <h2 class="m-0 max-md:mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Het bestuur</h2>
         </div>
         <div class="md:col-span-8 grid grid-cols-12 gap-x-[16px] gap-y-[32px]">
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje">
-            <b>Sicco van Sas</b> (<a href="mailto:sicco@openstate.eu">e-mail</a>, <a href="https://todon.nl/@sicco" target="_blank" rel="me noopener">mastodon</a>, <a href="https://github.com/siccovansas" target="_blank" rel="noopener">github</a>) kwam in 2012 bij ons binnen als stagiair voor zijn masterscriptie Artificial Intelligence. Daarna bleef hij in zijn vrije tijd betrokken bij de stichting. Zo won hij met zijn team de <a href="https://www.hackdeoverheid.nl/apps-hackathon-publieke-omroep/">Hackathon Publieke Omroep in 2013</a>. Sinds 2015 werkt hij bij Open State als developer. Sicco houdt van het openen en analyseren van data en heeft aan vele projecten gewerkt die daaraan bijdragen. Tijdens May Contain Hackers 2022 sprak hij op het hoofdpodium: <a href="https://media.ccc.de/v/mch2022-203-democracy-eventually-digitally-transparent-" target="_blank" rel="noopener">Democracy: Eventually Digitally Transparent?</a>.
-          </x-about-person>
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
+          <x-about-bestuur name="Ton Zijlstra" function="Voorzitter" href="https://www.linkedin.com/in/tonzijlstra/" />
+          <x-about-bestuur name="Ruben Brave" function="algemeen bestuurslid" href="https://www.linkedin.com/in/rbrave/" />
+          <x-about-bestuur name="Sara Spaargaren" function="algemeen bestuurslid" href="https://www.linkedin.com/in/saraspaargaren/" />
+          <x-about-bestuur name="Sanne Kamerling " function="algemeen bestuurslid" href="https://www.linkedin.com/in/swkamerling/" />
         </div>
       </div>
     </div>
