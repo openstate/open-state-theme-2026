@@ -96,15 +96,21 @@
           <h2 class="m-0 max-md:mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Het team</h2>
         </div>
         <div class="md:col-span-8 grid grid-cols-12 gap-x-[16px] gap-y-[32px]">
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje">
+          <x-about-person name="Sicco van Sas" function="Developer" image="sicco">
             <b>Sicco van Sas</b> (<a href="mailto:sicco@openstate.eu">e-mail</a>, <a href="https://todon.nl/@sicco" target="_blank" rel="me noopener">mastodon</a>, <a href="https://github.com/siccovansas" target="_blank" rel="noopener">github</a>) kwam in 2012 bij ons binnen als stagiair voor zijn masterscriptie Artificial Intelligence. Daarna bleef hij in zijn vrije tijd betrokken bij de stichting. Zo won hij met zijn team de <a href="https://www.hackdeoverheid.nl/apps-hackathon-publieke-omroep/">Hackathon Publieke Omroep in 2013</a>. Sinds 2015 werkt hij bij Open State als developer. Sicco houdt van het openen en analyseren van data en heeft aan vele projecten gewerkt die daaraan bijdragen. Tijdens May Contain Hackers 2022 sprak hij op het hoofdpodium: <a href="https://media.ccc.de/v/mch2022-203-democracy-eventually-digitally-transparent-" target="_blank" rel="noopener">Democracy: Eventually Digitally Transparent?</a>.
           </x-about-person>
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
-          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje" />
+          <x-about-person name="Tim Vos-Goedhart" function="senior projectleider" image="tim">
+            <b>Tim Vos-Goedhart</b> (<a href="mailto:tim@openstate.eu">e-mail</a>) is senior projectleider, jurist en politicoloog. Hij heeft veel ervaring met het bevorderen van actief burgerschap en versterken van de democratie. De overheid er is voor ons allen en dat kun je bereiken door transparantie, de kennis die wordt vergaard is van waarde voor iedereen. Actief burgerschap begint met een overheid die open by design is. Het voeden en aanjagen van het debat over transparantie en open data zijn cruciaal. Ondertussen werkt hij graag aan projecten die overheids data toegankelijk en herbruikbaar maken. Samen met en voor de Nederlandse journalistiek werkt hij aan het verbeteren van de positie van (lokale) journalisten en het bevorderen van hergebruik.
+          </x-about-person>
+          <x-about-person name="Marlinde Weener" function="Projectleider" image="marlinde">
+            <b>Marlinde Weener</b> (<a href="mailto:marlinde@openstate.eu">e-mail</a>) is sinds september 2024 werkzaam bij Open State Foundation als projectcoördinator en richt zich vooral op de projecten Open Lobby en Actieplan Open Overheid. Ze heeft economie, filosofie en internationale ontwikkelingsstudies gestudeerd. Voorheen werkte zij als veldmedewerker bij mensenrechtenorganisatie Peace Brigades International in Colombia. Nu wil ze haar focus verleggen naar het Nederlandse landschap en betrokken zijn bij het teweegbrengen van positieve ontwikkelingen in eigen land. Ze beschouwt overheid transparantie als een fundamenteel recht en een van de belangrijkste hoekstenen van een gezonde democratie. Haar missie is het onderwerp nog meer onder de aandacht te brengen; ook bij het bredere publiek.
+          </x-about-person>
+          <x-about-person name="Brechje Huisma" function="Projectcoördinator" image="brechje">
+            <b>Brechje Huisma</b> (<a href="mailto:brechje@openstate.eu">e-mail</a>) is projectcoördinator bij Open State Foundation en werkt sinds juli 2025 bij de organisatie. Ze is verantwoordelijk voor de communicatie en coördineert projecten voornamelijk gericht op journalistiek. Met een achtergrond in International Development Studies onderzocht ze in haar masterthesis hoe onafhankelijke journalistiek burgerparticipatie versterkt in autoritaire regimes. Nu zet ze zich in voor vergroting van transparantie en publieke verantwoording. Dit vanuit de overtuiging dat onafhankelijke journalistiek en toegang tot informatie essentieel zijn voor het beschermen van burgers en het functioneren van een gezonde democratie.
+          </x-about-person>
+          <x-about-person name="Rob van Dijk" function="Developer" image="rob">
+            <b>Rob van Dijk</b> (<a href="mailto:rob@openstate.eu">e-mail</a>) is sinds november 2024 developer bij Open State. Hij heeft een wetenschappelijke achtergrond (PhD in Sterrenkunde) en heeft sindsdien verschillende rollen binnen de IT sector vervuld. Op zoek naar een maatschappelijke organisatie kwam hij terecht bij Open State waar hij met plezier een bijdrage levert aan een transparantere democratie. Hij werkt aan projecten die openbare overheidsdata uit verschillende bronnen verzamelen om die vervolgens beschikbaar te maken via makkelijk toegankelijke formaten en websites.
+          </x-about-person>
         </div>
       </div>
     </div>
