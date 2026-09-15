@@ -20,7 +20,9 @@
     class="mobile-menu"
     :class="{ 'is-open': open }"
     :aria-hidden="!open"
+    :inert="!open"
     aria-label="Mobile navigation"
+    inert
   >
     <div class="mobile-menu-inner">
       <div class="mobile-menu-content">
