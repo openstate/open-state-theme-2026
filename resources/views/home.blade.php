@@ -28,9 +28,9 @@
         );
         $the_query = new WP_Query($args);
 
-        // Hero: uitgelicht for sm and xl+
         if($the_query->have_posts()): ?>
-        <div class="flex md:hidden xl:flex xl:justify-center gap-[16px] px-[24px] max-md:snap-x max-md:snap-mandatory max-md:items-stretch max-md:overflow-x-scroll">
+        <?php // Hero: uitgelicht for xl+ ?>
+        <div class="hidden xl:flex xl:justify-center gap-[16px] px-[24px] max-md:snap-x max-md:snap-mandatory max-md:items-stretch max-md:overflow-x-scroll">
           <? while($the_query->have_posts()) : $the_query->the_post(); ?>
             <? if($the_query->current_post == 0): ?>
               <a class="group max-md:w-full shrink-0 snap-start self-start rounded-lg" href="<? the_permalink(); ?>">
@@ -118,9 +118,69 @@
           </a>
           <? wp_reset_postdata(); ?>
         </div>
-        <? endif;
-        wp_reset_query();
-      ?>
+
+        <?php // Hero: uitgelicht for sm ?>
+        <div class="flex md:hidden gap-[16px] px-[24px] max-md:snap-x max-md:snap-mandatory max-md:items-stretch max-md:overflow-x-scroll">
+          <?
+          global $post;
+          $post = $the_query->posts[1];
+          setup_postdata($post);
+          ?>
+            <a class="group max-md:w-full shrink-0 snap-start bg-purple-800 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+              <div class="relative">
+                <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[220px]')); ?>
+                @include('partials/hero-badge-purple')
+              </div>
+              <div class="flex flex-col h-[220px] px-[20px] pt-[16px] pb-[20px]">
+                <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
+                <div class="flex mt-auto">
+                  @include('partials/hero-project-type')
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                </div>
+              </div>
+            </a>
+          <?
+          global $post;
+          $post = $the_query->posts[0];
+          setup_postdata($post);
+          ?>
+            <a class="group max-md:w-full shrink-0 snap-start bg-blue-200 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+              <div class="relative">
+                <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[220px]')); ?>
+                @include('partials/hero-badge-purple')
+              </div>
+              <div class="flex flex-col h-[220px] px-[20px] pt-[16px] pb-[20px]">
+                <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
+                <div class="flex mt-auto">
+                  @include('partials/hero-project-type')
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                </div>
+              </div>
+            </a>
+          <?
+          global $post;
+          $post = $the_query->posts[2];
+          setup_postdata($post);
+          ?>
+            <a class="group max-md:w-full shrink-0 snap-start bg-off-white-400 hocus:bg-purple-700 text-white hocus:text-pink transition-colors rounded-lg overflow-hidden" href="<? the_permalink(); ?>">
+              <div class="relative">
+                <? the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover max-md:h-[220px]')); ?>
+                @include('partials/hero-badge-purple')
+              </div>
+              <div class="flex flex-col h-[220px] px-[20px] pt-[16px] pb-[20px]">
+                <p class="font-serif text-[1.5rem]/[1.75rem] mb-[4px]"><? the_title(); ?></p>
+                <div class="flex mt-auto">
+                  @include('partials/hero-project-type')
+                  <span class="shrink-0 iconify size-[20px] mdi--arrow-right ml-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
+                </div>
+              </div>
+            </a>
+        </div>
+
+        <?
+          endif;
+          wp_reset_query();
+        ?>
       </div>
     </div>
   </div>
