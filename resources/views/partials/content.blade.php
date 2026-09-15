@@ -1,6 +1,6 @@
 <?php // Nieuwsbericht card op de homepage ?>
 
-<a class="xl:col-span-3 snap-start w-full md:w-1/2 xl:w-full shrink-0 flex flex-col bg-off-white-100 hocus:bg-purple-700 hocus:text-pink transition-colors rounded-lg overflow-hidden no-underline group h-[388px] no-default-ring focus:outline-none focus-visible:ring-2 focus-visible:ring-inset" href="{{ get_permalink() }}">
+<a class="xl:col-span-3 snap-start w-full md:w-1/2 xl:w-full shrink-0 flex flex-col bg-off-white-100 hocus:bg-purple-700 hocus:text-pink transition-colors rounded-lg overflow-hidden no-underline group h-[420px] no-default-ring focus:outline-none focus-visible:ring-2 focus-visible:ring-inset" href="{{ get_permalink() }}">
   <div class="flex flex-col h-full px-[16px] py-[16px]">
     @php
       $text = 'Nieuws';
