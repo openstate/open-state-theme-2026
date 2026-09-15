@@ -29,18 +29,18 @@
           <div class="mb-[16px] md:mb-[24px] xl:mb-[40px]">
             <h1 class="text-[1.75rem]/[2rem] tracking-[-0.0125rem] md:text-[2.75rem]/[3rem] md:tracking-[-0.0375rem] xl:text-[3.25rem]/[3.5rem] xl:tracking-[-0.8px]">{!! get_the_title() !!}</h1>
           </div>
-          <div class="grid">
-            <div class="md:order-3 max-md:relative md:static">
+          <div class="grid xl:grid-cols-12">
+            <div class="md:order-3 max-md:relative md:static col-span-12">
               {!! the_post_thumbnail('full', array('class' => 'rounded-lg object-cover max-h-[310px] xl:max-h-[500px]')) !!}
               @if ($parent_id && $parent_title)
                 <x-badge text="{{ $parent_title }}" card=True class="md:hidden" />
               @endif
             </div>
-            <p class="md:order-1 max-md:mt-[16px]">
+            <p class="md:order-1 max-md:mt-[16px] col-span-12 xl:col-span-8">
               <? echo get_field('project_samenvatting', get_the_id()) ?>
             </p>
             @if ($project_url)
-            <x-button class="md:order-2 md:mb-[40px] xl:mb-[64px]" variant="secondary" text="Bezoek {{ preg_replace('#^https?://(.*)/?$#', '$1', rtrim($project_url, '/')) }}" href="{{ $project_url }}" />
+            <x-button class="md:order-2 md:mb-[40px] xl:mb-[64px] col-span-12" variant="secondary" text="Bezoek {{ preg_replace('#^https?://(.*)/?$#', '$1', rtrim($project_url, '/')) }}" href="{{ $project_url }}" />
             @endif
           </div>
         </div>
