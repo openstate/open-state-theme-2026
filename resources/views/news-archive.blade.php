@@ -46,9 +46,14 @@
 
   <div class="px-[16px]">
   @if ($the_query->have_posts())
+    <? $i = 0; ?>
     @while ($the_query->have_posts())
+      @php
+        $mod = $i % 3;
+      @endphp
       <? $the_query->the_post() ?>
-        @include('partials.news-archive-post')
+        @include('partials.news-archive-post', ['mod' => $mod])
+      <? $i++; ?>
     @endwhile
   @endif
   </div>

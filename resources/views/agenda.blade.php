@@ -55,10 +55,14 @@
 
   <div class="px-[16px]">
   @if ($the_query->have_posts())
+    <? $i = 0; ?>
     @php $new_separator_shown = false; @endphp
     @php $old_separator_shown = false; @endphp
     @php $upcoming_event_count = 0; @endphp
     @while ($the_query->have_posts())
+      @php
+        $mod = $i % 3;
+      @endphp
       <? $the_query->the_post() ?>
         @php
           $tijdstip = get_field('agenda_tijdstip', get_the_id());
@@ -84,7 +88,8 @@
           @php $old_separator_shown = true; @endphp
         @endif
 
-        @include('partials.agenda-archive-post')
+        @include('partials.agenda-archive-post', ['mod' => $mod])
+      <? $i++; ?>
     @endwhile
   @endif
   </div>

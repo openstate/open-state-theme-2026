@@ -27,7 +27,7 @@
         <div class="md:col-span-8 xl:col-span-6 xl:h-[520px] flex flex-col">
           <span class="hidden xl:block mt-[67px] ml-[22.36%] bg-linear-[270deg,#FF29B4_0%,#3D1535_100%] w-[85px] h-[5px]"></span>
           <p class="xl:w-[65%] mt-[12px] md:mt-[16px] xl:mt-auto mb-[40px] md:mb-[56px] tracking-[-0.00625rem] xl:text-[1.125rem]/[1.75rem] xl:tracking-[-0.00625rem]">
-            Open State Foundation is een onafhankelijke stichting die zich inzet voor een digitaal transparante en controleerbare overheid. Sinds 2012 bouwen we tools, doen we onderzoek en adviseren we overheden — altijd vanuit de overtuiging dat een sterke democratie begint bij openheid.
+            Open State Foundation is een onafhankelijke stichting die zich inzet voor een digitaal transparante en controleerbare overheid. Sinds 2012 bouwen we tools, doen we onderzoek en adviseren we overheden. Altijd vanuit de overtuiging dat een sterke democratie begint bij openheid.
           </p>
           <x-button type="button" text="Lees hele verhaal" icon="plus" variant="secondary" onclick="document.getElementById('verhaal').showModal()" arialabel="dialog" />
           <div class="relative">
