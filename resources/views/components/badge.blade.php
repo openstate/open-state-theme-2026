@@ -19,5 +19,5 @@
 ?>
 
 <div class="{{ $cardClasses }} {{ $variantClasses }} {{ $class }} font-mono font-medium text-[0.75rem]/[1rem] px-[8px] py-[4px] rounded-sm">
-  {{ $text }}
+  {!! $text !!}
 </div>
