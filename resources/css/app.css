@@ -171,7 +171,7 @@
   /* NOTE: also add this class to $secondary_nav_colors at the top of sections/header.blade.php */
   .page-template-project-page,
   /* About page, use its name otherwise its subpages also change color */
-  .over-ons,
+  .wie-we-zijn,
   .error404,
   .page-template-donate,
   .page-template-work-with-us,
