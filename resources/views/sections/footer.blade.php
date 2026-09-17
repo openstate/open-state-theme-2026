@@ -24,7 +24,7 @@
     </div>
 
     <a href="/">
-      <img class="w-full mb-[28px]" src="{{ Vite::asset('resources/images/open_state_foundation_white.svg') }}" alt="Open State Foundation">
+      <img class="w-full mb-[28px]" src="{{ Vite::asset('resources/images/open_state_foundation_light.svg') }}" alt="Open State Foundation">
     </a>
 
     <div class="flex justify-end pb-[24px] gap-x-[24px]">
