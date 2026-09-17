@@ -31,6 +31,48 @@
     @endif
 
     <div class="flex-1 flex justify-end">
+      <!-- Search -->
+      <form
+        role="search"
+        method="get"
+        action="{{ esc_url(home_url('/')) }}"
+        class="relative flex items-center mr-[4px] xl:mr-[20px]"
+      >
+        <label for="nav-search" class="sr-only">
+          {{ $args['aria_label'] ?? __('Zoek naar:', 'sage') }}
+        </label>
+        <input
+          id="nav-search"
+          type="search"
+          name="s"
+          placeholder="{{ __('Zoeken…', 'sage') }}"
+          required
+          class="peer absolute top-1/2 right-full z-60 w-0 -translate-y-1/2 rounded-lg bg-white px-0 py-[12px] opacity-0 shadow-lg ring-1 ring-black/5 outline-none transition-all duration-300 ease-out
+                 focus:w-56 focus:border-gray-300 focus:px-4 focus:opacity-100 bg-white
+                 not-placeholder-shown:w-56 not-placeholder-shown:border-gray-300 not-placeholder-shown:px-4 not-placeholder-shown:opacity-100"
+        >
+
+        {{-- Shown while collapsed: opens the field --}}
+        <label
+          for="nav-search"
+          class="ml-2 flex cursor-pointer rounded-full text-gray-700 hover:bg-gray-100
+                 peer-focus:pointer-events-none peer-not-placeholder-shown:hidden"
+        >
+          <span class="sr-only">{{ __('Open zoekbalk', 'sage') }}</span>
+          <span class="iconify size-5 xl:size-7 mdi--search"></span>
+        </label>
+
+        {{-- Shown while active: submits the search --}}
+        <button
+          type="submit"
+          class="ml-2 hidden rounded-full text-gray-700 hover:bg-gray-100
+                 peer-not-placeholder-shown:block peer-not-placeholder-shown:flex"
+        >
+          <span class="sr-only">{{ __('Zoek', 'sage') }}</span>
+          <span class="iconify size-7 mdi--search"></span>
+        </button>
+      </form>
+
       <!-- Mobile Menu -->
       <x-mobile-menu :secondaryNavColors="$secondary_nav_colors">
         @if (has_nav_menu('primary_navigation'))

@@ -84,23 +84,33 @@ add_filter('upload_mimes', function( $existing_mimes=array() ) {
 
 // Catch Mollie donation webhook, request payment details from their API and send an email to us
 add_action('do_parse_request', function($do_parse, $wp) {
-    $current_path = esc_url_raw(add_query_arg([]));
+  $current_path = esc_url_raw(add_query_arg([]));
 
-    if (strpos($current_path, 'dmm-webhook')) {
-        $apikey = get_option('dmm_mollie_apikey');
+  if (strpos($current_path, 'dmm-webhook')) {
+    $apikey = get_option('dmm_mollie_apikey');
 
-        $args = array(
-            'headers' => array(
-                'Authorization' => 'Bearer ' . $apikey
-            )
-        );
-        $payment_response = wp_remote_get('https://api.mollie.com/v2/payments/' . $_POST['id'], $args);
-        $payment_json = json_decode(wp_remote_retrieve_body($payment_response));
+    $args = array(
+      'headers' => array('Authorization' => 'Bearer ' . $apikey)
+    );
+    $payment_response = wp_remote_get('https://api.mollie.com/v2/payments/' . $_POST['id'], $args);
+    $payment_json = json_decode(wp_remote_retrieve_body($payment_response));
 
-        $customer_response = wp_remote_get('https://api.mollie.com/v2/customers/' . $payment_json->customerId, $args);        $customer_json = json_decode(wp_remote_retrieve_body($customer_response));
+    $customer_response = wp_remote_get('https://api.mollie.com/v2/customers/' . $payment_json->customerId, $args);        $customer_json = json_decode(wp_remote_retrieve_body($customer_response));
 
-        wp_mail(get_option('admin_email'), 'Donatie aan Open State Foundation', "Donatie aan Open State Foundation\n\nStatus: $payment_json->status\nEenmalig/periodiek: $payment_json->sequenceType\nBedrag (€): " . $payment_json->amount->value . "\nBericht: $payment_json->description\nNaam: " . $customer_json->name . "\nE-mail: " . $customer_json->email . "\nPayment ID: $payment_json->id");
-    }
+    wp_mail(get_option('admin_email'), 'Donatie aan Open State Foundation', "Donatie aan Open State Foundation\n\nStatus: $payment_json->status\nEenmalig/periodiek: $payment_json->sequenceType\nBedrag (€): " . $payment_json->amount->value . "\nBericht: $payment_json->description\nNaam: " . $customer_json->name . "\nE-mail: " . $customer_json->email . "\nPayment ID: $payment_json->id");
+  }
 
-    return $do_parse;
+  return $do_parse;
 }, 30, 2);
+
+// Style our own search form
+add_filter('get_search_form', function ($form, $args) {
+  return view('partials.search-form', ['args' => $args])->render();
+}, 10, 2);
+
+// Set posts per page to 50 (for search results page)
+add_action('pre_get_posts', function ($query) {
+  if (! is_admin() && $query->is_main_query() && $query->is_search()) {
+    $query->set('posts_per_page', 50);
+  }
+});

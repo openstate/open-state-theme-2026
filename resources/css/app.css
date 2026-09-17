@@ -154,6 +154,7 @@
   .page-template-template-custom,
   .page-template-projects,
   .page-template-news-archive,
+  .search,
   .single-post {
     header {
       @apply !bg-white;
