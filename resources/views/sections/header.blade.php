@@ -30,7 +30,7 @@
       </nav>
     @endif
 
-    <div class="flex-1 flex justify-end">
+    <div class="flex-1 flex justify-end xl:max-w-[232.433px]">
       <!-- Search -->
       <form
         role="search"
