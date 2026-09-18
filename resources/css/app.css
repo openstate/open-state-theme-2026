@@ -68,6 +68,37 @@
   [x-cloak] { display: none !important; }
 }
 
+@layer components {
+  .table-responsive {
+    @apply overflow-x-auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+    @apply w-full mb-4 align-top text-base text-[#212529] whitespace-nowrap;
+  }
+
+  .table > :not(caption) > * > * {
+    @apply px-2 py-2 border-b border-[#dee2e6];
+  }
+
+  .table > thead {
+    @apply align-bottom border-b-2 border-[#dee2e6];
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    @apply bg-black/5;
+  }
+
+  .table-hover > tbody > tr:hover {
+    @apply bg-black/[0.075];
+  }
+
+  .table-bordered > :not(caption) > * > * {
+    @apply border border-[#dee2e6];
+  }
+}
+
 @layer base {
   *:focus-visible:not(.no-default-ring) {
     outline: 2px solid var(--color-pink);
