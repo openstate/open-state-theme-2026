@@ -113,12 +113,12 @@
       </div>
     </div>
 
-    <?php // Ons eerder werk ?>
+    <?php // Ons eerdere werk ?>
 
     <div class="px-[16px] md:px-[24px] pt-[48px] md:pt-[80px] xl:pt-[64px] pb-[80px] md:pb-[120px] xl:pb-[128px]">
       <div class="mx-auto w-full max-w-[1920px] xl:grid xl:grid-cols-12 xl:gap-x-[16px]">
         <div class="xl:col-span-4">
-          <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons eerder werk</h2>
+          <h2 class="mt-0 mb-[32px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">Ons eerdere werk</h2>
         </div>
         <div class="xl:col-span-8 flex snap-x snap-mandatory items-stretch overflow-x-scroll">
           <img class="size-[4rem] mr-[40px] snap-start" src="{{ Vite::asset('resources/images/den_haag.png') }}" alt="Den Haag">
