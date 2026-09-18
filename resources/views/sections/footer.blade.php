@@ -1,5 +1,13 @@
 <?php // Nieuwsbrief ?>
-@include('partials.newsletter')
+@php
+  if (array_intersect(array('error404', 'page-template-work-with-us', 'page-template-work-with-us-tool-implementation', 'page-template-work-with-us-advice-strategy', 'page-template-work-with-us-training-workshops', 'page-template-work-with-us-research-analyses', 'page-template-work-with-us-events-co-creation'), get_body_class())) {
+    $no_newsletter = true;
+  }
+@endphp
+
+@if (!$no_newsletter)
+  @include('partials.newsletter')
+@endif
 
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
