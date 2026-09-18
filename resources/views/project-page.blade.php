@@ -14,7 +14,7 @@
         ?>
         <div class="hidden md:block md:col-span-3 justify-self-start">
         @if ($parent_id && $parent_title)
-          <x-badge text="{{ $parent_title }}" />
+          <x-badge text="{!! $parent_title !!}" />
         @endif
         </div>
 
