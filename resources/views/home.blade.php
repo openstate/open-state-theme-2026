@@ -286,7 +286,4 @@
       <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/werk-met-ons/" text="Werk met ons" />
     </div>
   </div>
-
-  <?php // Nieuwsbrief ?>
-  @include('partials.newsletter')
 @endsection

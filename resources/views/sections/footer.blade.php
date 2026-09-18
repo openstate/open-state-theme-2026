@@ -1,3 +1,6 @@
+<?php // Nieuwsbrief ?>
+@include('partials.newsletter')
+
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
     <div class="xl:flex xl:justify-between mt-[24px] mb-[48px] md:mb-[100px] xl:mb-[120px]">
