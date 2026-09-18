@@ -59,7 +59,7 @@
                  peer-focus:pointer-events-none peer-not-placeholder-shown:hidden"
         >
           <span class="sr-only">{{ __('Open zoekbalk', 'sage') }}</span>
-          <span class="iconify size-5 xl:size-7 mdi--search"></span>
+          <span class="iconify size-5 xl:size-7 mdi--search {{ $secondary_nav_colors ? 'text-white' : '' }}"></span>
         </label>
 
         {{-- Shown while active: submits the search --}}
@@ -69,7 +69,7 @@
                  peer-not-placeholder-shown:block peer-not-placeholder-shown:flex"
         >
           <span class="sr-only">{{ __('Zoek', 'sage') }}</span>
-          <span class="iconify size-7 mdi--search"></span>
+          <span class="iconify size-7 mdi--search {{ $secondary_nav_colors ? 'text-white' : '' }}"></span>
         </button>
       </form>
 
