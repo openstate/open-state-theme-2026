@@ -283,7 +283,7 @@
         <x-ons-aanbod variant="ons-aanbod-home" />
       </div>
 
-      <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/werk-met-ons/" text="Werk met ons" />
+      <x-button class="mt-[40px] md:mt-[56px] xl:mt-[24px] mx-auto xl:mx-0 xl:ml-auto" href="/hoe-we-werken/" text="Hoe we werken" />
     </div>
   </div>
 @endsection
