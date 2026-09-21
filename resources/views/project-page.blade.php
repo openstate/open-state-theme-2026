@@ -40,7 +40,7 @@
               <? echo get_field('project_samenvatting', get_the_id()) ?>
             </p>
             @if ($project_url)
-            <x-button class="md:order-2 md:mb-[40px] xl:mb-[64px] col-span-12" variant="secondary" text="Bezoek {{ preg_replace('#^https?://(.*)/?$#', '$1', rtrim($project_url, '/')) }}" href="{{ $project_url }}" />
+            <x-button class="md:order-2 md:mb-[40px] xl:mb-[64px] col-span-12" variant="secondary" text="Bezoek {{ preg_replace('#^https?://(.*)/?$#', '$1', rtrim($project_url, '/')) }}" href="{{ $project_url }}" target="_blank" />
             @endif
           </div>
         </div>
