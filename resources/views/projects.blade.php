@@ -111,6 +111,7 @@
           <? $the_query->the_post() ?>
           @if (get_field('project_afgerond', get_the_id()) == true && $completed_projects == false)
             <? $completed_projects = true ?>
+            <? $i = 0; ?>
             </div>
             <hr class="mx-auto w-full max-w-[1920px] border-purple-800/10">
             <h2 class="mx-auto w-full max-w-[1920px] text-[1.625rem]/[1.875rem] md:text-[1.75rem]/[2.125rem] xl:text-[2.125rem]/[2.625rem] mb-[32px] md:mb-[40px] xl:mb-[48px]">Afgeronde projecten</h2>
