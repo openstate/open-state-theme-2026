@@ -6,7 +6,7 @@
       $categories = wp_get_post_categories(get_the_ID(), ['fields' => 'all']);
       $category_title = $categories ? $categories[0]->name : 'Nieuws';
     @endphp
-    <x-badge text="{{ $category_title }}" variant="secondary" class="self-start" />
+    <x-badge text="{!! $category_title !!}" variant="secondary" class="self-start" />
 
     <h2 class="mt-[20px] md:mt-[32px] mb-[8px] md:mb-[12px] text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">{!! get_the_title() !!}</h2>
 

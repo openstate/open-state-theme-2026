@@ -13,5 +13,5 @@
   }
 @endphp
 @if ($badge)
-  <x-badge text="{{ $badge }}" card=True />
+  <x-badge text="{!! $badge !!}" card=True />
 @endif

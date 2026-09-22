@@ -13,5 +13,5 @@
   }
 @endphp
 @if ($badge)
-  <x-badge text="{{ $badge }}" variant="quarternary" class="self-start" />
+  <x-badge text="{!! $badge !!}" variant="quarternary" class="self-start" />
 @endif

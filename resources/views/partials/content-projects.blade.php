@@ -12,7 +12,7 @@
       }
     @endphp
     @if ($parent_id && $parent_title)
-      <x-badge text="{{ $parent_title }}" variant="secondary" card=True />
+      <x-badge text="{!! $parent_title !!}" variant="secondary" card=True />
     @endif
   </div>
 

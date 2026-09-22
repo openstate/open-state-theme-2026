@@ -7,7 +7,7 @@
       $category_title = $categories ? $categories[0]->name : '';
     @endphp
     @if ($category_title)
-      <x-badge text="{{ $category_title }}" card=True />
+      <x-badge text="{!! $category_title !!}" card=True />
     @endif
   </div>
 

@@ -33,7 +33,7 @@
             <div class="md:order-3 max-md:relative md:static col-span-12">
               {!! the_post_thumbnail('full', array('class' => 'rounded-lg object-cover max-h-[310px] xl:max-h-[500px]')) !!}
               @if ($parent_id && $parent_title)
-                <x-badge text="{{ $parent_title }}" card=True class="md:hidden" />
+                <x-badge text="{!! $parent_title !!}" card=True class="md:hidden" />
               @endif
             </div>
             <p class="md:order-1 max-md:mt-[16px] col-span-12 xl:col-span-8">

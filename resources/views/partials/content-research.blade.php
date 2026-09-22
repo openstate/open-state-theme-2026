@@ -10,7 +10,7 @@
     @endphp
     <div class="absolute inset-0 bg-pink/0 group-hocus:bg-pink/40 transition-colors"></div>
 
-    <x-badge text="{{ $category_title }}" variant="secondary" card=True />
+    <x-badge text="{!! $category_title !!}" variant="secondary" card=True />
 
     <span class="iconify size-4.5 mdi--arrow-right opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300 absolute bottom-[12px] right-[12px] z-100 text-white"></span>
   </div>

@@ -8,7 +8,7 @@
         $text = 'Evenement';
       }
     @endphp
-    <x-badge text="{{ $text }}" variant="secondary" class="self-start" />
+    <x-badge text="{!! $text !!}" variant="secondary" class="self-start" />
     <h3 class="entry-title mt-[32px] mb-[12px] text-[1.5rem]/[1.75rem] tracking-[0]">
         {!! $title !!}
     </h3>
