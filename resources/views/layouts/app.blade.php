@@ -1,6 +1,22 @@
 <!doctype html>
 <html @php(language_attributes())>
   <head>
+
+    <!--
+      _@####@_                                 @####@,                               *######@@                               ^8@                @@
+     @@^     8@   _ ___     ___    _ ___      @@     8 _@@__   __    _@__   ___       @8     8  ___   ___  ___   _ ___     ___@@    ___   _@@__  _    ___    ______
+     @8      @@@^88^^^8@ _@8' ^@_'8@***8@      8@@__   '@8'' /^'^8@ '8@'' @#^ ^8@     @@,___  @#^ ^@@  @@   8@ '8@***8@  _@8''8@  =^'^8@  '@8'' 8@  @#^ ^@@ ^@@***@@
+     @@      _@= @8    @ @8*####\ @@    @        '^8@@  @@   _@@@@@  @@   @^*###8     @8  '^ @@    @@= @@   @@  @@    @  @8   @@  __@@@@   @@   @@ @@     @@ @@   @@
+     8@_     @8  @8   _@ 8@_   _. @@    @     @_    _@  @@  =@   @@  @@   @@    _     @8      @@   @@  @@   @@  @@    @  @@   @@  @8   @   @@   @@  @@   @@  @@   @@
+       8#@@>~    @@#@#8   ^#8@#^ .##<  ###    ^8#@@#~   8#@# 8@@#@##  #@#^ 88@#8     >#8<      8#@#~   ^#@@###=.#8# .#8#. 8@@#@## 88@#^##= 8@@#.#8#  8#@#~  #8#. >##
+                 @@
+                ^^^^
+
+    Benieuwd naar de broncode? Wij houden van open werken, dus de deze website is open source: https://github.com/openstate/open-state-theme-2026/
+
+    Bekijk al onze andere open source repositories op https://github.com/openstate/
+    -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
