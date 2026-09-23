@@ -403,6 +403,7 @@
     --cap-widget-height: 46px;
     --cap-widget-width: 244px;
     --cap-font: var(--font-sans);
+    --cap-color: var(--color-purple-800);
   }
 
   cap-widget {
