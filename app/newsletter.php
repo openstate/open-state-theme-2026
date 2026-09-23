@@ -246,27 +246,27 @@ function mailchimp_subscribe($email)
 function handle_newsletter_signup(\WP_REST_Request $request)
 {
     if (!cap_is_configured()) {
-        return newsletter_error('Newsletter signup is temporarily unavailable.', 503);
+        return newsletter_error('Aanmelden voor de nieuwsbrief is tijdelijk niet beschikbaar.', 503);
     }
 
     // Honeypot, carried over from the original embed form.
     if ($request->get_param(NEWSLETTER_HONEYPOT)) {
-        return newsletter_error('Invalid submission.');
+        return newsletter_error('Ongeldige aanvraag.');
     }
 
     if (newsletter_rate_limited()) {
-        return newsletter_error('Too many attempts. Please try again later.', 429);
+        return newsletter_error('Te veel pogingen. Probeer het later opnieuw.', 429);
     }
 
     $email = sanitize_email((string) $request->get_param('EMAIL'));
 
     if (!is_email($email)) {
-        return newsletter_error(__('This is an invalid email address.', 'sage'));
+        return newsletter_error(__('Dit is een ongeldig e-mailadres.', 'sage'));
     }
 
     // Verify before any side effect.
     if (!cap_verify_token($request->get_param(CAP_TOKEN_FIELD))) {
-        return newsletter_error(__('Verification failed. Please try again.', 'sage'), 403);
+        return newsletter_error(__('Verificatie mislukt. Probeer het opnieuw.', 'sage'), 403);
     }
 
     $result = mailchimp_subscribe($email);
@@ -277,6 +277,6 @@ function handle_newsletter_signup(\WP_REST_Request $request)
 
     return new \WP_REST_Response([
         'success' => true,
-        'message' => __('Almost done — check your inbox to confirm.', 'sage'),
+        'message' => __('Bijna klaar — bevestig je aanmelding via de e-mail die we net stuurden.', 'sage'),
     ], 200);
 }
