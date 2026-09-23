@@ -87,6 +87,16 @@ add_action('do_parse_request', function($do_parse, $wp) {
   $current_path = esc_url_raw(add_query_arg([]));
 
   if (strpos($current_path, 'dmm-webhook')) {
+    // The optional donation message is only stored locally within WordPress, so retrieve that
+    global $wpdb;
+    $donation = $wpdb->get_row(
+      $wpdb->prepare(
+        "SELECT * FROM " . DMM_TABLE_DONATIONS . " WHERE payment_id = %s",
+        $_POST['id']
+      )
+    );
+    $message = $donation->dm_message;
+
     $apikey = get_option('dmm_mollie_apikey');
 
     $args = array(
@@ -95,9 +105,10 @@ add_action('do_parse_request', function($do_parse, $wp) {
     $payment_response = wp_remote_get('https://api.mollie.com/v2/payments/' . $_POST['id'], $args);
     $payment_json = json_decode(wp_remote_retrieve_body($payment_response));
 
-    $customer_response = wp_remote_get('https://api.mollie.com/v2/customers/' . $payment_json->customerId, $args);        $customer_json = json_decode(wp_remote_retrieve_body($customer_response));
+    $customer_response = wp_remote_get('https://api.mollie.com/v2/customers/' . $payment_json->customerId, $args);
+    $customer_json = json_decode(wp_remote_retrieve_body($customer_response));
 
-    wp_mail(get_option('admin_email'), 'Donatie aan Open State Foundation', "Donatie aan Open State Foundation\n\nStatus: $payment_json->status\nEenmalig/periodiek: $payment_json->sequenceType\nBedrag (€): " . $payment_json->amount->value . "\nBericht: $payment_json->description\nNaam: " . $customer_json->name . "\nE-mail: " . $customer_json->email . "\nPayment ID: $payment_json->id");
+    wp_mail(get_option('admin_email'), 'Donatie aan Open State Foundation', "Donatie aan Open State Foundation\n\nStatus: $payment_json->status\nEenmalig/periodiek: $payment_json->sequenceType\nBedrag (€): " . $payment_json->amount->value . "\nBericht: $message\nNaam: " . $customer_json->name . "\nE-mail: " . $customer_json->email . "\nPayment ID: $payment_json->id");
   }
 
   return $do_parse;
