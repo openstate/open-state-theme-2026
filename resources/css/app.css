@@ -395,6 +395,34 @@
     @apply !text-purple-800 !border-none !p-0 !m-0;
   }
 
+  .capjs {
+    @apply mt-[8px] md:mt-0 mr-[8px];
+    --cap-border-color: transparent;
+    --cap-border-radius: 8px;
+    --cap-widget-padding: 9px;
+    --cap-widget-height: 46px;
+    --cap-widget-width: 244px;
+    --cap-font: var(--font-sans);
+  }
+
+  cap-widget {
+    display: inline-flex;
+    --cap-focus-ring: var(--color-pink);
+  }
+
+  cap-widget::part(label) {
+    @apply text-[0.875rem]/[1rem] font-normal;
+  }
+
+  #mce-EMAIL:focus-visible {
+    outline-offset: -3px;
+  }
+
+  cap-widget::part(trigger):focus-visible {
+    outline: 2px solid var(--color-pink);
+    outline-offset: -2px;
+  }
+
   /* md | 48rem | 768px */
   @media (width >= 48rem) {
     /* xl is the same */

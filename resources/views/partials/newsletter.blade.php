@@ -1,6 +1,6 @@
 <div class="bg-off-white-50 px-[16px] pt-[32px] pb-[48px] md:px-[24px] md:pt-[40px] md:pb-[64px] xl:pt-[56px] xl:pb-[80px]">
   <div class="mx-auto w-full max-w-[1920px]">
-    <form action="https://openstate.us4.list-manage.com/subscribe/post?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" data-endpoint="{{ esc_url(rest_url('open-state/v1/newsletter')) }}" novalidate>
       <div id="mc_embed_signup_scroll">
         <div class="grid grid-cols-12">
           <div class="col-span-12 xl:col-span-5 mb-[32px] xl:mb-0" for="mce-EMAIL">
@@ -12,55 +12,138 @@
           <div class="col-span-12 xl:col-span-6 xl:col-start-7 mt-auto">
             <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label>
             <div class="mc-field-group mc-first-group">
-              <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL">
-              <x-button-small variant="secondary" type="submit" class="align-top" />
-              <div id="mce-responses" class="clear mt-[8px]">
+              <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL" required>
+
+              <div class="flex md:inline">
+              @if (\App\cap_widget_endpoint())
+                <cap-widget id="mce-cap" class="capjs" data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
+                  data-cap-i18n-initial-state="<?php _e("Ik ben geen robot"); ?>"
+                  data-cap-i18n-verifying-label="<?php _e("Bezig met verifiëren..."); ?>"
+                  data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"
+                  data-cap-i18n-error-label="<?php _e("Fout"); ?>"
+                  data-cap-i18n-required-label="<?php _e("Verifieer eerst dat je een mens bent"); ?>">
+                </cap-widget>
+              @endif
+
+              <x-button-small variant="secondary" name="subscribe" id="mc-embedded-subscribe" type="submit" class="mt-auto md:align-top" />
+              </div>
+
+              <div id="mce-responses" class="clear mt-[8px]" aria-live="polite">
                 <div class="response text-purple-800" id="mce-error-response" style="display:none"></div>
                 <div class="response text-pink" id="mce-success-response" style="display:none"></div>
               </div>
+
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form
+ bot si       gnups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_03355fd4f1a7935cae63b21aa_a9619e4f3e" tabindex="-1" value="">
+              </div>
             </div>
           </div>
-        </div>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_03355fd4f1a7935cae63b21aa_a9619e4f3e" tabindex="-1" value="">
-          <input type="submit" name="subscribe" id="mc-embedded-subscribe" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1">
         </div>
       </div>
     </form>
   </div>
 </div>
 
-<script src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script>
-addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('mc-embedded-subscribe-form');
-  const emailInput = document.getElementById('mce-EMAIL');
-  const errorResponse = document.getElementById('mce-error-response');
+  (function () {
+    var form = document.getElementById('mc-embedded-subscribe-form');
+    if (!form) {
+      return;
+    }
 
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      const email = emailInput.value.trim();
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var widget = document.getElementById('mce-cap');
+    var errorBox = document.getElementById('mce-error-response');
+    var successBox = document.getElementById('mce-success-response');
+    var button = document.getElementById('mc-embedded-subscribe');
+    var capToken = null;
 
-      errorResponse.style.display = 'none';
+    var text = {
+      required: 'Dit is een verplicht veld.',
+      email: 'Dit is een ongeldig e-mailadres.',
+      captcha: 'Rond eerst de verificatie af.',
+      sending: 'Bezig…',
+      generic: 'Er ging iets mis. Probeer het later opnieuw.',
+      done: 'Bijna klaar — bevestig je aanmelding via de e-mail die we net stuurden.'
+    };
 
-      // Validate email is not empty
+    if (widget) {
+      widget.addEventListener('solve', function (event) {
+        capToken = event.detail && event.detail.token;
+      });
+      widget.addEventListener('reset', function () {
+        capToken = null;
+      });
+      widget.addEventListener('error', function () {
+        capToken = null;
+      });
+    }
+
+    function show(box, message) {
+      errorBox.style.display = 'none';
+      successBox.style.display = 'none';
+      box.textContent = message;
+      box.style.display = '';
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var email = form.querySelector('#mce-EMAIL').value.trim();
+
       if (!email) {
-        e.preventDefault();
-        errorResponse.textContent = 'Dit is een verplicht veld.';
-        errorResponse.style.display = 'block';
+        show(errorBox, text.required);
         return;
       }
 
-      // Validate email format
-      if (!emailRegex.test(email)) {
-        e.preventDefault();
-        errorResponse.textContent = 'Dit is een ongeldig e-mailadres.';
-        errorResponse.style.display = 'block';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        show(errorBox, text.email);
         return;
       }
+
+      // The widget also injects a hidden cap-token input; read either source.
+      var hidden = form.querySelector('input[name="cap-token"]');
+      var token = capToken || (hidden && hidden.value);
+
+      if (widget && !token) {
+        show(errorBox, text.captcha);
+        return;
+      }
+
+      button.disabled = true;
+      show(successBox, text.sending);
+
+      var payload = new FormData();
+      payload.append('EMAIL', email);
+      payload.append('cap-token', token || '');
+      payload.append('b_03355fd4f1a7935cae63b21aa_a9619e4f3e', form.querySelector('[name="b_03355fd4f1a7935cae63b21aa_a9619e4f3e"]').value);
+
+      fetch(form.dataset.endpoint, { method: 'POST', body: payload })
+        .then(function (response) {
+          return response.json().then(function (body) {
+            return { ok: response.ok, body: body };
+          });
+        })
+        .then(function (result) {
+          if (result.ok && result.body.success) {
+            show(successBox, result.body.message || text.done);
+            form.reset();
+          } else {
+            show(errorBox, (result.body && result.body.message) || text.generic);
+          }
+        })
+        .catch(function () {
+          show(errorBox, text.generic);
+        })
+        .finally(function () {
+          button.disabled = false;
+          capToken = null;
+          // Tokens are single-use, so the widget must be solved again.
+          if (widget && typeof widget.reset === 'function') {
+            widget.reset();
+          }
+        });
     });
-  }
-});
+  }());
 </script>
