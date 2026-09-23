@@ -53,6 +53,7 @@
       return;
     }
 
+    var isDutch = true;
     var widget = document.getElementById('mce-cap');
     var errorBox = document.getElementById('mce-error-response');
     var successBox = document.getElementById('mce-success-response');
@@ -60,12 +61,12 @@
     var capToken = null;
 
     var text = {
-      required: 'Dit is een verplicht veld.',
-      email: 'Dit is een ongeldig e-mailadres.',
-      captcha: 'Rond eerst de verificatie af.',
-      sending: 'Bezig…',
-      generic: 'Er ging iets mis. Probeer het later opnieuw.',
-      done: 'Bijna klaar — bevestig je aanmelding via de e-mail die we net stuurden.'
+      required: isDutch ? 'Dit is een verplicht veld.' : 'This field is required.',
+      email: isDutch ? 'Dit is een ongeldig e-mailadres.' : 'This is an invalid email address.',
+      captcha: isDutch ? 'Rond eerst de verificatie af.' : 'Please complete the verification first.',
+      sending: isDutch ? 'Bezig…' : 'Sending…',
+      generic: isDutch ? 'Er ging iets mis. Probeer het later opnieuw.' : 'Something went wrong. Please try again later.',
+      done: isDutch ? 'Bijna klaar — bevestig je aanmelding via de e-mail die we net stuurden.' : 'Almost done — check your inbox to confirm.'
     };
 
     if (widget) {
