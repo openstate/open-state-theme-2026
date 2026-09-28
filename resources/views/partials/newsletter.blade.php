@@ -16,7 +16,7 @@
 
               <div class="flex md:inline">
               @if (\App\cap_widget_endpoint())
-                <cap-widget id="mce-cap" class="capjs" data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
+                <cap-widget id="mce-cap" class="capjs" required data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
                   data-cap-i18n-initial-state="<?php _e("Ik ben geen robot"); ?>"
                   data-cap-i18n-verifying-label="<?php _e("Bezig met verifiëren..."); ?>"
                   data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"

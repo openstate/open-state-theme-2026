@@ -404,6 +404,17 @@
     --cap-widget-width: 244px;
     --cap-font: var(--font-sans);
     --cap-color: var(--color-purple-800);
+    --cap-spinner-color: var(--color-pink);
+  }
+
+  #donate-cap {
+    @apply mt-0 mr-0;
+    --cap-background: var(--color-purple-700);
+    --cap-color: var(--color-white);
+    --cap-widget-padding: 12px;
+    --cap-widget-height: 48px;
+    --cap-widget-width: 225px;
+    --cap-checkbox-background: white;
   }
 
   cap-widget {

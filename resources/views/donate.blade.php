@@ -83,7 +83,26 @@
                 <textarea name="dmm_message" class="mt-[8px] donate-form-field donate-form-field-textarea" placeholder="Optioneel, maar we vinden het erg leuk om te horen waarom je doneert"></textarea>
               </div>
 
-              <x-button type="submit" variant="secondary" name="dmm_submitted" class="mx-auto donate-form-field donate-form-button" text="Doneer" />
+
+              @if (\App\cap_is_configured())
+                <div class="flex flex-col md:flex-row gap-x-[16px] gap-y-[32px]">
+                  <cap-widget id="donate-cap" class="capjs" required
+                    data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
+                    data-cap-i18n-initial-state="<?php _e("Ik ben geen robot"); ?>"
+                    data-cap-i18n-verifying-label="<?php _e("Bezig met verifiëren..."); ?>"
+                    data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"
+                    data-cap-i18n-error-label="<?php _e("Fout"); ?>"
+                    data-cap-i18n-required-label="<?php _e("Verifieer eerst dat je een mens bent"); ?>">
+                  </cap-widget>
+                  <x-button type="submit" variant="secondary" name="dmm_submitted" class="donate-form-field donate-form-button" text="Doneer" />
+                </div>
+              @endif
+
+              @if (\App\donate_error_message())
+                <div class="mx-auto">
+                  <div>{{ \App\donate_error_message() }}</div>
+                </div>
+              @endif
             </form>
             <div class="hidden">
               {!! do_shortcode( '[doneren_met_mollie]' ) !!}
