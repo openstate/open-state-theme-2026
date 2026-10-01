@@ -146,12 +146,6 @@
             Ultrasnelle laadstations voor elektrische auto's, busjes, motors en vrachtwagens.
           </x-open-street>
         </div>
-
-        <h3>Steun in natura</h3>
-        <div class="grid grid-cols-12">
-          <x-steun-in-natura title="Open Data Monitor" image="logo-laptop-met-linux.svg" link="https://opendatamonitor.nl/" domain="OpenDataMonitor.nl">
-            Monitoring van data.overheid.nl gemaakt door Code Division.
-          </x-steun-in-natura>
       </div>
     </div>
   </div>
