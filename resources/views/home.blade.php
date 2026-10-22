@@ -231,7 +231,7 @@
       ?>
       @if ($the_query->have_posts())
         <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[56px] xl:gap-y-[64px] mb-[40px] md:mb-[56px] xl:mb-[24px]">
-          <? $i = 0; ?>
+          <? $i = 0; $row = 0; ?>
           @while ($the_query->have_posts())
             <?
               # On each row the cards have different col-spans so use modulo 2

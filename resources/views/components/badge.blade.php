@@ -12,7 +12,10 @@
   default => 'bg-purple-700 text-white',
 })
 
-<? if ($card) {
+
+<?
+$cardClasses = '';
+if ($card) {
   // Set card = True if the badge needs to be shown at the top left inside a card/image
   $cardClasses = 'absolute top-[12px] left-[12px] z-10';
 }

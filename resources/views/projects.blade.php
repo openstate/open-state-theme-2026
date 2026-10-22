@@ -86,7 +86,7 @@
 
     <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
       @if ($the_query->have_posts())
-        <? $i = 0; ?>
+        <? $i = 0; $row = 0; ?>
         @while ($the_query->have_posts())
           @php
             # On each row the cards have different col-spans so use modulo 2

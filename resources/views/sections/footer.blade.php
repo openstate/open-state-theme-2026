@@ -1,5 +1,6 @@
 <?php // Nieuwsbrief ?>
 @php
+  $no_newsletter = false;
   if (array_intersect(array('error404', 'page-template-work-with-us', 'page-template-work-with-us-tool-implementation', 'page-template-work-with-us-advice-strategy', 'page-template-work-with-us-training-workshops', 'page-template-work-with-us-research-analyses', 'page-template-work-with-us-events-co-creation'), get_body_class())) {
     $no_newsletter = true;
   }
