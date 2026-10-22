@@ -5,6 +5,8 @@
   'function' => '',
   'image' => '',
   'width' => '561px',
+  'content' => '',
+  'slot' => '',
 ])
 
 <dialog

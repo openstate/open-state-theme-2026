@@ -32,25 +32,25 @@
   ?>
 
   @if ($the_query->found_posts > $posts_per_page)
-  <div class="text-center mb-[40px]">
-    <?
-      $big = 999999999; // need an unlikely integer
-      $paginate_args = array(
-          'base' => str_replace($big, '%#%', esc_url(get_pagenum_link( $big))),
-          'format' => '?paged=%#%',
-          'current' => max(1, get_query_var('paged')),
-          'total' => $the_query->max_num_pages,
-          'show_all' => true,
-      );
-      $paginated_links = paginate_links($paginate_args);
-      echo $paginated_links;
+    <div class="text-center mb-[40px]">
+      <?
+        $big = 999999999; // need an unlikely integer
+        $paginate_args = array(
+            'base' => str_replace($big, '%#%', esc_url(get_pagenum_link( $big))),
+            'format' => '?paged=%#%',
+            'current' => max(1, get_query_var('paged')),
+            'total' => $the_query->max_num_pages,
+            'show_all' => true,
+        );
+        $paginated_links = paginate_links($paginate_args);
+        echo $paginated_links;
 
-      $post_min = $posts_per_page * ($paged - 1) + 1;
-      $post_max = $posts_per_page * ($paged - 1) + $the_query->post_count;
-      $pagination_string = '<div class="pagination-string font-medium">evenementen ' .  $post_min  . '-' . $post_max . ' van in totaal ' . $the_query->found_posts . '</div>';
-      echo $pagination_string;
-    ?>
-  </div >
+        $post_min = $posts_per_page * ($paged - 1) + 1;
+        $post_max = $posts_per_page * ($paged - 1) + $the_query->post_count;
+        $pagination_string = '<div class="pagination-string font-medium">evenementen ' .  $post_min  . '-' . $post_max . ' van in totaal ' . $the_query->found_posts . '</div>';
+        echo $pagination_string;
+      ?>
+    </div >
   @endif
 
   <div class="px-[16px]">
@@ -94,12 +94,14 @@
   @endif
   </div>
 
-  <div class="text-center mt-[40px] mb-[100px] xl:mb-[120px]">
-    <?
-      echo $paginated_links;
-      echo $pagination_string;
-    ?>
-  </div>
+  @if ($the_query->found_posts > $posts_per_page)
+    <div class="text-center mt-[40px] mb-[100px] xl:mb-[120px]">
+      <?
+        echo $paginated_links;
+        echo $pagination_string;
+      ?>
+    </div>
+  @endif
 
   <? wp_reset_query(); ?>
 @endsection

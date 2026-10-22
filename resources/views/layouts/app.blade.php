@@ -61,12 +61,6 @@
         @yield('content')
       </main>
 
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          @yield('sidebar')
-        </aside>
-      @endif
-
       @include('sections.footer')
       <div class="flex-1 bg-purple-800"></div>
     </div>

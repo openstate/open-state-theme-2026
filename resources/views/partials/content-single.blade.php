@@ -1,4 +1,4 @@
-<?php // Post/nieuwsbericht ?>
+<?php // Post/nieuwsbericht page/pagina ?>
 
 <div class="px-[16px] pt-[104px] pb-[100px] xl:pb-[160px]" @php(post_class('h-entry'))>
   @if (in_array('single', get_body_class()))
@@ -58,7 +58,7 @@
     @endif
       @php(the_content())
 
-      @if ($agenda_evenement)
+      @if (! empty($agenda_evenement))
       <div class="flex flex-col">
         <?
           $unixtimestamp = strtotime($agenda_tijdstip);

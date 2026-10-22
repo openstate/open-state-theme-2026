@@ -54,14 +54,14 @@
               <label class="bg-off-white-100 font-mono text-[0.875rem]/[1.375rem] text-off-white-400 flex items-center gap-[8px] px-[12px] py-[8px] rounded-lg cursor-pointer hocus:!bg-purple-400 hocus:text-white focus-within:!bg-purple-400 focus-within:text-white has-checked:bg-purple-600 has-checked:text-white transition-colors">
                 <input
                   type="checkbox"
-                  id="{{ $checkbox_id }}"
+                  id="{{-- {{ $checkbox_id }} --}}"
                   name="parents[]"
-                  value="{{ $parent->ID }}"
-                  {{ $is_checked ? 'checked' : '' }}
+                  value="{{-- {{ $parent->ID }} --}}"
+                  {{-- {{ $is_checked ? 'checked' : '' }} --}}
                   class="sr-only"
                   onchange="this.form.submit()"
                 >
-                <span>{{ $parent->post_title }}</span>
+                <span>{{-- {{ $parent->post_title }} --}}</span>
               </label>
           @php
             //}
