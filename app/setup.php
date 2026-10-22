@@ -216,3 +216,28 @@ add_filter('excerpt_length', function ($length) {
 add_filter('excerpt_more', function () {
     return '&hellip;';
 });
+
+/**
+ * We don't use category, tag, author, date or taxonomy archives:
+ * serve a 404 for them.
+ */
+add_action('template_redirect', function () {
+    if (is_category() || is_tag() || is_author() || is_date() || is_tax()) {
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+        nocache_headers();
+    }
+}, 1);
+
+/**
+ * Post format archives (like /type/gallery/, ?post_format=..) aren't used, and
+ * qTranslate-XT's slugs module fatals on them. Turn them into a 404 before
+ * WordPress core and qTranslate process the request.
+ */
+add_filter('request', function ($query_vars) {
+    if (! is_admin() && isset($query_vars['post_format'])) {
+        return ['error' => '404'];
+    }
+    return $query_vars;
+}, 9);
