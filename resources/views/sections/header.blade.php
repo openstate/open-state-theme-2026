@@ -56,7 +56,7 @@
         <label
           for="nav-search"
           class="ml-2 flex cursor-pointer rounded-full text-gray-700 hocus:text-pink
-                 peer-focus:pointer-events-none {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:hidden"
+                 peer-focus:pointer-events-none {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:hidden transition-colors"
         >
           <span class="sr-only">{{ __('Open zoekbalk', 'sage') }}</span>
           <span class="iconify size-5 xl:size-7 mdi--search"></span>
@@ -66,7 +66,7 @@
         <button
           type="submit"
           class="ml-2 hidden cursor-pointer rounded-full text-gray-700 hocus:text-pink
-                 peer-not-placeholder-shown:block {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:flex"
+                 peer-not-placeholder-shown:block {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:flex transition-colors"
         >
           <span class="sr-only">{{ __('Zoek', 'sage') }}</span>
           <span class="iconify size-5 xl:size-7 mdi--search"></span>

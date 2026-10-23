@@ -222,17 +222,13 @@
           @apply text-purple-800;
         }
       }
-
-      .hamburger-line {
-        @apply !bg-white;
-      }
-
+u
       #search-icon-collapsed {
         @apply text-white;
       }
 
       .mobile-menu-toggle {
-        @apply hocus:!text-pink;
+        @apply text-white hocus:!text-pink;
       }
 
       .mobile-menu {
