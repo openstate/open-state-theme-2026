@@ -232,11 +232,7 @@
       }
 
       .mobile-menu-toggle {
-        @apply hocus:!bg-purple-600;
-      }
-
-      .mobile-menu-toggle:focus {
-        @apply text-white;
+        @apply hocus:!text-pink;
       }
 
       .mobile-menu {
@@ -276,7 +272,7 @@
     }
 
     a[href] {
-      @apply hover:text-pink transition font-medium;
+      @apply hocus:text-pink transition font-medium;
     }
 
     a:not([href]) {

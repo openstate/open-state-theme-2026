@@ -55,21 +55,21 @@
         {{-- Shown while collapsed: opens the field --}}
         <label
           for="nav-search"
-          class="ml-2 flex cursor-pointer rounded-full text-gray-700 hover:bg-gray-100
-                 peer-focus:pointer-events-none peer-not-placeholder-shown:hidden"
+          class="ml-2 flex cursor-pointer rounded-full text-gray-700 hocus:text-pink
+                 peer-focus:pointer-events-none {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:hidden"
         >
           <span class="sr-only">{{ __('Open zoekbalk', 'sage') }}</span>
-          <span class="iconify size-5 xl:size-7 mdi--search {{ $secondary_nav_colors ? 'text-white' : '' }}"></span>
+          <span class="iconify size-5 xl:size-7 mdi--search"></span>
         </label>
 
         {{-- Shown while active: submits the search --}}
         <button
           type="submit"
-          class="ml-2 hidden rounded-full text-gray-700 hover:bg-gray-100
-                 peer-not-placeholder-shown:block peer-not-placeholder-shown:flex"
+          class="ml-2 hidden cursor-pointer rounded-full text-gray-700 hocus:text-pink
+                 peer-not-placeholder-shown:block {{ $secondary_nav_colors ? 'text-white' : '' }} peer-not-placeholder-shown:flex"
         >
           <span class="sr-only">{{ __('Zoek', 'sage') }}</span>
-          <span class="iconify size-7 mdi--search {{ $secondary_nav_colors ? 'text-white' : '' }}"></span>
+          <span class="iconify size-5 xl:size-7 mdi--search"></span>
         </button>
       </form>
 
