@@ -88,6 +88,17 @@
       @if ($the_query->have_posts())
         <? $i = 0; $row = 0; ?>
         @while ($the_query->have_posts())
+          {{-- run only once: when the first 'completed project' is encountered, add the hr and reset the i and row counters --}}
+          <? $the_query->the_post() ?>
+          @if (get_field('project_afgerond', get_the_id()) == true && $completed_projects == false)
+            <? $completed_projects = true ?>
+            <? $i = 0; $row = 0; ?>
+            </div>
+            <hr class="mx-auto w-full max-w-[1920px] border-purple-800/10">
+            <h2 class="mx-auto w-full max-w-[1920px] text-[1.625rem]/[1.875rem] md:text-[1.75rem]/[2.125rem] xl:text-[2.125rem]/[2.625rem] mb-[32px] md:mb-[40px] xl:mb-[48px]">Afgeronde projecten</h2>
+            <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
+          @endif
+
           @php
             # On each row the cards have different col-spans so use modulo 2
             # for md and modulo 3 for xl to account for this
@@ -107,16 +118,6 @@
               2 => 'xl:col-span-4',
             };
           @endphp
-
-          <? $the_query->the_post() ?>
-          @if (get_field('project_afgerond', get_the_id()) == true && $completed_projects == false)
-            <? $completed_projects = true ?>
-            <? $i = 0; ?>
-            </div>
-            <hr class="mx-auto w-full max-w-[1920px] border-purple-800/10">
-            <h2 class="mx-auto w-full max-w-[1920px] text-[1.625rem]/[1.875rem] md:text-[1.75rem]/[2.125rem] xl:text-[2.125rem]/[2.625rem] mb-[32px] md:mb-[40px] xl:mb-[48px]">Afgeronde projecten</h2>
-            <div class="mx-auto w-full max-w-[1920px] grid grid-cols-12 gap-x-[16px] gap-y-[12px] md:gap-y-[48px] xl:gap-y-[100px] mb-[120px]">
-          @endif
 
           <div class="col-span-12 {{ $cols }} {{ $cols_xl }}">
             @include('partials.content-projects')
