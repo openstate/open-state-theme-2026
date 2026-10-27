@@ -26,7 +26,7 @@
   @apply hocus:text-pink;
 }
 
-.mobile-menu-toggle:focus {
+.mobile-menu-toggle:focus-visible {
   outline: 2px solid;
   outline-offset: 2px;
 }
