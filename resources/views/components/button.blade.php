@@ -51,9 +51,7 @@
       'flex h-10 items-center rounded-sm px-[20px] text-sm leading-[20px]',
       $variantClasses,
     ])
-  >
-    {{ $text }}
-  </span>
+  >{{ $text }}</span>
 
   <span
     aria-hidden="true"

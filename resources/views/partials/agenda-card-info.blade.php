@@ -1,3 +1,5 @@
+@props(['mb' => 'mb-0'])
+
 <?
   $timestamp = get_field('agenda_tijdstip', get_the_id());
   if ($timestamp) {
@@ -6,9 +8,7 @@
   }
 ?>
 @if ($timestamp)
-<time class="text-[0.875rem]/[1.375rem] font-medium" datetime="{{ str_replace(' ', 'T', get_field('agenda_tijdstip', get_the_id())) }}">
-  {{ $formatted_date }}
-</time>
+<time class="text-[0.875rem]/[1.375rem] font-medium" datetime="{{ str_replace(' ', 'T', get_field('agenda_tijdstip', get_the_id())) }}">{{ $formatted_date }}</time>
 @endif
 
-<p class="mb-0 text-[0.875rem]/[1.375rem] font-medium"><? echo get_field('agenda_locatie', get_the_id()) ?></p>
+<p class="{{ $mb }} text-[0.875rem]/[1.375rem] font-medium"><? echo get_field('agenda_locatie', get_the_id()) ?></p>

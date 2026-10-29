@@ -15,12 +15,8 @@
 
         <div class="xl:col-span-6 xl:col-start-6">
           {!! the_post_thumbnail('full', array('class' => 'rounded-lg w-full md:h-[443px] xl:h-[423px] mx-auto')) !!}
-          <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">
-            Bouwen is een vak.
-          </p>
-          <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">
-            Van concept tot werkende tool. Wij bouwen transparantie-instrumenten die passen bij jullie organisatie: lobbyregisters, begrotingsportalen, raadsinformatiesystemen en maatwerkoplossingen. Open source, volledig overdraagbaar, en gebouwd om te blijven.
-          </p>
+          <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">Bouwen is een vak.</p>
+          <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">Van concept tot werkende tool. Wij bouwen transparantie-instrumenten die passen bij jullie organisatie: lobbyregisters, begrotingsportalen, raadsinformatiesystemen en maatwerkoplossingen. Open source, volledig overdraagbaar, en gebouwd om te blijven.</p>
         </div>
       </div>
     </div>

@@ -5,27 +5,20 @@
         <div class="grid grid-cols-12">
           <div class="col-span-12 xl:col-span-5 mb-[32px] xl:mb-0" for="mce-EMAIL">
             <h2 class='font-serif text-[2.75rem]/[3rem] tracking-[-0.0375rem] mt-0 mb-[12px]'>Blijf op de hoogte</h2>
-            <p class='mb-0'>Meld je net als 1600+ andere lezers aan voor onze maandelijkse nieuwsbrief!
-            </br>
+            <p class='mb-0'>Meld je net als 1600+ andere lezers aan voor onze maandelijkse nieuwsbrief!</br>
             Wat kan je verwachten? Zie onze <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">eerdere nieuwsbrieven</a>.</p>
           </div>
           <div class="col-span-12 xl:col-span-6 xl:col-start-7 mt-auto">
             <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label>
             <div class="mc-field-group mc-first-group">
-              <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[8px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL" required>
-
-              <div class="flex md:inline">
-              @if (\App\cap_widget_endpoint())
-                <cap-widget id="mce-cap" class="capjs" required data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
+              <!-- Ugly formatting (no spaces/newlines) required to avoid 'whitespace' after the input fields (viewable with CTRL + A or in the inspector) -->
+              <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[12px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL" required><div class="flex md:inline">@if (\App\cap_widget_endpoint())<cap-widget id="mce-cap" class="capjs" required data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
                   data-cap-i18n-initial-state="<?php _e("Ik ben geen robot"); ?>"
                   data-cap-i18n-verifying-label="<?php _e("Bezig met verifiëren..."); ?>"
                   data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"
                   data-cap-i18n-error-label="<?php _e("Fout"); ?>"
                   data-cap-i18n-required-label="<?php _e("Verifieer eerst dat je een mens bent"); ?>">
-                </cap-widget>
-              @endif
-
-              <x-button-small variant="secondary" name="subscribe" id="mc-embedded-subscribe" type="submit" class="mt-auto md:align-top" />
+                </cap-widget>@endif<x-button-small variant="secondary" name="subscribe" id="mc-embedded-subscribe" type="submit" class="mt-auto md:align-top" />
               </div>
 
               <div id="mce-responses" class="clear mt-[8px]" aria-live="polite">
@@ -33,8 +26,7 @@
                 <div class="response text-pink" id="mce-success-response" style="display:none"></div>
               </div>
 
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form
- bot si       gnups-->
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true">
                 <input type="text" name="b_03355fd4f1a7935cae63b21aa_a9619e4f3e" tabindex="-1" value="">
               </div>

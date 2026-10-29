@@ -40,9 +40,7 @@
   @endif
   <article class="mx-auto md:w-[688px]">
     <header>
-      <h1 class="p-name font-serif text-[1.5rem]/[1.75rem] tracking-[-0.00625rem] md:text-[2.25rem]/[2.5rem] md:tracking-[-0.025rem] xl:text-[2.75rem]/[3rem] xl:tracking-[-0.0375rem] pb-[20px]">
-        {!! $title !!}
-      </h1>
+      <h1 class="p-name font-serif text-[1.5rem]/[1.75rem] tracking-[-0.00625rem] md:text-[2.25rem]/[2.5rem] md:tracking-[-0.025rem] xl:text-[2.75rem]/[3rem] xl:tracking-[-0.0375rem] pb-[20px]">{!! $title !!}</h1>
 
       @if (in_array('single', get_body_class()))
         @include('partials.entry-meta')

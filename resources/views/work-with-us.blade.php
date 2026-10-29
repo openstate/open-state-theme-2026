@@ -15,12 +15,8 @@
 
         <div class="xl:col-span-6 xl:col-start-6">
           {!! the_post_thumbnail('full', array('class' => 'rounded-lg w-full md:h-[443px] xl:h-[423px] mx-auto')) !!}
-          <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">
-            Transparantie is complex.
-          </p>
-          <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">
-            Of het nu gaat om de Woo, een lobbyregister of het ontsluiten van begrotingsdata — de politieke en maatschappelijke druk groeit, maar de capaciteit en kennis om het goed te doen zijn schaars. Wij helpen overheden die stap te zetten. Praktisch, bewezen, en altijd open source.
-          </p>
+          <p class="mt-[40px] xl:mt-[56px] text-pink text-[1.125rem]/[1.75rem] tracking-[-0.00625rem] md:text-[1.25rem]/[2rem] md:tracking-[0rem] mb-0">Transparantie is complex.</p>
+          <p class="font-serif mt-[12px] md:mt-[16px] xl:mt-[20px] mb-0 text-[1.125rem]/[1.375rem] md:text-[1.5rem]/[2rem] md:tracking-[-0.00625rem] xl:text-[1.75rem]/[2rem] xl:tracking-[-0.0125rem]">Of het nu gaat om de Woo, een lobbyregister of het ontsluiten van begrotingsdata — de politieke en maatschappelijke druk groeit, maar de capaciteit en kennis om het goed te doen zijn schaars. Wij helpen overheden die stap te zetten. Praktisch, bewezen, en altijd open source.</p>
         </div>
       </div>
     </div>

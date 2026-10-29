@@ -59,3 +59,6 @@ collect(['setup', 'filters', 'shortcodes', 'kieswijzer_2023', 'kieswijzer_2024',
             );
         }
     });
+
+// Sicco: Contact Form 7 doet normaal zelf formatting op onze formulier code, dat willen we niet.
+add_filter( 'wpcf7_autop_or_not', '__return_false' );

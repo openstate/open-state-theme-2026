@@ -349,10 +349,6 @@ u
       h3 {
         @apply mt-0 mb-[8px];
       }
-
-      p {
-        @apply mb-[32px];
-      }
   }
 
   .page-template-donate {

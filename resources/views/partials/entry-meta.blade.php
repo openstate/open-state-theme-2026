@@ -1,6 +1,4 @@
-<time class="dt-published font-mono text-[0.875rem]/[1.375rem] font-medium" datetime="{{ get_post_time('c', true) }}">
-  {{ get_the_date('D j M \'y') }}
-</time>
+<time class="dt-published font-mono text-[0.875rem]/[1.375rem] font-medium" datetime="{{ get_post_time('c', true) }}">{{ get_the_date('D j M \'y') }}</time>
 
 <!--p>
   <span>Door</span>

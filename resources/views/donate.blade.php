@@ -31,10 +31,7 @@
                 </select>
 
                 <div id="permission" class="flex mt-[8px]">
-                  <input type="checkbox" name="dmm_permission" id="dmm_permission" class="w-min mr-[12px] mb-auto">
-                  <label for="dmm_permission" class="text-white text-[0.875rem]/[1.375rem] font-sans font-normal">
-                    Hierbij machtig ik Open State Foundation om het bovenstaande bedrag periodiek van mijn rekeningnummer af te schrijven.
-                  </label>
+                  <input type="checkbox" name="dmm_permission" id="dmm_permission" class="w-min mr-[12px] mb-auto"><label for="dmm_permission" class="text-white text-[0.875rem]/[1.375rem] font-sans font-normal">Hierbij machtig ik Open State Foundation om het bovenstaande bedrag periodiek van mijn rekeningnummer af te schrijven.</label>
                 </div>
               </div>
 

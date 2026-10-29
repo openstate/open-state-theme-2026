@@ -9,17 +9,15 @@
       }
     @endphp
     <x-badge text="{!! $text !!}" variant="secondary" class="self-start" />
-    <h3 class="entry-title mt-[32px] mb-[12px] text-[1.5rem]/[1.75rem] tracking-[0]">
-        {!! $title !!}
-    </h3>
-    @include('partials.agenda-card-info')
+    <h3 class="entry-title mt-[32px] mb-[12px] text-[1.5rem]/[1.75rem] tracking-[0]">{!! $title !!}</h3>
+    @if (get_field('agenda_evenement'))
+    @include('partials.agenda-card-info', ['mb' => 'mb-[8px]'])
+    @endif
 
-    {!! get_the_excerpt() !!}
+    <p>{!! get_the_excerpt() !!}</p>
 
     <div class="flex mt-auto pt-[8px]">
-      <time class="dt-published text-[0.875rem]/[1.375rem] font-medium" datetime="{{ get_post_time('c', true) }}">
-        {{ get_the_date('D j M \'y') }}
-      </time>
+      <time class="dt-published text-[0.875rem]/[1.375rem] font-medium" datetime="{{ get_post_time('c', true) }}">{{ get_the_date('D j M \'y') }}</time>
       <span class="iconify size-4.5 mdi--arrow-right ml-auto my-auto opacity-0 -translate-x-2 group-hocus:opacity-100 group-hocus:translate-x-0 transition-all duration-300"></span>
     </div>
   </div>

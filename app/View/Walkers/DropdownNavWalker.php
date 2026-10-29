@@ -74,8 +74,7 @@ class DropdownNavWalker extends \Walker_Nav_Menu
                         :aria-expanded="open.toString()"
                         aria-haspopup="true"
                         class="%s flex items-center">
-                        %s
-                        <svg
+                        %s<svg
                             aria-hidden="true"
                             :class="open ? \'rotate-180\' : \'\'"
                             class="h-4 w-4 transition-transform duration-200"

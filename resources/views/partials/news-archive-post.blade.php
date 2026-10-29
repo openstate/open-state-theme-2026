@@ -20,9 +20,7 @@
   </div>
 
   <div class="flex flex-col justify-between pt-[16px] px-[20px] pb-[24px] md:pt-[20px] md:px-[24px] md:pb-[24px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors">
-    <h2 class="mt-0 text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">
-      {!! get_the_title() !!}
-    </h2>
+    <h2 class="mt-0 text-[1.25rem]/[1.625rem] md:text-[1.375rem]/[1.5rem] xl:text-[1.5rem]/[1.75rem]">{!! get_the_title() !!}</h2>
 
     <div class="flex">
       @include('partials/entry-meta')
