@@ -1,3 +1,8 @@
+@php
+  $action_box_vraagteken = get_field('action_box_vraagteken');
+  $action_box_download   = get_field('action_box_download');
+@endphp
+
 @if ($action_box_vraagteken || $action_box_download)
   <div class="grid grid-cols-12 md:gap-x-[16px] gap-y-[16px] mt-[48px]">
     @if ($action_box_vraagteken)

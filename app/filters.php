@@ -6,14 +6,6 @@
 
 namespace App;
 
-// Retrieve ACF action box fields
-function get_action_box_data($data) {
-  $data['action_box_vraagteken'] = get_field('action_box_vraagteken');
-  $data['action_box_download'] = get_field('action_box_download');
-
-  return $data;
-}
-
 // Retrieve ACF agenda fields
 function get_agenda_data($data) {
   $data['agenda_evenement'] = get_field('agenda_evenement');
@@ -37,16 +29,10 @@ function get_project_data($data) {
 }
 
 add_filter('sage/template/single/data', function ($data) {
-  $data = get_action_box_data($data);
   return get_agenda_data($data);
 });
 
-add_filter('sage/template/template-custom/data', function ($data) {
-  return get_action_box_data($data);
-});
-
 add_filter('sage/template/page/data', function ($data) {
-  $data = get_action_box_data($data);
   return get_project_data($data);
 });
 
