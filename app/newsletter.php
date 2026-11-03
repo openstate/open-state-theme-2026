@@ -58,9 +58,10 @@ function cap_is_configured()
     return (bool) cap_widget_endpoint() && (bool) open_state_setting('OPEN_STATE_CAP_SECRET_KEY');
 }
 
+use Illuminate\Support\Facades\Vite;
+
 /**
- * Load the Cap widget. Version is pinned deliberately — an unpinned CDN
- * reference lets an upstream release change behaviour without warning.
+ * Load the Cap widget.
  */
 add_action('wp_enqueue_scripts', function () {
     if (!cap_is_configured()) {
@@ -69,9 +70,9 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_script(
         'cap-widget',
-        'https://cdn.jsdelivr.net/npm/cap-widget@0.1.56',
+        Vite::asset('resources/js/cap.js'),
         [],
-        '0.1.56',
+        null, // the filename is already content-hashed
         true
     );
 }, 100);

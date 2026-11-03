@@ -26,6 +26,9 @@
     "vite": "^8.0.0"
   },
   "dependencies": {
-    "alpinejs": "^3.15.12"
+    "@cap.js/wasm": "0.0.7",
+    "alpinejs": "^3.15.12",
+    "cap-widget": "0.1.56",
+    "pako": "2.1.0"
   }
 }
