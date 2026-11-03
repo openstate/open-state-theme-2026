@@ -87,16 +87,4 @@
       <? wp_reset_query() ?>
     </div>
   </div>
-
-<!--script>
-document.getElementById('parent-filter').addEventListener('change', function() {
-  const parentId = this.value;
-  if (parentId) {
-    window.location.href = get_page_link(parentId);
-  } else {
-    // Reset to show all
-    window.location.href = window.location.pathname;
-  }
-});
-</script--!>
 @endsection
