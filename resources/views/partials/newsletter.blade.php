@@ -12,7 +12,7 @@
             <label class="block mb-[8px] font-mono text-[13px]/[18px] font-medium text-pink" for="mce-EMAIL">E-mailadres</label>
             <div class="mc-field-group mc-first-group">
               <!-- Ugly formatting (no spaces/newlines) required to avoid 'whitespace' after the input fields (viewable with CTRL + A or in the inspector) -->
-              <input type="email" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[12px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL" required><div class="flex md:inline">@if (\App\cap_widget_endpoint())<cap-widget id="mce-cap" class="capjs" required data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
+              <input type="email" autocomplete="on" class="align-top bg-white w-[244px] rounded-lg p-[12px] text-[14px]/[22px] mr-[12px]" placeholder="jouw@emailadres.nl" value="" name="EMAIL" id="mce-EMAIL" required><div class="flex md:inline">@if (\App\cap_widget_endpoint())<cap-widget id="mce-cap" class="capjs" required data-cap-api-endpoint="{{ \App\cap_widget_endpoint() }}"
                   data-cap-i18n-initial-state="<?php _e("Ik ben geen robot"); ?>"
                   data-cap-i18n-verifying-label="<?php _e("Bezig met verifiëren..."); ?>"
                   data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"

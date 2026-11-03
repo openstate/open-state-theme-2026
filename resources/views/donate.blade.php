@@ -51,8 +51,8 @@
               </div>
 
               <div>
-                <label for="dmm_methode">Betaalmethode</label>
-                <select name="dmm_method" class="custom-select donate-form-field mt-[8px] font-mono">
+                <label for="dmm_method">Betaalmethode</label>
+                <select id="dmm_method" name="dmm_method" class="custom-select donate-form-field mt-[8px] font-mono">
                   <option class="dmm_dd dmm_nomc" value="ideal" style="display: block;" selected>iDEAL | Wero</option>
                   <option class="dmm_cc dmm_mc" value="creditcard">
                     Creditcard / debitcard
