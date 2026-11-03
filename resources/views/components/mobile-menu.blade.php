@@ -1,12 +1,18 @@
-<div class="mobile-menu-wrapper" x-data="{ open: false }" @keydown.escape="open = false">
+<div
+  class="mobile-menu-wrapper"
+  x-data="{ open: false }"
+  x-trap.noscroll="open"
+  @keydown.escape="open = false"
+>
   <!-- Hamburger Button -->
   <button
     type="button"
     class="mobile-menu-toggle"
     @click="open = !open"
     :aria-expanded="open"
-    aria-label="Toggle navigation menu"
+    aria-expanded="false"
     aria-controls="mobile-menu"
+    aria-label="{{ __('Menu', 'sage') }}"
   >
     <span class="hamburger" aria-hidden="true">
       <span class="hamburger-line hamburger-line-top"></span>
@@ -17,12 +23,13 @@
   <!-- Mobile Menu -->
   <nav
     id="mobile-menu"
+    tabindex="-1"
     class="mobile-menu"
     :class="{ 'is-open': open }"
-    :aria-hidden="!open"
     :inert="!open"
-    aria-label="Mobile navigation"
     inert
+    aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}"
+    @click="if ($event.target.closest('a')) open = false"
   >
     <div class="mobile-menu-inner">
       <div class="mobile-menu-content">

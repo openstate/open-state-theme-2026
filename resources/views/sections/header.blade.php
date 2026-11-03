@@ -25,7 +25,7 @@
           'menu_class'     => 'nav flex items-center gap-[72px]',
           'echo'           => false,
           'walker'         => new \App\View\Walkers\DropdownNavWalker(),
-          'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar" aria-label="Main navigation">%3$s</ul>',
+          'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         ]) !!}
       </nav>
     @endif
