@@ -22,24 +22,49 @@
 
     <?php
       if ((strpos($_SERVER['REQUEST_URI'], 'civicrm/petition/sign') !== false && isset($_GET['sid']) && $_GET['sid'] == '2') || strpos($_SERVER['REQUEST_URI'], 'petitie-maak-lobby-transparant') !== false) {
-          echo '<meta property="og:image" content="https://openstate.eu/wp-content/uploads/sites/14/2025/03/Petitie-lobbyregister.webp">' . "\n";
-          echo '    <meta property="og:title" content="Petitie: Maak lobby transparant!">' . "\n";
+        echo '<meta property="og:image" content="https://openstate.eu/wp-content/uploads/sites/14/2025/03/Petitie-lobbyregister.webp">' . "\n";
+        echo '    <meta property="og:title" content="Petitie: Maak lobby transparant!">' . "\n";
       } elseif(!is_front_page()) {
-          echo '<meta property="og:title" content="' . ltrim(wp_title('', false)) . '">' . "\n";
-          $ogimage = '    <meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
-          if (isset($post)) {
-            $image = get_the_post_thumbnail_url($post->ID);
-            if ($image) {
-             $ogimage = '    <meta property="og:image" content="' . esc_url($image) . '">' . "\n";
-            }
+        echo '<meta property="og:title" content="' . ltrim(wp_title('', false)) . '">' . "\n";
+        $ogimage = '    <meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
+        if (isset($post)) {
+          $image = get_the_post_thumbnail_url($post->ID);
+          if ($image) {
+           $ogimage = '    <meta property="og:image" content="' . esc_url($image) . '">' . "\n";
           }
-          echo $ogimage;
+        }
+        echo $ogimage;
       } else {
-          echo '<meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
-          echo '    <meta property="og:title" content="Open State Foundation - Zonder transparantie geen democratie">' . "\n";
+        echo '<meta property="og:image" content="' . Vite::asset('resources/images/open_state_foundation_open_graph.png') . '">' . "\n";
+        echo '    <meta property="og:title" content="Open State Foundation - Zonder transparantie geen democratie">' . "\n";
       }
     ?>
     <meta property="og:site_name" content="Open State Foundation">
+
+    <?php
+    $description = '';
+
+    if (in_array('page-template-project-page', get_body_class(), true)) {
+      $description = get_field('project_samenvatting');
+    }
+
+    if (! $description) {
+      if (is_singular()) {
+        $description = get_the_excerpt();
+      } else {
+        $description = 'In een sterke democratie heeft de overheid geen geheimen. Wij geloven in een open overheid waarbij burgers, journalisten en ambtenaren toegang hebben tot informatie om op te kunnen vertrouwen en op te kunnen bouwen.';
+      }
+    }
+
+    $description = wp_strip_all_tags($description);
+
+    if ($description) {
+      printf(
+        '<meta name="description" content="%s">' . "\n",
+        esc_attr($description)
+      );
+    }
+    ?>
 
     @php(do_action('get_header'))
     @php(wp_head())
