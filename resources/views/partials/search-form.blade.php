@@ -15,5 +15,5 @@
     required
   >
 
-  <x-button-small variant="secondary" type="submit" class="align-top" />
+  <x-button-small variant="secondary" type="submit" aria-label="Zoeken" class="align-top" />
 </form>

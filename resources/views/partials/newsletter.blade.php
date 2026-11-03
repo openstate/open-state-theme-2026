@@ -18,7 +18,7 @@
                   data-cap-i18n-solved-label="<?php _e("Je bent een mens"); ?>"
                   data-cap-i18n-error-label="<?php _e("Fout"); ?>"
                   data-cap-i18n-required-label="<?php _e("Verifieer eerst dat je een mens bent"); ?>">
-                </cap-widget>@endif<x-button-small variant="secondary" name="subscribe" id="mc-embedded-subscribe" type="submit" class="mt-auto md:align-top" />
+                </cap-widget>@endif<x-button-small variant="secondary" name="subscribe" aria-label="Aanmelden" id="mc-embedded-subscribe" type="submit" class="mt-auto md:align-top" />
               </div>
 
               <div id="mce-responses" class="clear mt-[8px]" aria-live="polite">
