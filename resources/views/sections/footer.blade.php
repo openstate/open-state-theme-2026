@@ -13,11 +13,16 @@
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
     <div class="xl:flex xl:justify-between mt-[24px] mb-[48px] md:mb-[100px] xl:mb-[120px]">
-      <div class="mb-[32px] flex gap-x-[12px]">
-        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--mastodon" aria-label="Mastodon" href="https://mastodon.nl/@openstate" rel="me"/>
-        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--bluesky" aria-label="Bluesky" href="https://bsky.app/profile/openstate.eu"/>
-        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/company/open-state-foundation/"/>
-        <x-icon class="h-[48px] w-[48px]" icon="simple-icons--github" aria-label="GitHub" href="https://github.com/openstate/"/>
+      <div class="grid">
+        <div class="mb-[32px] flex gap-x-[12px]">
+          <x-icon class="h-[48px] w-[48px]" icon="simple-icons--mastodon" aria-label="Mastodon" href="https://mastodon.nl/@openstate" rel="me"/>
+          <x-icon class="h-[48px] w-[48px]" icon="simple-icons--bluesky" aria-label="Bluesky" href="https://bsky.app/profile/openstate.eu"/>
+          <x-icon class="h-[48px] w-[48px]" icon="simple-icons--linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/company/open-state-foundation/"/>
+          <x-icon class="h-[48px] w-[48px]" icon="simple-icons--github" aria-label="GitHub" href="https://github.com/openstate/"/>
+        </div>
+        <div class="mb-[32px] ">
+          <x-button href="/doneren/" text="Steun ons" variant="secondary" />
+        </div>
       </div>
 
       @if (has_nav_menu('primary_navigation'))
