@@ -1,6 +1,6 @@
 <?php // Mediabericht card op 'In de media' pagina ?>
 
-<a class="group no-underline rounded-lg bg-off-white-50 flex flex-col" href="{{ get_field('mediabericht_url') }}" target="_blank">
+<a class="group rounded-lg bg-off-white-50 flex flex-col no-open-state-underline" href="{{ get_field('mediabericht_url') }}" target="_blank">
   <div class="flex flex-col h-[280px] px-[16px] py-[16px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors rounded-lg">
     @php
       $categories = wp_get_post_categories(get_the_ID(), ['fields' => 'all']);

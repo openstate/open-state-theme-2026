@@ -23,7 +23,7 @@
     'group grid w-fit cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
     'motion-safe:transition-[grid] motion-safe:duration-200 motion-safe:ease-in-out',
     'motion-safe:hocus:grid-cols-[2.75rem_auto_0]',
-    'no-underline whitespace-nowrap',
+    'whitespace-nowrap no-open-state-underline',
     $class,
   ])
   {{ $attributes }}

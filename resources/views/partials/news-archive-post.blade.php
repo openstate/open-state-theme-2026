@@ -6,7 +6,7 @@
   $move_right = $mod == 1 ? '2xl:translate-x-[-344px]' : '';
 @endphp
 
-<a class="group no-underline md:mx-auto {{ $move_right }} md:block md:w-[688px] rounded-lg overflow-hidden bg-off-white-50 flex flex-col md:grid md:grid-cols-2 md:h-[280px] mb-[16px]" href="{!! the_permalink() !!}">
+<a class="group md:mx-auto {{ $move_right }} md:block md:w-[688px] rounded-lg overflow-hidden bg-off-white-50 flex flex-col md:grid md:grid-cols-2 md:h-[280px] mb-[16px] no-open-state-underline" href="{!! the_permalink() !!}">
   <div class="relative">
     {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'object-cover w-full md:h-full max-h-[280px]')) !!}
 

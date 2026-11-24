@@ -30,9 +30,9 @@
     @if ($category_title)
       <nav aria-label="Breadcrumb" id="breadcrumb" class="font-mono font-medium text-[#A1A1A1] text-[0.8125rem]/[1rem] md:text-[0.875rem]/[1.375rem] tracking-[0.03125rem] mt-[6px] mb-[22px]">
         <ol class="list-none p-0">
-          <li class="inline"><a href="/projecten/">Projecten</a></li>
+          <li class="inline"><a href="/projecten/" class="no-open-state-underline">Projecten</a></li>
           <span class="text-pink inline">></span>
-          <li class="inline"><a href="{!! $project_url !!}">{{ $category_title }}</a></li>
+          <li class="inline"><a href="{!! $project_url !!}" class="no-open-state-underline">{{ $category_title }}</a></li>
         </ol>
       </nav>
     @endif

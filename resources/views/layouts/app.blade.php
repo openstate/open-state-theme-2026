@@ -102,6 +102,16 @@
         @yield('content')
       </main>
 
+      <?php
+        $show_newsletter = true;
+        if (array_intersect(array('error404', 'page-template-work-with-us', 'page-template-work-with-us-tool-implementation', 'page-template-work-with-us-advice-strategy', 'page-template-work-with-us-training-workshops', 'page-template-work-with-us-research-analyses', 'page-template-work-with-us-events-co-creation'), get_body_class())) {
+          $show_newsletter = false;
+        }
+      ?>
+      @if ($show_newsletter)
+        @include('partials.newsletter')
+      @endif
+
       @include('sections.footer')
       <div class="flex-1 bg-purple-800"></div>
     </div>

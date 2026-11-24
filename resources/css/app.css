@@ -120,10 +120,12 @@
     @apply xl:text-[1.125rem]/[1.75rem] tracking-[-0.00625]
   }
 
-  /* Underline with a remove transition on hover */
-  div > a:not(:has(div, span, img), .no-open-state-underline),
-  td > a:not(:has(div, span, img)),
-  p a:not(:has(div, span, img)) {
+  /* Default styling for links: underline with a remove transition on hover.
+     Only apply it on the main and aside (newsletter) sections and exclude
+     (parent) elements with .no-open-state-underline.
+  */
+  main a:not(.no-open-state-underline, .no-open-state-underline > a),
+  aside a:not(.no-open-state-underline){
     @apply text-pink bg-linear-to-r from-current to-current
       bg-[length:100%_1px] bg-no-repeat bg-right-bottom
       [background-position:0_100%] transition-[background-size] duration-100
@@ -135,7 +137,10 @@
     @apply relative;
 
     a {
-      @apply after:absolute after:inset-0 underline;
+      @apply after:absolute after:inset-0 bg-linear-to-r from-current to-current
+      bg-[length:100%_1px] bg-no-repeat bg-right-bottom
+      [background-position:0_100%] transition-[background-size] duration-100
+      hocus:bg-[length:0%_1px];
     }
 
     /* In most cases there is only one <a href> in the text, so do not underline; in some cases there are more links, so underline them for clarity */
@@ -385,6 +390,7 @@ u
 
   .capjs {
     @apply mt-[8px] md:mt-0 mr-[8px];
+    --cap-background: white;
     --cap-border-color: transparent;
     --cap-border-radius: 8px;
     --cap-widget-padding: 9px;

@@ -4,7 +4,7 @@
   'domain' => '',
 ])
 
-<a class="group rounded-lg overflow-hidden bg-off-white-200 flex flex-col col-span-12 md:col-span-3" href="{{ $link }}" target="_blank">
+<a class="group rounded-lg overflow-hidden bg-off-white-200 flex flex-col col-span-12 md:col-span-3 no-open-state-underline" href="{{ $link }}" target="_blank">
 
   <div class="flex flex-col min-h-[140px] md:min-h-[220px] xl:min-h-[240px] px-[20px] py-[20px] md:pt-[20px] md:px-[28px] md:pb-[28px] xl:pt-[20px] xl:px-[24px] xl:pb-[24px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors">
     <h4 class="mt-0 mb-[4px] md:mb-[8px] text-[1.5rem]/[1.75rem] md:text-[1.625rem]/[2rem] md:tracking-[-0.0125rem] xl:text-[2rem]/[2.5rem] xl:tracking-[-0.025rem]">{{ $title }}</h4>

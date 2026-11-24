@@ -1,10 +1,10 @@
-<div class="bg-off-white-50 px-[16px] pt-[32px] pb-[48px] md:px-[24px] md:pt-[40px] md:pb-[64px] xl:pt-[56px] xl:pb-[80px]">
+<aside class="bg-off-white-50 px-[16px] pt-[32px] pb-[48px] md:px-[24px] md:pt-[40px] md:pb-[64px] xl:pt-[56px] xl:pb-[80px]" aria-labelledby="newsletter-heading">
   <div class="mx-auto w-full max-w-[1920px]">
     <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" data-endpoint="{{ esc_url(rest_url('open-state/v1/newsletter')) }}" novalidate>
       <div id="mc_embed_signup_scroll">
         <div class="grid grid-cols-12">
           <div class="col-span-12 xl:col-span-5 mb-[32px] xl:mb-0" for="mce-EMAIL">
-            <h2 class='font-serif text-[2.75rem]/[3rem] tracking-[-0.0375rem] mt-0 mb-[12px]'>Blijf op de hoogte</h2>
+            <h2 class='font-serif text-[2.75rem]/[3rem] tracking-[-0.0375rem] mt-0 mb-[12px]' id="newsletter-heading">Blijf op de hoogte</h2>
             <p class='mb-0'>Meld je net als 1600+ andere lezers aan voor onze maandelijkse nieuwsbrief!</br>
             Wat kan je verwachten? Zie onze <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">eerdere nieuwsbrieven</a>.</p>
           </div>
@@ -36,7 +36,7 @@
       </div>
     </form>
   </div>
-</div>
+</aside>
 
 <script>
   (function () {

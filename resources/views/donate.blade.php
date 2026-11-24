@@ -136,12 +136,12 @@
 
         <h3>Open State-donateurs</h3>
         <div class="grid grid-cols-12 gap-[16px]">
-          <x-open-street title="Laptop met Linux" image="logo-laptop-met-linux.svg" link="https://laptopmetlinux.nl/" domain="LaptopMetLinux.nl">
+          <x-open-state-donateur title="Laptop met Linux" image="logo-laptop-met-linux.svg" link="https://laptopmetlinux.nl/" domain="LaptopMetLinux.nl">
             Ga voor vrijheid, veiligheid, betrouwbaarheid en blijheid, kies Open Source hardware!
-          </x-open-street>
-          <x-open-street title="Fastned" image="logo-fastned.svg" link="https://fastnedcharging.com/" domain="FastnedCharging.com">
+          </x-open-state-donateur>
+          <x-open-state-donateur title="Fastned" image="logo-fastned.svg" link="https://fastnedcharging.com/" domain="FastnedCharging.com">
             Ultrasnelle laadstations voor elektrische auto's, busjes, motors en vrachtwagens.
-          </x-open-street>
+          </x-open-state-donateur>
         </div>
       </div>
     </div>

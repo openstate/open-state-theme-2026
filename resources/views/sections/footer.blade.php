@@ -1,15 +1,3 @@
-<?php // Nieuwsbrief ?>
-@php
-  $no_newsletter = false;
-  if (array_intersect(array('error404', 'page-template-work-with-us', 'page-template-work-with-us-tool-implementation', 'page-template-work-with-us-advice-strategy', 'page-template-work-with-us-training-workshops', 'page-template-work-with-us-research-analyses', 'page-template-work-with-us-events-co-creation'), get_body_class())) {
-    $no_newsletter = true;
-  }
-@endphp
-
-@if (!$no_newsletter)
-  @include('partials.newsletter')
-@endif
-
 <footer class="2xl:grid 2xl:grid-cols-12 content-info bg-purple-800 text-white px-[24px]">
   <div class="mx-auto w-full max-w-[1920px] 2xl:col-span-12 content-center">
     <div class="xl:flex xl:justify-between mt-[24px] mb-[48px] md:mb-[100px] xl:mb-[120px]">
@@ -47,7 +35,7 @@
     <div class="flex justify-end pb-[24px] gap-x-[24px]">
       <div><a class="text-white hocus:text-pink transition no-open-state-underline" href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
       <div><a class="text-white hocus:text-pink transition no-open-state-underline" href="/privacy/">Privacy policy</a></div>
-      <div><a class="text-white hocus:text-pink transition no-open-state-underline" href="/responsible-disclosure">Responsible disclosure</a></div>
+      <div><a class="text-white hocus:text-pink transition no-open-state-underline" href="/responsible-disclosure/">Responsible disclosure</a></div>
     </div>
   </div>
 </footer>

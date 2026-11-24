@@ -1,6 +1,6 @@
 <?php // Project card op projectoverzicht en homepage ?>
 
-<a class="group no-underline rounded-lg overflow-hidden bg-off-white-50 flex flex-col" href="{!! the_permalink() !!}">
+<a class="group rounded-lg overflow-hidden bg-off-white-50 flex flex-col no-open-state-underline" href="{!! the_permalink() !!}">
   <div class="relative">
     {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'aspect-[16/10] object-cover')) !!}
 

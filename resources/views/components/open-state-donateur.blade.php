@@ -5,7 +5,7 @@
   'domain' => '',
 ])
 
-<a class="group rounded-lg overflow-hidden bg-blue-200 text-white flex flex-col col-span-12 md:col-span-4" href="{{ $link }}" target="_blank">
+<a class="group rounded-lg overflow-hidden bg-blue-200 text-white flex flex-col col-span-12 md:col-span-4 no-open-state-underline" href="{{ $link }}" target="_blank">
   <img class="bg-white h-[232px] px-[20px] py-[20px] md:pt-[20px] md:px-[28px] md:pb-[28px] xl:pt-[20px] xl:px-[24px] xl:pb-[24px]" src="{{ Vite::asset('resources/images/' . $image) }}" alt="Logo {{ $title }}">
 
   <div class="flex flex-col min-h-[180px] md:min-h-[260px] xl:min-h-[280px] px-[20px] py-[20px] md:pt-[20px] md:px-[28px] md:pb-[28px] xl:pt-[20px] xl:px-[24px] xl:pb-[24px] group-hocus:bg-purple-700 group-hocus:text-pink transition-colors">

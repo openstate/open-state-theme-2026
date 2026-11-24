@@ -1,6 +1,6 @@
 <?php // Onderzoek card op 'Onderzoek' pagina ?>
 
-<a class="group no-underline rounded-lg overflow-hidden bg-off-white-50 flex flex-col" href="{{ get_field('onderzoek_url') }}" target="_blank">
+<a class="group rounded-lg overflow-hidden bg-off-white-50 flex flex-col no-open-state-underline" href="{{ get_field('onderzoek_url') }}" target="_blank">
   <div class="relative">
     {!! the_post_thumbnail('col-7-thumbnail', array('class' => 'aspect-[1/1.4142] object-cover')) !!}
 
