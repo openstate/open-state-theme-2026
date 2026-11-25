@@ -20,10 +20,10 @@
 <a
 @endif
   @class([
-    'group grid w-fit cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
+    'group grid w-fit max-w-full shrink-0 cursor-pointer grid-cols-[0_auto_2.75rem] items-center font-mono font-medium',
     'motion-safe:transition-[grid] motion-safe:duration-200 motion-safe:ease-in-out',
     'motion-safe:hocus:grid-cols-[2.75rem_auto_0]',
-    'whitespace-nowrap no-open-state-underline',
+    'no-open-state-underline',
     $class,
   ])
   {{ $attributes }}
@@ -48,7 +48,7 @@
 
   <span
     @class([
-      'flex h-10 items-center rounded-sm px-[20px] text-sm leading-[20px]',
+      'block min-w-0 rounded-sm px-[20px] py-[10px] text-sm leading-[20px]',
       $variantClasses,
     ])
   >{{ $text }}</span>
